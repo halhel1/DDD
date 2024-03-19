@@ -65,3 +65,10 @@ func dodge():
 	else:
 		is_dodging = false
 
+func _on_area_2d_area_entered(area):
+	if area.is_in_group("seashell"):
+		print("collected")
+	
+		
+
+
