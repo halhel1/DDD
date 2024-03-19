@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZHLIeKg8waXC03tRJ6mGfZfHyw7Zrh1MkBCi+H3euRIuAUx3QNwqYR5TgOB3a/dNtEXC/ksRC1HtoPOrznJIbQ==",
+  "success": true,
+  "projectFilePath": "/Users/hussainalhelfi/Documents/ddd/Team-5/New Game Project.csproj",
+  "expectedPackageFiles": [
+    "/Users/hussainalhelfi/.nuget/packages/godot.sourcegenerators/4.2.1/godot.sourcegenerators.4.2.1.nupkg.sha512",
+    "/Users/hussainalhelfi/.nuget/packages/godotsharp/4.2.1/godotsharp.4.2.1.nupkg.sha512",
+    "/Users/hussainalhelfi/.nuget/packages/godotsharpeditor/4.2.1/godotsharpeditor.4.2.1.nupkg.sha512",
+    "/Users/hussainalhelfi/.nuget/packages/microsoft.netcore.app.ref/6.0.27/microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "/Users/hussainalhelfi/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.27/microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512"
+  ],
+  "logs": []
+}
