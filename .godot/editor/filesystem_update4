@@ -1,4 +1,7 @@
-res://player.gd
 res://Scenes/root.tscn
 res://Scenes/enemy.tscn
+res://Scenes/level0.tscn
 res://Scenes/seashell.tscn
+res://Scenes/player.tscn
+res://Scenes/terrain.tscn
+res://Scenes/view.tscn
