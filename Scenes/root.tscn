@@ -13,6 +13,7 @@ size = Vector2(70.6999, 40.3118)
 scale = Vector2(1, 1.002)
 
 [node name="level0" parent="." instance=ExtResource("2_olmta")]
+process_mode = 3
 position = Vector2(-31, -192)
 
 [node name="Player" parent="." instance=ExtResource("1_nqsxe")]

@@ -1,3 +1,5 @@
+res://Scenes/options.tscn
+res://TempResources/custombuttons.tres
 res://Scenes/root.tscn
 res://Scenes/enemy.tscn
 res://Scenes/level0.tscn
@@ -5,3 +7,4 @@ res://Scenes/seashell.tscn
 res://Scenes/player.tscn
 res://Scenes/terrain.tscn
 res://Scenes/view.tscn
+res://Scenes/MainMenu.tscn
