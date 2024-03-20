@@ -19,13 +19,13 @@ public partial class View : Camera2D
 	{
 	}
 		 public override void _PhysicsProcess(double delta)
-    {
+	{
 		 Vector2 arrowInput = new Vector2(
-            Input.GetActionStrength("ui_right") - Input.GetActionStrength("ui_left"),
+			Input.GetActionStrength("ui_right") - Input.GetActionStrength("ui_left"),
 			Input.GetActionStrength("ui_down") - Input.GetActionStrength("ui_up")
-        );
+		);
 		Vector2 movement = new Vector2((float)(arrowInput.X * speed * delta),(float)(arrowInput.Y * speed * delta));
 		Translate(movement);
-       
-    }
+	   
+	}
 }
