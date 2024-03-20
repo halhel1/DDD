@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2qyk02xf5hkv"]
+[gd_scene load_steps=7 format=3 uid="uid://b2qyk02xf5hkv"]
 
 [ext_resource type="PackedScene" uid="uid://82a20eu1aqyu" path="res://Scenes/player.tscn" id="1_nqsxe"]
 [ext_resource type="PackedScene" uid="uid://b6t21fne0yyx5" path="res://Scenes/level0.tscn" id="2_olmta"]
 [ext_resource type="PackedScene" uid="uid://dwmikcdcuccab" path="res://Scenes/enemy.tscn" id="3_1nlpj"]
 [ext_resource type="PackedScene" uid="uid://e3xs8nnx7lxh" path="res://Scenes/seashell.tscn" id="4_ifogr"]
+[ext_resource type="PackedScene" uid="uid://tku2ooftur5w" path="res://Scenes/view.tscn" id="5_hoxcg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nl7fp"]
 size = Vector2(70.6999, 40.3118)
@@ -39,5 +40,7 @@ scale = Vector2(0.2, 0.2)
 [node name="seashell2" parent="." instance=ExtResource("4_ifogr")]
 position = Vector2(937, 78.8423)
 scale = Vector2(0.2, 0.2)
+
+[node name="View" parent="." instance=ExtResource("5_hoxcg")]
 
 [connection signal="area_entered" from="Player/Area2D" to="Player" method="_on_area_2d_area_entered"]
