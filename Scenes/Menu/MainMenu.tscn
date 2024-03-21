@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://chncqjalee0es"]
 
-[ext_resource type="Theme" uid="uid://bcysiyl7g3m1i" path="res://TempResources/custombuttons.tres" id="1_uv2np"]
+[ext_resource type="Theme" uid="uid://b4qps1aut45o2" path="res://TempResources/custombuttons.tres" id="1_uv2np"]
 [ext_resource type="Script" path="res://Scenes/Menu/MainMenu.cs" id="2_1h5yw"]
 
 [sub_resource type="Theme" id="Theme_fdjas"]
