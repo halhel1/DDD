@@ -5,9 +5,4 @@ res://Scenes/terrain.tscn
 res://Scenes/MainMenu.tscn
 res://Scenes/options.tscn
 res://Scenes/Enemies/enemy.tscn
-res://Scenes/Enemies/enemy.cs
-res://Scenes/Menu/MainMenu.cs
-res://Scenes/Menu/options.cs
-res://Scenes/Menu/View.cs
-res://Scenes/Seashell/seashell.cs
 res://Scenes/Seashell/seashell.tscn
