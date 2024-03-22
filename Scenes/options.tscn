@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bur5llc1asa6y"]
 
 [ext_resource type="Theme" uid="uid://b4qps1aut45o2" path="res://TempResources/custombuttons.tres" id="1_3pj46"]
-[ext_resource type="Script" path="res://options.cs" id="1_s7wvj"]
+[ext_resource type="Script" path="res://Scenes/options.cs" id="2_okmif"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -18,7 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.65, 2.65)
 theme = ExtResource("1_3pj46")
-script = ExtResource("1_s7wvj")
+script = ExtResource("2_okmif")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -45,5 +45,4 @@ text = "Home
 "
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/return home" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/return home" to="." method="_on_return_home_pressed"]
