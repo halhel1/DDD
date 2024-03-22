@@ -61,13 +61,13 @@ offset = Vector2(2.08165e-12, 2.08165e-12)
 position = Vector2(7.77173, -36.8333)
 scale = Vector2(-0.704242, 1.39847)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemySprite/detectionArea"]
+[node name="enemyVision" type="CollisionShape2D" parent="enemySprite/detectionArea"]
 position = Vector2(10, 30)
 scale = Vector2(1.40978, -0.771873)
 shape = SubResource("CircleShape2D_5yj07")
 debug_color = Color(0.713726, 0.466667, 0.360784, 0.419608)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="enemyBody" type="CollisionShape2D" parent="."]
 position = Vector2(-14, 8)
 scale = Vector2(0.56907, -0.519485)
 shape = SubResource("CircleShape2D_cqg6x")
