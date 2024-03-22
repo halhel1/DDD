@@ -11,3 +11,4 @@ res://Scenes/Menu/MainMenu.cs
 res://Scenes/Menu/View.cs
 res://Scenes/options.cs
 res://Scenes/Seashell/seashell.cs
+res://Scenes/Player/player.tscn
