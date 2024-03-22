@@ -1,10 +1,9 @@
-
-[gd_scene load_steps=3 format=3 uid="uid://bur5llc1asa6y"]
+[gd_scene load_steps=3 format=3 uid="uid://chncqjalee0es"]
 
 [ext_resource type="Theme" uid="uid://b4qps1aut45o2" path="res://TempResources/custombuttons.tres" id="1_3pj46"]
 [ext_resource type="Script" path="res://options.cs" id="1_s7wvj"]
 
-[node name="Menu" type="Control"]
+[node name="Menu2" type="Control"]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -46,5 +45,5 @@ text = "Home
 "
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/return home" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/return home" to="." method="_on_return_home_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/return home" to="." method="_on_back_pressed"]
