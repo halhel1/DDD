@@ -1,1 +1,11 @@
 res://Scenes/Player/player.gd
+res://Scenes/root.tscn
+res://TempResources/custombuttons.tres
+res://Scenes/level0.tscn
+res://Scenes/terrain.tscn
+res://Scenes/MainMenu.tscn
+res://Scenes/options.tscn
+res://Scenes/Enemies/enemy.tscn
+res://Scenes/Seashell/seashell.tscn
+res://Scenes/Menu/MainMenu.tscn
+res://Scenes/Menu/options.tscn
