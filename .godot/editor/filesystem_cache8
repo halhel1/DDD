@@ -1,32 +1,32 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1711067159
+::res://::1711067511
 MainMenu.cs::CSharpScript::-1::1711044258::0::1::::<><>::
 options.cs::CSharpScript::-1::1711044580::0::1::::<><>::
 README.md::TextFile::-1::1711044898::0::1::::<><>::
-::res://Scenes/::1711057725
-level0.tscn::PackedScene::4603184086160792604::1711057725::0::1::::<><>::uid://bsa5foa6euhgt::::res://TempResources/16x16/Tilesets/Solaria Demo Update 01.png<>uid://cwwvypk3aolxp::::res://Scenes/terrain.tscn<>uid://dwmikcdcuccab::::res://Scenes/Enemies/enemy.tscn<>uid://e3xs8nnx7lxh::::res://Scenes/Seashell/seashell.tscn
-MainMenu.tscn::PackedScene::5291150663558689726::1711057725::0::1::::<><>::uid://b4qps1aut45o2::::res://TempResources/custombuttons.tres<>res://options.cs
-options.tscn::PackedScene::3827133713817202694::1711057725::0::1::::<><>::uid://b4qps1aut45o2::::res://TempResources/custombuttons.tres<>res://options.cs
-root.tscn::PackedScene::4316025927596732773::1711057725::0::1::::<><>::uid://82a20eu1aqyu::::res://Scenes/Player/player.tscn<>uid://b6t21fne0yyx5::::res://Scenes/level0.tscn
-terrain.tscn::PackedScene::6363730958485094841::1711057725::0::1::::<><>::uid://br7x1nmmy5x3u::::res://TempResources/icon.svg
-::res://Scenes/Enemies/::1711057725
+::res://Scenes/::1711067492
+level0.tscn::PackedScene::4603184086160792604::1711067492::0::1::::<><>::uid://bsa5foa6euhgt::::res://TempResources/16x16/Tilesets/Solaria Demo Update 01.png<>uid://cwwvypk3aolxp::::res://Scenes/terrain.tscn<>uid://dwmikcdcuccab::::res://Scenes/Enemies/enemy.tscn<>uid://e3xs8nnx7lxh::::res://Scenes/Seashell/seashell.tscn
+MainMenu.tscn::PackedScene::5291150663558689726::1711067492::0::1::::<><>::uid://b4qps1aut45o2::::res://TempResources/custombuttons.tres<>res://options.cs
+options.tscn::PackedScene::3827133713817202694::1711067492::0::1::::<><>::uid://b4qps1aut45o2::::res://TempResources/custombuttons.tres<>res://options.cs
+root.tscn::PackedScene::4316025927596732773::1711067492::0::1::::<><>::uid://82a20eu1aqyu::::res://Scenes/Player/player.tscn<>uid://b6t21fne0yyx5::::res://Scenes/level0.tscn
+terrain.tscn::PackedScene::6363730958485094841::1711067492::0::1::::<><>::uid://br7x1nmmy5x3u::::res://TempResources/icon.svg
+::res://Scenes/Enemies/::1711067492
 enemy.cs::CSharpScript::-1::1711048104::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::8728692847844705625::1711057725::0::1::::<><>::res://Scenes/Enemies/enemy.cs<>uid://l2uiw6c25qqp::::res://TempResources/16x16/Sprites/Slime 01.png
-::res://Scenes/Menu/::1711057726
+enemy.tscn::PackedScene::8728692847844705625::1711067492::0::1::::<><>::res://Scenes/Enemies/enemy.cs<>uid://l2uiw6c25qqp::::res://TempResources/16x16/Sprites/Slime 01.png
+::res://Scenes/Menu/::1711067492
 MainMenu.cs::CSharpScript::-1::1711044898::0::1::::<>Control<>::
-MainMenu.tscn::PackedScene::5291150663558689726::1711057726::0::1::::<><>::uid://b4qps1aut45o2::::res://TempResources/custombuttons.tres<>res://Scenes/Menu/MainMenu.cs
+MainMenu.tscn::PackedScene::5291150663558689726::1711067492::0::1::::<><>::uid://b4qps1aut45o2::::res://TempResources/custombuttons.tres<>res://Scenes/Menu/MainMenu.cs
 options.cs::CSharpScript::-1::1711044898::0::1::::<>Control<>::
-options.tscn::PackedScene::3827133713817202694::1711057726::0::1::::<><>::uid://b4qps1aut45o2::::res://TempResources/custombuttons.tres<>res://options.cs
+options.tscn::PackedScene::3827133713817202694::1711067492::0::1::::<><>::uid://b4qps1aut45o2::::res://TempResources/custombuttons.tres<>res://options.cs
 View.cs::CSharpScript::-1::1711044898::0::1::::<>Camera2D<>::
 view.tscn::PackedScene::1355495120161512646::1711044898::0::1::::<><>::res://View.cs
 ::res://Scenes/Player/::1711044898
 player.gd::GDScript::-1::1711044898::0::1::::<>CharacterBody2D<>::
 player.tscn::PackedScene::2372019576056558628::1711044898::0::1::::<><>::res://Scenes/Player/player.gd<>uid://br7x1nmmy5x3u::::res://TempResources/icon.svg
-::res://Scenes/Seashell/::1711057725
+::res://Scenes/Seashell/::1711067492
 seashell.cs::CSharpScript::-1::1711044898::0::1::::<>Area2D<>::
-seashell.tscn::PackedScene::339988340765399697::1711057725::0::1::::<><>::res://Scenes/Seashell/seashell.cs<>uid://c65osrmx14r6w::::res://TempResources/Seashell_%28Public_Demo%29_Icon.webp
-::res://TempResources/::1711055969
-custombuttons.tres::Theme::4455871458985159303::1711055969::0::1::::<><>::
+seashell.tscn::PackedScene::339988340765399697::1711067492::0::1::::<><>::res://Scenes/Seashell/seashell.cs<>uid://c65osrmx14r6w::::res://TempResources/Seashell_%28Public_Demo%29_Icon.webp
+::res://TempResources/::1711067166
+custombuttons.tres::Theme::4455871458985159303::1711067166::0::1::::<><>::
 icon.svg::CompressedTexture2D::3647134737064429080::1711044258::1711044258::1::::<><>::
 Seashell_%28Public_Demo%29_Icon.webp::CompressedTexture2D::7011509947491543392::1711044258::1711044258::1::::<><>::
 ::res://TempResources/16x16/::1711044258
