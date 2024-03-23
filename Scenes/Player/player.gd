@@ -13,8 +13,8 @@ var can_dodge: bool = true
 #dodge_cooldown not changing as intended, will fix
 @export var dodge_speed_mult: float = 2
 var alter_max_speed: int = max_speed
-
 var invunerable: bool = false
+var is_dead=false
 
 func ready():
 	$HealthBar.max_value = max_health
@@ -86,11 +86,16 @@ func _on_cooldown_timer_timeout():
 
 func take_damage(amount):
 	current_health -= amount
-	if current_health < 0:
-		print("dead, health reset")
-		current_health = max_health
+	if current_health<=0:
+		die();
 	$HealthBar.value = current_health
 	#need a timer for invunerability
+
+func die():
+	is_dead=true
+	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+
+
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("seashell"):

@@ -1,5 +1,7 @@
-Control
 Label
+VBoxContainer
+MarginContainer
+Control
 ProgressBar
 Timer
 CollisionShape2D
