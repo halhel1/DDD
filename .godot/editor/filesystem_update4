@@ -1,7 +1,5 @@
-res://Scenes/Player/player.gd
-res://Scenes/death.tscn
-res://TempResources/custombuttons.tres
 res://Scenes/root.tscn
+res://TempResources/custombuttons.tres
 res://Scenes/level0.tscn
 res://Scenes/Enemies/enemy.tscn
 res://Scenes/Seashell/seashell.tscn
