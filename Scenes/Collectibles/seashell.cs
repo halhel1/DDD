@@ -23,6 +23,5 @@ public partial class seashell : Area2D
 
 	public void _on_body_entered(Node body){
 		QueueFree();
-		
 	}
 }
