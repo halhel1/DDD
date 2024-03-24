@@ -86,17 +86,18 @@ func _on_cooldown_timer_timeout():
 
 func take_damage(amount):
 	current_health -= amount
+	$HealthBar.value = current_health
 	if current_health<=0:
 		die();
-	$HealthBar.value = current_health
-	#need a timer for invunerability
 
 func die():
 	is_dead=true
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 
-
-
-func _on_area_2d_area_entered(area):
+func _on_player_hitbox_area_entered(area):
 	if area.is_in_group("seashell"):
-		print("collected")
+		print("shell collected")
+	if area.is_in_group("heart"):
+		if current_health!=max_health:
+			current_health += 10 
+			$HealthBar.value = current_health
