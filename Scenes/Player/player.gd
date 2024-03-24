@@ -41,7 +41,6 @@ func movement_handler(delta):
 		move_and_slide()
 		if Input.is_action_just_pressed("dodge")&&can_dodge:
 			dodge()
-			take_damage(10)
 	
 	if(dodging):
 		#accelerate fast & direction locked while dodge
@@ -99,5 +98,10 @@ func _on_player_hitbox_area_entered(area):
 		print("shell collected")
 	if area.is_in_group("heart"):
 		if current_health!=max_health:
-			current_health += 10 
+			current_health += 20 
 			$HealthBar.value = current_health
+	if area.is_in_group("enemy"):
+		take_damage(20)
+		$HealthBar.value = current_health
+
+
