@@ -4,7 +4,7 @@ using Godot;
 
 public partial class enemy : CharacterBody2D
 {
-    private int speed = 100;
+    private int speed = 150;
     private Node player = null;
     private bool playerChase = false;
     private AnimatedSprite2D enemySprite;
