@@ -98,10 +98,8 @@ func _on_player_hitbox_area_entered(area):
 		print("shell collected")
 	if area.is_in_group("heart"):
 		if current_health!=max_health:
-			current_health += 20 
+			current_health += 10 
 			$HealthBar.value = current_health
 	if area.is_in_group("enemy"):
-		take_damage(20)
+		take_damage(20);
 		$HealthBar.value = current_health
-
-
