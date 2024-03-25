@@ -81,7 +81,7 @@ value = 1.5
 show_percentage = false
 
 [node name="damageTimer" type="Timer" parent="."]
-autostart = true
+wait_time = 0.5
 
 [connection signal="timeout" from="DodgeTimer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="PlayerHitbox" to="." method="_on_player_hitbox_area_entered"]

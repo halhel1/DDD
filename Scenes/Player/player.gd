@@ -26,6 +26,7 @@ func ready():
 	$CooldownTimer.wait_time = dodge_cooldown
 	$damageTimer.timeout.connect(_on_damage_timer_timeout)
 	
+	
 
 func _physics_process(delta):
 	movement_handler(delta)
@@ -56,6 +57,11 @@ func get_input_direction():
 	direction.x = Input.get_action_strength("moveRight") - Input.get_action_strength("moveLeft")
 	direction.y = Input.get_action_strength("moveDown") - Input.get_action_strength("moveUp")
 	return direction.normalized()
+
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://Scenes/options.tscn")
+
 
 func apply_friction(magnitude):
 	if velocity.length() > magnitude:
@@ -113,7 +119,5 @@ func _on_player_hitbox_area_exited(area):
 	if area.is_in_group("enemy"):
 		$damageTimer.stop()
 	
-
-
 func _on_damage_timer_timeout():
 	take_damage(20)
