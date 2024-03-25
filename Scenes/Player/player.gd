@@ -16,11 +16,15 @@ var alter_max_speed: int = max_speed
 var invunerable: bool = false
 var is_dead=false
 
+
+
+
 func ready():
 	$HealthBar.max_value = max_health
 	$HealthBar.value = current_health
 	$DodgeTimer.wait_time = dodge_time
 	$CooldownTimer.wait_time = dodge_cooldown
+	$damageTimer.timeout.connect(_on_damage_timer_timeout)
 	
 
 func _physics_process(delta):
@@ -98,8 +102,18 @@ func _on_player_hitbox_area_entered(area):
 		print("shell collected")
 	if area.is_in_group("heart"):
 		if current_health!=max_health:
-			current_health += 10 
+			current_health += 20 
 			$HealthBar.value = current_health
 	if area.is_in_group("enemy"):
-		take_damage(20);
+		take_damage(20)
+		$damageTimer.start();
 		$HealthBar.value = current_health
+
+func _on_player_hitbox_area_exited(area):
+	if area.is_in_group("enemy"):
+		$damageTimer.stop()
+	
+
+
+func _on_damage_timer_timeout():
+	take_damage(20)
