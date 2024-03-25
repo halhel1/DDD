@@ -25,6 +25,12 @@ bg_color = Color(0, 0, 0, 1)
 position = Vector2(389, 312)
 scale = Vector2(1.007, 1)
 script = ExtResource("1_oa1ny")
+max_health = null
+max_speed = null
+acceleration = null
+dodge_time = null
+dodge_cooldown = null
+dodge_speed_mult = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4.96523, 60)
@@ -74,6 +80,11 @@ max_value = 1.5
 value = 1.5
 show_percentage = false
 
+[node name="damageTimer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="timeout" from="DodgeTimer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="PlayerHitbox" to="." method="_on_player_hitbox_area_entered"]
+[connection signal="area_exited" from="PlayerHitbox" to="." method="_on_player_hitbox_area_exited"]
 [connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldown_timer_timeout"]
+[connection signal="timeout" from="damageTimer" to="." method="_on_damage_timer_timeout"]

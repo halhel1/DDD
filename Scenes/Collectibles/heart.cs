@@ -13,7 +13,10 @@ public partial class heart : Area2D
 	{
 	}
 
-	public void _on_body_entered(Node body){
-		QueueFree();
+	
+	public void _on_area_entered(Node body){
+		if(body.IsInGroup("player")){
+			QueueFree();
+		}
 	}
 }

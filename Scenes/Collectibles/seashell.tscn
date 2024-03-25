@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://mt3j75qvcah8"]
+[gd_scene load_steps=4 format=3 uid="uid://c5ia6tk2p15b3"]
 
 [ext_resource type="Script" path="res://Scenes/Collectibles/seashell.cs" id="1_h6lox"]
 [ext_resource type="Texture2D" uid="uid://c65osrmx14r6w" path="res://TempResources/Seashell_%28Public_Demo%29_Icon.webp" id="2_y6mc0"]
@@ -21,4 +21,4 @@ position = Vector2(-6, 4)
 skew = -0.698132
 shape = SubResource("CapsuleShape2D_o4v4y")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

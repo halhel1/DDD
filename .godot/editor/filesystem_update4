@@ -1,3 +1,4 @@
+res://Scenes/Player/player.gd
 res://Scenes/root.tscn
 res://TempResources/custombuttons.tres
 res://Scenes/level0.tscn

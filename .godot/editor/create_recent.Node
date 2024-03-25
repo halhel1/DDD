@@ -1,3 +1,4 @@
+Timer
 Area2D
 CollisionShape2D
 Sprite2D
@@ -6,7 +7,6 @@ VBoxContainer
 MarginContainer
 Control
 ProgressBar
-Timer
 Camera2D
 AnimatedSprite2D
 CharacterBody2D
