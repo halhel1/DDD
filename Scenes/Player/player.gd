@@ -33,6 +33,7 @@ func _physics_process(delta):
 	if (!can_dodge):
 		$CooldownBar.value = $CooldownTimer.time_left
 	
+	
 
 func movement_handler(delta):
 	var direction: Vector2 = Vector2.ZERO

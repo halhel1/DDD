@@ -1,11 +1,14 @@
+TileMap
+Label
+TextureRect
+Control
+CanvasLayer
 Timer
 Area2D
 CollisionShape2D
 Sprite2D
-Label
 VBoxContainer
 MarginContainer
-Control
 ProgressBar
 Camera2D
 AnimatedSprite2D
