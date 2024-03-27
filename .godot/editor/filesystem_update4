@@ -9,6 +9,10 @@ res://Scenes/Player/player.tscn
 res://Scenes/game_over.tscn
 res://Scenes/terrain.tscn
 res://Scenes/Collectibles/heart.tscn
+res://obstacleSpawner.tscn
+res://enemySpawner.tscn
+res://enemySpawner.cs
+res://obstacleSpawner.cs
 res://Scenes/Collectibles/heart.cs
 res://Scenes/Collectibles/seashell.cs
 res://Scenes/Enemies/enemy.cs
@@ -16,8 +20,3 @@ res://Scenes/game_over.cs
 res://Scenes/Menu/MainMenu.cs
 res://Scenes/options.cs
 res://Scenes/Player/player.gd
-res://Scenes/obstacleSpawner.cs
-res://obstacleSpawner.tscn
-res://obstacleSpawner.cs
-res://enemySpawner.tscn
-res://enemySpawner.cs

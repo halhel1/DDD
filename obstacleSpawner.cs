@@ -13,7 +13,7 @@ public partial class obstacleSpawner : Node2D
     private float maxX = 1500;
     private float minY = -500;
     private float maxY = 1500;
-	private float obstacleRadius=150;
+	private float obstacleRadius=200;
 	private List<Vector2>obstaclePositions=new List<Vector2>();
 	
 	// Called when the node enters the scene tree for the first time.

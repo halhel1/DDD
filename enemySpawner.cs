@@ -13,7 +13,7 @@ public partial class enemySpawner : Node2D
     private float maxX = 1500;
     private float minY = -500;
     private float maxY = 1500;
-	private float enemyRadius=50;
+	private float enemyRadius=100;
 	private List<Vector2>enemyPositions=new List<Vector2>();
 	
 	// Called when the node enters the scene tree for the first time.
