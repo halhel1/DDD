@@ -19,4 +19,10 @@ res://Scenes/Enemies/enemy.cs
 res://Scenes/game_over.cs
 res://Scenes/Menu/MainMenu.cs
 res://Scenes/options.cs
-res://Scenes/Player/player.gd
+res://Scenes/spawner.cs
+res://collectibleSpawner.tscn
+res://collectibleSpawner.cs
+res://Scenes/Enemies/enemySpawner.tscn
+res://Scenes/Collectibles/collectibleSpawner.tscn
+res://Scenes/Collectibles/collectibleSpawner.cs
+res://Scenes/Enemies/enemySpawner.cs
