@@ -1,6 +1,9 @@
-TileMap
+Marker2D
+Node2D
 Label
 TextureRect
+ColorRect
+TileMap
 Control
 CanvasLayer
 Timer
@@ -9,7 +12,3 @@ CollisionShape2D
 Sprite2D
 VBoxContainer
 MarginContainer
-ProgressBar
-Camera2D
-AnimatedSprite2D
-CharacterBody2D
