@@ -1,11 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6t21fne0yyx5"]
+[gd_scene load_steps=7 format=3 uid="uid://b6t21fne0yyx5"]
 
 [ext_resource type="Texture2D" uid="uid://bp1i3eqm5fcr6" path="res://TempResources/16x16/Tilesets/Water+.png" id="1_ot7jw"]
-[ext_resource type="PackedScene" uid="uid://dwmikcdcuccab" path="res://Scenes/Enemies/enemy.tscn" id="3_vb1v8"]
-[ext_resource type="PackedScene" uid="uid://c5ia6tk2p15b3" path="res://Scenes/Collectibles/seashell.tscn" id="4_4wu78"]
-[ext_resource type="PackedScene" uid="uid://bmeg5vaalfra" path="res://Scenes/Collectibles/heart.tscn" id="5_jijsg"]
+[ext_resource type="PackedScene" uid="uid://ntva6vdjjb7g" path="res://Scenes/Collectibles/collectibleSpawner.tscn" id="4_mg5es"]
 [ext_resource type="PackedScene" uid="uid://b88tyovxykgn" path="res://obstacleSpawner.tscn" id="5_nxmaf"]
-[ext_resource type="PackedScene" uid="uid://bw41lglmsvfru" path="res://enemySpawner.tscn" id="6_f5n0i"]
+[ext_resource type="PackedScene" uid="uid://bw41lglmsvfru" path="res://Scenes/Enemies/enemySpawner.tscn" id="6_f5n0i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xffck"]
 texture = ExtResource("1_ot7jw")
@@ -189,26 +187,8 @@ layer_1/tile_data = PackedInt32Array(720888, 589824, 2, 786424, 589824, 2, 85196
 layer_2/name = "Terrain"
 layer_2/tile_data = PackedInt32Array()
 
-[node name="Enemy" parent="." instance=ExtResource("3_vb1v8")]
-position = Vector2(355, 729.541)
-scale = Vector2(0.885003, 0.857771)
-
-[node name="seashell" parent="." instance=ExtResource("4_4wu78")]
-position = Vector2(636, 196.607)
-scale = Vector2(0.2, 0.2)
-
-[node name="seashell2" parent="." instance=ExtResource("4_4wu78")]
-position = Vector2(937, 78.8423)
-scale = Vector2(0.2, 0.2)
-
-[node name="heart" parent="." instance=ExtResource("5_jijsg")]
-position = Vector2(713, 447)
-scale = Vector2(0.8, 0.8)
-
-[node name="heart2" parent="." instance=ExtResource("5_jijsg")]
-position = Vector2(-140, 682)
-scale = Vector2(0.8, 0.8)
-
 [node name="Node2D" parent="." instance=ExtResource("5_nxmaf")]
 
 [node name="enemySpawner" parent="." instance=ExtResource("6_f5n0i")]
+
+[node name="collectibleSpawner" parent="." instance=ExtResource("4_mg5es")]
