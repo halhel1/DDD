@@ -4,7 +4,9 @@
 
 -checkout onto respective feature branch, create a new branch when needed or work off experimental
 
--try to regularly fetch/pull changes from remote repo to avoid merge conflicts
+-before making any changes ensure feature branch is up to date with dev, using git reset --hard  dev(this will override any changes you have not commit so try doing this prior to working on new additions)
+
+-pulling/fetching frequently
 
 -add and commit changes 
 
