@@ -187,7 +187,7 @@ layer_1/tile_data = PackedInt32Array(720888, 589824, 2, 786424, 589824, 2, 85196
 layer_2/name = "Terrain"
 layer_2/tile_data = PackedInt32Array()
 
-[node name="Node2D" parent="." instance=ExtResource("5_nxmaf")]
+[node name="obstacleSpawner" parent="." instance=ExtResource("5_nxmaf")]
 
 [node name="enemySpawner" parent="." instance=ExtResource("6_f5n0i")]
 
