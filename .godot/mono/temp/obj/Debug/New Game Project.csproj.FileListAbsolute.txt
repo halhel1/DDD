@@ -69,3 +69,21 @@ C:/Users/B$/Downloads/team 5/.godot/mono/temp/obj/Debug/ref/New Game Project.dll
 /Users/hussainalhelfi/Downloads/ddddd/Team-5/.godot/mono/temp/obj/Debug/New Game Project.pdb
 /Users/hussainalhelfi/Downloads/ddddd/Team-5/.godot/mono/temp/obj/Debug/New Game Project.genruntimeconfig.cache
 /Users/hussainalhelfi/Downloads/ddddd/Team-5/.godot/mono/temp/obj/Debug/ref/New Game Project.dll
+/Users/bricetillman/Team-5/.godot/mono/temp/bin/Debug/New Game Project.deps.json
+/Users/bricetillman/Team-5/.godot/mono/temp/bin/Debug/New Game Project.runtimeconfig.json
+/Users/bricetillman/Team-5/.godot/mono/temp/bin/Debug/New Game Project.dll
+/Users/bricetillman/Team-5/.godot/mono/temp/bin/Debug/New Game Project.pdb
+/Users/bricetillman/Team-5/.godot/mono/temp/bin/Debug/GodotSharp.dll
+/Users/bricetillman/Team-5/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
+/Users/bricetillman/Team-5/.godot/mono/temp/obj/Debug/New Game Project.csproj.AssemblyReference.cache
+/Users/bricetillman/Team-5/.godot/mono/temp/obj/Debug/New Game Project.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bricetillman/Team-5/.godot/mono/temp/obj/Debug/New Game Project.AssemblyInfoInputs.cache
+/Users/bricetillman/Team-5/.godot/mono/temp/obj/Debug/New Game Project.AssemblyInfo.cs
+/Users/bricetillman/Team-5/.godot/mono/temp/obj/Debug/New Game Project.csproj.CoreCompileInputs.cache
+/Users/bricetillman/Team-5/.godot/mono/temp/obj/Debug/New Game Project.sourcelink.json
+/Users/bricetillman/Team-5/.godot/mono/temp/obj/Debug/New Game.D781FC22.Up2Date
+/Users/bricetillman/Team-5/.godot/mono/temp/obj/Debug/New Game Project.dll
+/Users/bricetillman/Team-5/.godot/mono/temp/obj/Debug/refint/New Game Project.dll
+/Users/bricetillman/Team-5/.godot/mono/temp/obj/Debug/New Game Project.pdb
+/Users/bricetillman/Team-5/.godot/mono/temp/obj/Debug/New Game Project.genruntimeconfig.cache
+/Users/bricetillman/Team-5/.godot/mono/temp/obj/Debug/ref/New Game Project.dll
