@@ -13,7 +13,6 @@ res://Scenes/Enemies/enemySpawner.tscn
 res://Scenes/Collectibles/collectibleSpawner.tscn
 res://Scenes/Menu/MainMenu.tscn
 res://border.tscn
-res://Scenes/Player/player.gd
 res://obstacleSpawner.cs
 res://Scenes/Collectibles/collectibleSpawner.cs
 res://Scenes/Collectibles/heart.cs
@@ -25,3 +24,5 @@ res://Scenes/game_over.cs
 res://Scenes/Menu/MainMenu.cs
 res://Scenes/options.cs
 res://Scenes/spawner.cs
+res://Scenes/obstacleSpawner.tscn
+res://Scenes/obstacleSpawner.cs
