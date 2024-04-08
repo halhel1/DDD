@@ -14,19 +14,23 @@ private void _on_start_pressed()
 	
 }
 
-
-private void _on_options_pressed()
-{
-	
-	GetTree().ChangeSceneToFile("res://Scenes/options.tscn");
-	
-	
-}
+	private void _on_options_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://Scenes/options.tscn");
+	}
 
 
-private void _on_quit_pressed()
-{
-	GetTree().Quit();
-}
+	private void _on_quit_pressed()
+	{	
+		GetTree().Quit();
+	}
 
 }
+
+
+
+
+
+
+
+
