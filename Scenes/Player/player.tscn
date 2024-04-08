@@ -17,7 +17,7 @@ bg_color = Color(0, 0, 0, 1)
 bg_color = Color(1, 0.305882, 0.490196, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xp4ik"]
-size = Vector2(170.804, 170)
+size = Vector2(144.985, 93)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gvtcs"]
 bg_color = Color(1, 1, 1, 1)
@@ -59,7 +59,7 @@ show_percentage = false
 [node name="PlayerHitbox" type="Area2D" parent="." groups=["player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHitbox"]
-position = Vector2(2.97919, 11)
+position = Vector2(3.9722, 49.5)
 shape = SubResource("RectangleShape2D_xp4ik")
 
 [node name="damageTimer" type="Timer" parent="."]

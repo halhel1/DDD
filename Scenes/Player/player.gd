@@ -42,6 +42,8 @@ func die():
 func _on_player_hitbox_area_entered(area):
 	if area.is_in_group("seashell"):
 		print("shell collected")
+		$CooldownTimer.stop()
+		$StateMachine/WalkingState.can_dodge = true
 	if area.is_in_group("heart"):
 		if current_health!=max_health:
 			current_health += 20 

@@ -1,12 +1,14 @@
-res://language/localization.en.translation
-res://language/localization.zh.translation
-res://Scenes/root.tscn
+res://Scenes/Player/player.tscn
 res://TempResources/custombuttons.tres
+res://Scenes/Player/PlayerStates/death_state.gd
+res://Scenes/Player/PlayerStates/idle_state.gd
+res://Scripts/state_machine.gd
+res://Scenes/Player/PlayerStates/walking_state.gd
+res://Scenes/root.tscn
 res://Scenes/level0.tscn
 res://Scenes/Enemies/enemy.tscn
 res://Scenes/Collectibles/seashell.tscn
 res://Scenes/options.tscn
-res://Scenes/Player/player.tscn
 res://Scenes/game_over.tscn
 res://Scenes/terrain.tscn
 res://Scenes/Collectibles/heart.tscn
@@ -26,8 +28,4 @@ res://Scenes/Menu/MainMenu.cs
 res://Scenes/obstacleSpawner.cs
 res://Scenes/options.cs
 res://Scenes/spawner.cs
-res://Scenes/Player/PlayerStates/walking_state.gd
-res://Scenes/Player/PlayerStates/idle_state.gd
-res://Scenes/Player/PlayerStates/death_state.gd
 res://Scenes/Player/player.gd
-res://Scenes/Player/cooldown_bar.gd

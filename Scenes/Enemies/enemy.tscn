@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5yj07"]
-radius = 32.1164
+radius = 69.1756
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cqg6x"]
 radius = 52.7827
@@ -65,7 +65,7 @@ position = Vector2(7.77173, -36.8333)
 scale = Vector2(-0.704242, 1.39847)
 
 [node name="enemyVision" type="CollisionShape2D" parent="enemySprite/detectionArea"]
-position = Vector2(11.4689, 27.8437)
+position = Vector2(10.8096, 27.9372)
 scale = Vector2(1.41, 1.5)
 shape = SubResource("CircleShape2D_5yj07")
 debug_color = Color(0.713726, 0.466667, 0.360784, 0.419608)
