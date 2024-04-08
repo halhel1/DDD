@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6t21fne0yyx5"]
+[gd_scene load_steps=7 format=3 uid="uid://b6t21fne0yyx5"]
 
 [ext_resource type="Texture2D" uid="uid://bp1i3eqm5fcr6" path="res://TempResources/16x16/Tilesets/Water+.png" id="1_ot7jw"]
 [ext_resource type="PackedScene" uid="uid://ntva6vdjjb7g" path="res://Scenes/Collectibles/collectibleSpawner.tscn" id="4_mg5es"]
-[ext_resource type="PackedScene" uid="uid://caf8auwqqrwg3" path="res://border.tscn" id="5_5evgt"]
-[ext_resource type="PackedScene" uid="uid://b88tyovxykgn" path="res://obstacleSpawner.tscn" id="5_nxmaf"]
+[ext_resource type="PackedScene" uid="uid://b88tyovxykgn" path="res://Scenes/obstacleSpawner.tscn" id="5_nxmaf"]
 [ext_resource type="PackedScene" uid="uid://bw41lglmsvfru" path="res://Scenes/Enemies/enemySpawner.tscn" id="6_f5n0i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xffck"]
@@ -194,20 +193,8 @@ layer_2/tile_data = PackedInt32Array()
 
 [node name="collectibleSpawner" parent="." instance=ExtResource("4_mg5es")]
 
-[node name="border" parent="." instance=ExtResource("5_5evgt")]
-position = Vector2(-755, -702)
-scale = Vector2(3.4, 3.4)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-755, -666)
 
-[node name="border2" parent="." instance=ExtResource("5_5evgt")]
-position = Vector2(-767, 2012)
-scale = Vector2(3.4, 3.4)
-
-[node name="border3" parent="." instance=ExtResource("5_5evgt")]
-position = Vector2(-793, -659)
-rotation = 1.5708
-scale = Vector2(3.4, 3.4)
-
-[node name="border4" parent="." instance=ExtResource("5_5evgt")]
-position = Vector2(1921, -665)
-rotation = 1.5708
-scale = Vector2(3.4, 3.4)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(1, 0, 2635, -2, 2634, 2632, -1, 2638, -5, 20, -5, -6, -44, 27, -70, 2714, 2673, 2709, 2696, -125, -29, -102)
