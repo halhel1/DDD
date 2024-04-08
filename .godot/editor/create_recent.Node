@@ -1,3 +1,5 @@
+Node
+StateMachine
 CollisionPolygon2D
 StaticBody2D
 Area2D
@@ -11,4 +13,3 @@ TileMap
 Control
 CanvasLayer
 Timer
-Sprite2D
