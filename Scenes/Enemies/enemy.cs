@@ -20,9 +20,7 @@ public partial class enemy : CharacterBody2D
 	public override void _Process(double delta)
 	{
 		
-		
 	}
-   
 	   public override void _PhysicsProcess(double delta){
 	   
 		
@@ -44,6 +42,7 @@ public partial class enemy : CharacterBody2D
 		player=body;
 		playerChase=true;
 		enemySprite.Stop();
+		enemySprite.Play("chase");
 		}
 		
 	}
@@ -52,6 +51,7 @@ public partial class enemy : CharacterBody2D
 		if(body.IsInGroup("player")){
 		player=null;
 		playerChase=false;
+		enemySprite.Stop();
 		enemySprite.Play("idle");
 		}
 		

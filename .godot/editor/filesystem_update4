@@ -1,4 +1,10 @@
-res://Scenes/Player/player.gd
+res://language/localization.en.translation
+res://language/localization.zh.translation
+res://Scenes/Menu/MainMenu.tscn
+res://TempResources/custombuttons.tres
+res://Scenes/Enemies/enemy.tscn
+res://Scenes/Player/player.tscn
+res://Scenes/level0.tscn
 res://Scenes/Collectibles/collectibleSpawner.cs
 res://Scenes/Collectibles/heart.cs
 res://Scenes/Collectibles/seashell.cs
@@ -10,8 +16,4 @@ res://Scenes/Menu/MainMenu.cs
 res://Scenes/obstacleSpawner.cs
 res://Scenes/options.cs
 res://Scenes/spawner.cs
-res://language/localization.en.translation
-res://language/localization.zh.translation
-res://Scenes/Menu/MainMenu.tscn
-res://TempResources/custombuttons.tres
-res://Scenes/Player/cooldown_bar.gd
+res://Scenes/Player/player.gd
