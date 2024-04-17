@@ -13,3 +13,4 @@ position = Vector2(-217, -337.325)
 [node name="Player" parent="." instance=ExtResource("1_nqsxe")]
 position = Vector2(128, 115.768)
 scale = Vector2(0.433151, 0.495604)
+dodge_time = 0.5

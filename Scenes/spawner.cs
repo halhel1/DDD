@@ -18,6 +18,7 @@ public partial class spawner : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+        
 		playerScene=(PackedScene)ResourceLoader.Load("res://Scenes/Player/player.tscn");
 		player=(Node2D)playerScene.Instantiate();
 		
@@ -68,18 +69,14 @@ public partial class spawner : Node2D
 	}
 
 	private bool isPlayerClose(Vector2 newPos){
-		
 		if(player!=null){
-			float distanceToPlayer=player.GlobalPosition.DistanceTo(newPos);
-			if(distanceToPlayer<entityRadius *2){
+			float distanceToPlayer=player.Position.DistanceTo(newPos);
+			if(distanceToPlayer<entityRadius * 2){
 				
 				return true;
 			}
 		}
-		
 		return false;
 
 	}
-
-	
 }
