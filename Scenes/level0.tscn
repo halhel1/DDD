@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b6t21fne0yyx5"]
 
 [ext_resource type="Texture2D" uid="uid://cv7vxmkeg2ykm" path="res://TempResources/16x16/Tilesets/spritesheet.png" id="1_budno"]
-[ext_resource type="PackedScene" uid="uid://f7jpagy8tgfy" path="res://shader.tscn" id="4_2qdaq"]
+[ext_resource type="PackedScene" uid="uid://f7jpagy8tgfy" path="res://Scenes/shader.tscn" id="4_2qdaq"]
 [ext_resource type="PackedScene" uid="uid://ntva6vdjjb7g" path="res://Scenes/Collectibles/collectibleSpawner.tscn" id="4_mg5es"]
 [ext_resource type="PackedScene" uid="uid://bw41lglmsvfru" path="res://Scenes/Enemies/enemySpawner.tscn" id="6_f5n0i"]
 
@@ -170,5 +170,5 @@ polygon = PackedVector2Array(1, 0, 2635, -2, 2634, 2632, -1, 2638, -5, 20, -5, -
 [node name="enemySpawner" parent="." instance=ExtResource("6_f5n0i")]
 
 [node name="Node2D" parent="." instance=ExtResource("4_2qdaq")]
-position = Vector2(-1653, -442)
-scale = Vector2(8, 8)
+position = Vector2(-2212, -646)
+scale = Vector2(10, 10)

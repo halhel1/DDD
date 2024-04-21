@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://f7jpagy8tgfy"]
 
-[ext_resource type="Shader" path="res://shader.gdshader" id="1_tugtl"]
+[ext_resource type="Shader" path="res://Scripts/shader.gdshader" id="1_iwf11"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nuq8i"]
-shader = ExtResource("1_tugtl")
+shader = ExtResource("1_iwf11")
 shader_parameter/time = null
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_l3f4p"]
