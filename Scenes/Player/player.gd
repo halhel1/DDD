@@ -13,6 +13,7 @@ var invunerable: bool = false
 var is_dead: bool =false
 var enemies_in_hitbox:Array =[];
 
+
 func ready():
 	$HealthBar.max_value = max_health
 	$HealthBar.value = current_health
