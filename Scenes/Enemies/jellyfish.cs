@@ -21,7 +21,7 @@ public partial class jellyfish : CharacterBody2D
 	
 	public override void _Ready()
 	{
-		enemySprite=GetNode<Godot.AnimatedSprite2D>("enemySprite");
+		enemySprite=GetNode<Godot.AnimatedSprite2D>("jellyfishSprite");
 		enemySprite.Play("idle");
 	}
 	public override void _Process(double delta)

@@ -172,7 +172,7 @@ position = Vector2(394, 341)
 scale = Vector2(0.6, 0.734)
 script = ExtResource("1_twupr")
 
-[node name="enemySprite" type="AnimatedSprite2D" parent="."]
+[node name="jellyfishSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(18.3333, -5.44957)
 scale = Vector2(2.85384, 1.66007)
 sprite_frames = SubResource("SpriteFrames_5a0c5")
@@ -180,11 +180,11 @@ animation = &"chase"
 speed_scale = 0.5
 offset = Vector2(2.08165e-12, 2.08165e-12)
 
-[node name="detectionArea" type="Area2D" parent="enemySprite"]
+[node name="detectionArea" type="Area2D" parent="jellyfishSprite"]
 position = Vector2(7.77173, -36.8333)
 scale = Vector2(-0.704242, 1.39847)
 
-[node name="enemyVision" type="CollisionShape2D" parent="enemySprite/detectionArea"]
+[node name="enemyVision" type="CollisionShape2D" parent="jellyfishSprite/detectionArea"]
 position = Vector2(14.3527, 26.3383)
 scale = Vector2(1.41, 1.5)
 shape = SubResource("CircleShape2D_5yj07")
@@ -209,8 +209,8 @@ shape = SubResource("CapsuleShape2D_xy3m3")
 [node name="hitBoxTimer" type="Timer" parent="."]
 wait_time = 1.5
 
-[connection signal="area_entered" from="enemySprite/detectionArea" to="." method="_on_detection_area_area_entered"]
-[connection signal="area_exited" from="enemySprite/detectionArea" to="." method="_on_detection_area_area_exited"]
+[connection signal="area_entered" from="jellyfishSprite/detectionArea" to="." method="_on_detection_area_area_entered"]
+[connection signal="area_exited" from="jellyfishSprite/detectionArea" to="." method="_on_detection_area_area_exited"]
 [connection signal="area_entered" from="enemyHitbox" to="." method="_on_enemy_hitbox_area_entered"]
 [connection signal="area_exited" from="enemyHitbox" to="." method="_on_enemy_hitbox_area_exited"]
 [connection signal="timeout" from="hitBoxTimer" to="." method="_on_hit_box_timer_timeout"]

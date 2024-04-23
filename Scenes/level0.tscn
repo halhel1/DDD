@@ -170,5 +170,5 @@ polygon = PackedVector2Array(1, 0, 2635, -2, 2634, 2632, -1, 2638, -5, 20, -5, -
 [node name="enemySpawner" parent="." instance=ExtResource("6_f5n0i")]
 
 [node name="Node2D" parent="." instance=ExtResource("4_2qdaq")]
-position = Vector2(-2212, -646)
-scale = Vector2(10, 10)
+position = Vector2(-1939, -557)
+scale = Vector2(9, 9)
