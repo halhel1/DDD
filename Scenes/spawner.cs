@@ -34,6 +34,36 @@ public partial class spawner : Node2D
 
     }
 
+	 protected void spawnEntities(int numEntities,Color[]colors,string sprite)
+    {
+        for (int i = 0; i < numEntities; i++)
+        {
+			Vector2 randomPos;
+			float randomScale;
+			bool posValid=false;
+			do{
+			float randomX = (float)random.NextDouble() * (maxX - minX) + minX;
+            float randomY = (float)random.NextDouble() * (maxY - minY) + minY;
+			randomPos = new Vector2(randomX, randomY);
+			randomScale=(float)random.NextDouble()*(float)(0.9-0.2)+(float)0.8;
+			posValid=isValidEntity(randomPos) && !isPlayerClose(randomPos);
+			}
+			while(!posValid);
+			spawnPositions.Add(randomPos);
+            Node2D obstacleInstance = (Node2D)entityScene
+    .Instantiate();
+            obstacleInstance.Position = randomPos;
+			obstacleInstance.Scale=new Vector2(randomScale,randomScale);
+			AnimatedSprite2D entitySprite=obstacleInstance.GetNode<Godot.AnimatedSprite2D>(sprite);
+			if(entitySprite!=null){
+				entitySprite.Modulate = Colors.White;
+				int colorIndex = random.Next(0, colors.Length);
+				entitySprite.Modulate *= colors[colorIndex];
+			}
+			AddChild(obstacleInstance);
+        }
+    }
+
 	 protected void spawnEntities(int numEntities)
     {
         for (int i = 0; i < numEntities; i++)
@@ -54,7 +84,7 @@ public partial class spawner : Node2D
     .Instantiate();
             obstacleInstance.Position = randomPos;
 			obstacleInstance.Scale=new Vector2(randomScale,randomScale);
-            AddChild(obstacleInstance); 
+			AddChild(obstacleInstance);
         }
     }
 

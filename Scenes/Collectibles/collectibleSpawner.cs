@@ -3,7 +3,8 @@ using System;
 using System.Collections.Generic;
 public partial class collectibleSpawner : spawner
 {
-	public override void _Ready(){
+	
+		public override void _Ready(){
 		base._Ready();
 		setEntity((PackedScene)ResourceLoader.Load("res://Scenes/Collectibles/heart.tscn"),50);
 		spawnEntities(5); 
