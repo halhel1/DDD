@@ -8,10 +8,10 @@ public partial class spawner : Node2D
 	private PackedScene playerScene;
 	private Node2D player;
 	 private Random random = new Random();
-	 private float minX = -500;
-    private float maxX = 1500;
-    private float minY = -500;
-    private float maxY = 1500;
+	 private float minX = 200;
+    private float maxX = 4000;
+    private float minY = 0;
+    private float maxY = 1000;
 	private float entityRadius;
 	private List<Vector2>spawnPositions=new List<Vector2>();
 	
