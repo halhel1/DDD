@@ -1,3 +1,8 @@
+Camera2D
+TileMap
+Sprite2D
+ShaderGlobalsOverride
+Timer
 Node
 StateMachine
 CollisionPolygon2D
@@ -8,8 +13,3 @@ Marker2D
 Node2D
 Label
 TextureRect
-ColorRect
-TileMap
-Control
-CanvasLayer
-Timer
