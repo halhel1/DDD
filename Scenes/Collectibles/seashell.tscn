@@ -8,6 +8,8 @@ radius = 22.0978
 height = 58.7434
 
 [node name="seashell" type="Area2D" groups=["seashell"]]
+z_index = 3
+y_sort_enabled = true
 position = Vector2(382, 344)
 scale = Vector2(0.4, 0.4)
 script = ExtResource("1_h6lox")
