@@ -12,10 +12,12 @@ process_mode = 1
 position = Vector2(2.08165e-12, 2.08165e-12)
 scale = Vector2(3, 3)
 
-[node name="collectibleSpawner" parent="." instance=ExtResource("4_mg5es")]
-
 [node name="enemySpawner" parent="." instance=ExtResource("6_f5n0i")]
+position = Vector2(2156, 863)
+
+[node name="collectibleSpawner" parent="." instance=ExtResource("4_mg5es")]
+position = Vector2(2156, 863)
 
 [node name="Node2D" parent="." instance=ExtResource("4_2qdaq")]
-position = Vector2(-1088, -1103)
-scale = Vector2(12, 8)
+position = Vector2(-489, -811)
+scale = Vector2(12, 12)
