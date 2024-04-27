@@ -1,7 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://82a20eu1aqyu"]
+[gd_scene load_steps=13 format=3 uid="uid://82a20eu1aqyu"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_oa1ny"]
 [ext_resource type="Texture2D" uid="uid://br7x1nmmy5x3u" path="res://TempResources/icon.svg" id="2_outys"]
+[ext_resource type="Script" path="res://Scripts/state_machine.gd" id="3_ljpdt"]
+[ext_resource type="Script" path="res://Scenes/Player/PlayerStates/idle_state.gd" id="4_yryu6"]
+[ext_resource type="Script" path="res://Scenes/Player/PlayerStates/walking_state.gd" id="5_4a82o"]
+[ext_resource type="Script" path="res://Scenes/Player/PlayerStates/death_state.gd" id="6_wxmbt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3wbu"]
 size = Vector2(140.384, 39.5162)
@@ -22,9 +26,12 @@ bg_color = Color(1, 1, 1, 1)
 bg_color = Color(0, 0, 0, 1)
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(389, 312)
+z_index = 4
+y_sort_enabled = true
+position = Vector2(32, -172)
 scale = Vector2(1.007, 1)
 script = ExtResource("1_oa1ny")
+dodge_time = 0.3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4.96523, 60)
@@ -33,15 +40,13 @@ shape = SubResource("RectangleShape2D_p3wbu")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(4.96526, 13)
+position = Vector2(7.94439, 18)
 scale = Vector2(1.007, 1)
 texture = ExtResource("2_outys")
 
-[node name="DodgeTimer" type="Timer" parent="."]
-wait_time = 0.5
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-5.9583, 28)
+zoom = Vector2(2.5, 2.5)
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 offset_left = -76.0
@@ -57,11 +62,11 @@ show_percentage = false
 [node name="PlayerHitbox" type="Area2D" parent="." groups=["player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHitbox"]
-position = Vector2(2.97919, 11)
+position = Vector2(6.95134, 12)
 shape = SubResource("RectangleShape2D_xp4ik")
 
-[node name="CooldownTimer" type="Timer" parent="."]
-wait_time = 1.5
+[node name="damageTimer" type="Timer" parent="."]
+wait_time = 0.5
 
 [node name="CooldownBar" type="ProgressBar" parent="."]
 offset_left = -84.4091
@@ -70,15 +75,31 @@ offset_right = 92.5909
 offset_bottom = 93.0
 theme_override_styles/background = SubResource("StyleBoxFlat_gvtcs")
 theme_override_styles/fill = SubResource("StyleBoxFlat_3rel7")
-max_value = 1.5
+max_value = 3.0
 value = 1.5
 show_percentage = false
 
-[node name="damageTimer" type="Timer" parent="."]
-wait_time = 0.5
+[node name="CooldownTimer" type="Timer" parent="."]
+wait_time = 1.5
 
-[connection signal="timeout" from="DodgeTimer" to="." method="_on_timer_timeout"]
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_ljpdt")
+
+[node name="IdleState" type="Node" parent="StateMachine"]
+script = ExtResource("4_yryu6")
+
+[node name="WalkingState" type="Node" parent="StateMachine"]
+script = ExtResource("5_4a82o")
+
+[node name="DodgeTimer" type="Timer" parent="StateMachine/WalkingState"]
+wait_time = 33.634
+one_shot = true
+
+[node name="DeathState" type="Node" parent="StateMachine"]
+script = ExtResource("6_wxmbt")
+
 [connection signal="area_entered" from="PlayerHitbox" to="." method="_on_player_hitbox_area_entered"]
 [connection signal="area_exited" from="PlayerHitbox" to="." method="_on_player_hitbox_area_exited"]
-[connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldown_timer_timeout"]
 [connection signal="timeout" from="damageTimer" to="." method="_on_damage_timer_timeout"]
+[connection signal="timeout" from="CooldownTimer" to="StateMachine/WalkingState" method="_on_cooldown_timer_timeout"]
+[connection signal="timeout" from="StateMachine/WalkingState/DodgeTimer" to="StateMachine/WalkingState" method="_on_dodge_timer_timeout"]
