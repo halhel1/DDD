@@ -20,6 +20,8 @@ config/icon="res://icon.svg"
 window/size/viewport_width=770
 window/size/viewport_height=770
 window/size/initial_position=Vector2i(435, 410)
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [dotnet]
 
