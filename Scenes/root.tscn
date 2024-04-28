@@ -18,4 +18,4 @@ dodge_cooldown = null
 dodge_speed_multiplier = null
 
 [node name="level0" parent="." instance=ExtResource("2_olmta")]
-position = Vector2(6, -13.9721)
+position = Vector2(1, -8.98203)
