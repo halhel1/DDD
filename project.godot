@@ -59,6 +59,10 @@ dodge={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://language/language.en.translation", "res://language/language.zh.translation")
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
