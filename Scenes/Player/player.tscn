@@ -183,7 +183,7 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 z_index = 4
 y_sort_enabled = true
-scale = Vector2(1.007, 1)
+scale = Vector2(2, 1.986)
 script = ExtResource("1_oa1ny")
 dodge_time = 0.3
 
