@@ -1,9 +1,10 @@
-res://language/language_setting.gd
 res://language/language_setting.tscn
 res://TempResources/custombuttons.tres
 res://Scripts/shader.gdshader
 res://Scenes/Player/player.gdshader
 res://Scenes/Menu/MainMenu.tscn
+res://Scenes/game_over.tscn
+res://Scenes/options.tscn
 res://Scenes/Collectibles/collectibleSpawner.cs
 res://Scenes/Collectibles/heart.cs
 res://Scenes/Collectibles/seashell.cs
@@ -16,8 +17,3 @@ res://Scenes/obstacleSpawner.cs
 res://Scenes/options.cs
 res://Scenes/proc_gen.cs
 res://Scenes/spawner.cs
-res://Scenes/Menu/SetLocation.gd
-res://language/SetLocation.gd
-res://language/localization.en.translation
-res://language/localization.zh.translation
-res://Scenes/options.tscn
