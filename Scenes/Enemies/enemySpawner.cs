@@ -10,11 +10,11 @@ public partial class enemySpawner : spawner
 };
 	public override void _Ready(){
 		base._Ready();
-		setEntity((PackedScene)ResourceLoader.Load("res://Scenes/Enemies/jellyfish.tscn"),200);
+		setEntity((PackedScene)ResourceLoader.Load("res://Scenes/Enemies/jellyfish.tscn"),220);
 		spawnEntities(15,colors,"jellyfishSprite"); 
 	}
-	 protected override bool isValidEntity(Vector2 newPos){
-		return base.isValidEntity(newPos);
+	 protected override bool isValidEntity(Vector2 newPos, float effectiveRadius){
+		return base.isValidEntity(newPos,effectiveRadius);
 
 	}
 }

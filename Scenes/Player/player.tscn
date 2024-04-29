@@ -26,7 +26,8 @@ bg_color = Color(1, 1, 1, 1)
 bg_color = Color(0, 0, 0, 1)
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(389, 312)
+z_index = 4
+y_sort_enabled = true
 scale = Vector2(1.007, 1)
 script = ExtResource("1_oa1ny")
 dodge_time = 0.3
@@ -38,15 +39,16 @@ shape = SubResource("RectangleShape2D_p3wbu")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = 2
-y_sort_enabled = true
-position = Vector2(4.96526, 13)
+position = Vector2(7.94439, 18)
 scale = Vector2(1.007, 1)
 texture = ExtResource("2_outys")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-5.9583, 28)
-zoom = Vector2(2.5, 2.5)
+limit_left = 100
+limit_top = 80
+limit_right = 4550
+limit_bottom = 2350
+editor_draw_limits = true
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 offset_left = -76.0
@@ -62,7 +64,7 @@ show_percentage = false
 [node name="PlayerHitbox" type="Area2D" parent="." groups=["player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHitbox"]
-position = Vector2(2.97919, 11)
+position = Vector2(6.95134, 12)
 shape = SubResource("RectangleShape2D_xp4ik")
 
 [node name="damageTimer" type="Timer" parent="."]
