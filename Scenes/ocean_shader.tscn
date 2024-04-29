@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://f7jpagy8tgfy"]
 
-[ext_resource type="Shader" path="res://Scripts/shader.gdshader" id="1_iwf11"]
+[ext_resource type="Shader" path="res://Scripts/shader.gdshader" id="1_w4gb1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nuq8i"]
-shader = ExtResource("1_iwf11")
+shader = ExtResource("1_w4gb1")
 shader_parameter/time = null
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_l3f4p"]
@@ -12,8 +12,9 @@ shader_parameter/time = null
 seamless = true
 noise = SubResource("FastNoiseLite_l3f4p")
 
-[node name="Node2D" type="Node2D"]
+[node name="oceanShader" type="Node2D"]
 top_level = true
+position = Vector2(-489, 811)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 7
