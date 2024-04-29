@@ -10,12 +10,7 @@ scale = Vector2(1, 1.002)
 [node name="Player" parent="." instance=ExtResource("1_nqsxe")]
 position = Vector2(2156, 836.327)
 scale = Vector2(0.443, 0.507)
-max_health = null
-max_speed = null
-acceleration = null
-dodge_time = null
-dodge_cooldown = null
-dodge_speed_multiplier = null
+dodge_time = 0.5
 
 [node name="level0" parent="." instance=ExtResource("2_olmta")]
 position = Vector2(1, -8.98203)

@@ -8,4 +8,5 @@ func _process(delta):
 	translate(direction.normalized() * speed * delta)
 
 func _on_body_entered(body):
+	print("body hit. Implement damaging entities")
 	pass

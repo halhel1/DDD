@@ -22,8 +22,10 @@ func ready():
 
 func _process(_delta):
 	$CooldownBar.value = $CooldownTimer.time_left
+	$AnimatedSprite2D.play()
 	if Input.is_action_just_pressed("attack"):
 		fire()
+	animate()
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
@@ -37,8 +39,8 @@ func take_damage(amount):
 
 func fire():
 	var projectile = projectile_scene.instantiate()
-	projectile.direction = get_global_mouse_position() - $Sprite2D.global_position
-	projectile.global_position = $Sprite2D.global_position
+	projectile.direction = get_global_mouse_position() - $AnimatedSprite2D.global_position
+	projectile.global_position = $AnimatedSprite2D.global_position
 	projectile.speed = 700
 	get_tree().get_root().add_child(projectile)
 
@@ -67,3 +69,37 @@ func _on_player_hitbox_area_exited(area):
 func _on_damage_timer_timeout():
 	for enemy in enemies_in_hitbox:
 		take_damage(15)
+
+
+func animate():
+	var direction: Vector2
+	direction.x = Input.get_action_strength("moveRight") - Input.get_action_strength("moveLeft")
+	direction.y = Input.get_action_strength("moveDown") - Input.get_action_strength("moveUp")
+	match(direction):
+		Vector2(0,0):
+			$AnimatedSprite2D.animation = "f_idle"
+			$AnimatedSprite2D.flip_h = false
+		Vector2(0,-1):
+			$AnimatedSprite2D.animation = "b_walk"
+			$AnimatedSprite2D.flip_h = false
+		Vector2(0,1):
+			$AnimatedSprite2D.animation = "f_walk"
+			$AnimatedSprite2D.flip_h = false
+		Vector2(-1,0):
+			$AnimatedSprite2D.animation = "fr_walk"
+			$AnimatedSprite2D.flip_h = true
+		Vector2(-1,-1):
+			$AnimatedSprite2D.animation = "br_walk"
+			$AnimatedSprite2D.flip_h = true
+		Vector2(-1,1):
+			$AnimatedSprite2D.animation = "fr_walk"
+			$AnimatedSprite2D.flip_h = true
+		Vector2(1,0):
+			$AnimatedSprite2D.animation = "fr_walk"
+			$AnimatedSprite2D.flip_h = false
+		Vector2(1,-1):
+			$AnimatedSprite2D.animation = "br_walk"
+			$AnimatedSprite2D.flip_h = false
+		Vector2(1,1):
+			$AnimatedSprite2D.animation = "fr_walk"
+			$AnimatedSprite2D.flip_h = false
