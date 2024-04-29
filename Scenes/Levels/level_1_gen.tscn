@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqp7wfdk1rq7"]
+[gd_scene load_steps=2 format=3 uid="uid://c5wobkd7611ot"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level1Gen.cs" id="1_4j3ss"]
 

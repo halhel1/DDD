@@ -1,14 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://b6t21fne0yyx5"]
 
-[ext_resource type="PackedScene" uid="uid://cqp7wfdk1rq7" path="res://Scenes/Levels/level_1_gen.tscn" id="1_m56t2"]
-[ext_resource type="PackedScene" uid="uid://f7jpagy8tgfy" path="res://Scenes/ocean_shader.tscn" id="4_2qdaq"]
+[ext_resource type="PackedScene" uid="uid://c5wobkd7611ot" path="res://Scenes/Levels/level_1_gen.tscn" id="1_hl2b8"]
+[ext_resource type="PackedScene" path="res://Scenes/shader.tscn" id="4_2qdaq"]
 [ext_resource type="PackedScene" uid="uid://ntva6vdjjb7g" path="res://Scenes/Collectibles/collectibleSpawner.tscn" id="4_mg5es"]
 [ext_resource type="PackedScene" uid="uid://bw41lglmsvfru" path="res://Scenes/Enemies/enemySpawner.tscn" id="6_f5n0i"]
 
-[node name="level1" type="Node2D"]
+[node name="level0" type="Node2D"]
 process_mode = 1
 
-[node name="level1Gen" parent="." instance=ExtResource("1_m56t2")]
+[node name="procGen" parent="." instance=ExtResource("1_hl2b8")]
+position = Vector2(2.08165e-12, 2.08165e-12)
+
+[node name="enemySpawner" parent="." instance=ExtResource("6_f5n0i")]
+position = Vector2(2156, 863)
 
 [node name="collectibleSpawner" parent="." instance=ExtResource("4_mg5es")]
 position = Vector2(2156, 863)
@@ -16,6 +20,3 @@ position = Vector2(2156, 863)
 [node name="Node2D" parent="." instance=ExtResource("4_2qdaq")]
 position = Vector2(-489, -811)
 scale = Vector2(12, 12)
-
-[node name="enemySpawner" parent="." instance=ExtResource("6_f5n0i")]
-position = Vector2(2156, 863)
