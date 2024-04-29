@@ -1,10 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqngml6rf8ay4"]
+[gd_scene load_steps=4 format=3 uid="uid://b1sru4egl1h6b"]
 
-[ext_resource type="Script" path="res://Scenes/proc_gen.cs" id="1_xer3o"]
-[ext_resource type="Texture2D" uid="uid://cv7vxmkeg2ykm" path="res://TempResources/16x16/Tilesets/spritesheet.png" id="2_ynmeq"]
+[ext_resource type="Texture2D" uid="uid://cv7vxmkeg2ykm" path="res://TempResources/16x16/Tilesets/spritesheet.png" id="1_7hy52"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ljm0"]
-texture = ExtResource("2_ynmeq")
+texture = ExtResource("1_7hy52")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -189,11 +188,9 @@ texture_region_size = Vector2i(32, 32)
 7:5/0 = 0
 7:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:5/0/physics_layer_0/angular_velocity = 0.0
-7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -7.5, -15, 0, 0, 7.5, 15, 0)
 8:5/0 = 0
 8:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:5/0/physics_layer_0/angular_velocity = 0.0
-8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -7.5, -15, 0, 0, 7.5, 15, 0)
 9:5/0 = 0
 9:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:5/0/physics_layer_0/angular_velocity = 0.0
@@ -379,10 +376,7 @@ tile_size = Vector2i(30, 15)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3ljm0")
 
-[node name="procGen" type="Node2D"]
-script = ExtResource("1_xer3o")
-
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap"]
 z_as_relative = false
 y_sort_enabled = true
 tile_set = SubResource("TileSet_32b1a")

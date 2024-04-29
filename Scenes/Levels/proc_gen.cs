@@ -5,17 +5,17 @@ using System.Linq;
 public partial class proc_gen : Node2D
 { 
     [Export]
-    public NoiseTexture2D noiseHeightTeXt;
-    private FastNoiseLite noise;
+    protected NoiseTexture2D noiseHeightText;
+    protected FastNoiseLite noise;
     private float[] noiseValArr;
-    private int width = 50;
-    private int height = 100;
-    private TileMap tileMap;
+    private int width;
+    private int height;
+    protected TileMap tileMap;
     private int sourceId=0;
-    private Vector2I dirtAtlas= new Vector2I(3,2);
-    private Vector2I seaweedAtlas=new Vector2I(10,3);
-    private Vector2I grassAtlas=new Vector2I(4,2);
-    private Vector2I borderAtlas=new Vector2I(8,5);
+    protected Vector2I tile1;
+    protected Vector2I tile2;
+    protected Vector2I tile3;
+    protected Vector2I borderAtlas=new Vector2I(8,5);
     Random rand = new Random();
     int ground=0;
     int ground1=1;
@@ -25,14 +25,16 @@ public partial class proc_gen : Node2D
     PackedScene Border;
     public override void _Ready()
     {
-        tileMap = GetNode<TileMap>("TileMap");
+        PackedScene tileMapScene = ResourceLoader.Load<PackedScene>("res://Scenes/tile_map.tscn");
+        TileMap tileMapInstance = (TileMap)tileMapScene.Instantiate();
+        tileMap = tileMapInstance;
+        AddChild(tileMap);
         noise = new FastNoiseLite(); 
         noise.SetSeed((int)DateTime.Now.Ticks);
         noise.SetNoiseType(FastNoiseLite.NoiseType.Perlin);
         noise.SetFrequency((float)0.04);
-        GenerateLevel();
     }
-    void GenerateLevel()
+    public void GenerateLevel(int width, int height,Vector2I tile1,Vector2I tile2,Vector2I tile3)
     {
         noiseValArr = new float[(width) * (height)];
         for (int X = 0; X < width; X++)
@@ -41,10 +43,7 @@ public partial class proc_gen : Node2D
         {
             if (X == 0 || X == width - 1 || Y == 0 || Y == height - 1)
             {
-                
                 tileMap.SetCell(ground3, new Vector2I(X, Y), 0, borderAtlas, 0);
-                
-                
             }
         }
     }
@@ -56,21 +55,21 @@ public partial class proc_gen : Node2D
                 float noiseVal = noise.GetNoise(X, Y);
                 noiseValArr[X + Y * width] = noiseVal;
                 if(noiseVal >= 0.0){
-                    tileMap.SetCell(ground,new Vector2I(X,Y),0,dirtAtlas,0);
+                    tileMap.SetCell(ground,new Vector2I(X,Y),0,tile1,0);
                     if (rand.Next(3) == 0){
-                    tileMap.SetCell(ground1, new Vector2I(X, Y), 0, seaweedAtlas, 0);
+                    tileMap.SetCell(ground1, new Vector2I(X, Y), 0, tile2, 0);
                     }
                 }
                  else if(noiseVal >= -0.5){
-                    tileMap.SetCell(ground1,new Vector2I(X,Y),0,grassAtlas,0);
+                    tileMap.SetCell(ground1,new Vector2I(X,Y),0,tile3,0);
                     if (rand.Next(3) == 0){
-                    tileMap.SetCell(ground1, new Vector2I(X, Y), 0, dirtAtlas, 0);
+                    tileMap.SetCell(ground1, new Vector2I(X, Y), 0, tile1, 0);
                     }
                 }
                 else {
-                    tileMap.SetCell(ground2,new Vector2I(X,Y),0,dirtAtlas,0);
+                    tileMap.SetCell(ground2,new Vector2I(X,Y),0,tile1,0);
                     if (rand.Next(9) == 0){
-                    tileMap.SetCell(ground2, new Vector2I(X, Y), 0, grassAtlas, 0);
+                    tileMap.SetCell(ground2, new Vector2I(X, Y), 0, tile3, 0);
                     } 
                 }
             
