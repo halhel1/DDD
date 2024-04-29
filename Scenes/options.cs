@@ -46,6 +46,11 @@ public partial class options : Control
 	GetTree().Quit();
 	}
 
+	private void _on_Language_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://language/language_setting.tscn");
+	}
+
 }
 
 

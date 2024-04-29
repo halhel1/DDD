@@ -1,5 +1,3 @@
-res://language/localization.en.translation
-res://language/localization.zh.translation
 res://Scenes/Player/player.tscn
 res://TempResources/custombuttons.tres
 res://Scripts/shader.gdshader
@@ -26,3 +24,6 @@ res://Scenes/Menu/MainMenu.cs
 res://Scenes/obstacleSpawner.cs
 res://Scenes/options.cs
 res://Scenes/spawner.cs
+res://language/localization.en.translation
+res://language/localization.zh.translation
+res://Scenes/proc_gen.cs
