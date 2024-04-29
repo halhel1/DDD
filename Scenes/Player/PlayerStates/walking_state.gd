@@ -9,14 +9,14 @@ var dodge_cooldown: float
 var dodge_speed_mult: float
 
 var alter_max_speed: int
+
+var player: Node = null
 var cooldown_timer: Node = null
 
-@onready var machine: StateMachine = get_parent()
-var player: Node = null
 
 #this is all pretty clunky but will work on fixing that later
 func _ready():
-	player = machine.get_parent()
+	player = get_parent().get_parent()
 	cooldown_timer = player.get_node("CooldownTimer")
 	
 	max_speed=player.max_speed
@@ -31,17 +31,11 @@ func _ready():
 
 func physics_update(delta):
 	movement_handler(delta)
-	
-	if Input.is_action_pressed("attack"):
-		attack()
-	
-	if player.velocity == Vector2.ZERO:
-		machine.transition_to("IdleState")
-	if player.current_health <= 0:
-		machine.transition_to("DeathState")
 
 func movement_handler(delta):
 	var direction: Vector2
+	
+	#dodging = false #temp for testing
 	
 	if (!dodging):
 		direction = get_input_direction()
@@ -55,6 +49,8 @@ func movement_handler(delta):
 	
 	else: #accelerate fast & direction locked while dodge
 		player.move_and_slide()
+
+
 
 func get_input_direction():
 	var direction: Vector2
@@ -91,8 +87,3 @@ func _on_dodge_timer_timeout():
 	max_speed = alter_max_speed
 	dodging = false
 	$DodgeTimer.stop()
-
-func attack():
-	var cursor_pos = get_viewport().get_mouse_position()
-	
-	pass
