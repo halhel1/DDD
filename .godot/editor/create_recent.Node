@@ -1,9 +1,11 @@
-RemoteTransform2D
-CollisionPolygon2D
-Area2D
+AnimatedSprite2D
+Camera2D
+VisibleOnScreenNotifier2D
 CollisionShape2D
 Sprite2D
-Camera2D
+Area2D
+RemoteTransform2D
+CollisionPolygon2D
 TileMap
 ShaderGlobalsOverride
 Timer
@@ -11,5 +13,3 @@ Node
 StateMachine
 StaticBody2D
 Marker2D
-Node2D
-Label
