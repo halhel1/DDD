@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/idle_state.gd" id="4_yryu6"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/walking_state.gd" id="5_4a82o"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/death_state.gd" id="6_wxmbt"]
-[ext_resource type="Texture2D" path="res://TempResources/deepDiver.svg" id="7_qouq5"]
+[ext_resource type="Texture2D" uid="uid://dyw0h7wkahf0w" path="res://TempResources/deepDiver.svg" id="7_qouq5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3wbu"]
 size = Vector2(50.7894, 26.8993)

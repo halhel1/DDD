@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b6t21fne0yyx5"]
 
 [ext_resource type="PackedScene" uid="uid://c5wobkd7611ot" path="res://Scenes/Levels/level_1_gen.tscn" id="1_hl2b8"]
-[ext_resource type="PackedScene" path="res://Scenes/shader.tscn" id="4_2qdaq"]
+[ext_resource type="PackedScene" uid="uid://f7jpagy8tgfy" path="res://Scenes/shader.tscn" id="4_2qdaq"]
 [ext_resource type="PackedScene" uid="uid://ntva6vdjjb7g" path="res://Scenes/Collectibles/collectibleSpawner.tscn" id="4_mg5es"]
 [ext_resource type="PackedScene" uid="uid://bw41lglmsvfru" path="res://Scenes/Enemies/enemySpawner.tscn" id="6_f5n0i"]
 
