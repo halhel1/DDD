@@ -27,6 +27,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 8.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 32
@@ -75,8 +79,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_k8hj5")
 theme_override_font_sizes/font_size = 64
-text = "Quit
-"
+text = "Quit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsVbox/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsVbox/Options" to="." method="_on_options_pressed"]
