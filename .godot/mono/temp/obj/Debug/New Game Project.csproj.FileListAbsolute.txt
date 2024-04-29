@@ -195,3 +195,21 @@ C:/Users/No Thanks/Desktop/DDD/Team-5/.godot/mono/temp/obj/Debug/ref/New Game Pr
 /Users/hussainalhelfi/Downloads/wdw/Team-5/.godot/mono/temp/obj/Debug/New Game Project.pdb
 /Users/hussainalhelfi/Downloads/wdw/Team-5/.godot/mono/temp/obj/Debug/New Game Project.genruntimeconfig.cache
 /Users/hussainalhelfi/Downloads/wdw/Team-5/.godot/mono/temp/obj/Debug/ref/New Game Project.dll
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\obj\Debug\New Game Project.csproj.AssemblyReference.cache
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\obj\Debug\New Game Project.GeneratedMSBuildEditorConfig.editorconfig
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\obj\Debug\New Game Project.AssemblyInfoInputs.cache
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\obj\Debug\New Game Project.AssemblyInfo.cs
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\obj\Debug\New Game Project.csproj.CoreCompileInputs.cache
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\obj\Debug\New Game Project.sourcelink.json
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\obj\Debug\New Game Project.dll
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\obj\Debug\refint\New Game Project.dll
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\obj\Debug\New Game Project.pdb
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\bin\Debug\New Game Project.deps.json
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\bin\Debug\New Game Project.runtimeconfig.json
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\bin\Debug\New Game Project.dll
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\bin\Debug\New Game Project.pdb
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\bin\Debug\GodotSharp.dll
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\obj\Debug\New Game Project.csproj.CopyComplete
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\obj\Debug\New Game Project.genruntimeconfig.cache
+F:\Github Desktop Clone\Team-5\.godot\mono\temp\obj\Debug\ref\New Game Project.dll

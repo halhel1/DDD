@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://djtj54lsqcpt6"]
 
-[ext_resource type="Script" path="res://language/language_setting.cs" id="1_apmch"]
 [ext_resource type="FontFile" uid="uid://bv8ny1vjw7q08" path="res://fonts/StayPixelRegular-EaOxl.ttf" id="1_glocy"]
+[ext_resource type="Script" path="res://language/language_setting.gd" id="1_hhbph"]
 [ext_resource type="Theme" uid="uid://b4qps1aut45o2" path="res://TempResources/custombuttons.tres" id="2_d6oby"]
 
 [sub_resource type="Theme" id="Theme_qatqf"]
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_apmch")
+script = ExtResource("1_hhbph")
 
 [node name="BG Color" type="ColorRect" parent="."]
 layout_mode = 1
@@ -53,11 +53,16 @@ layout_mode = 2
 size_flags_vertical = 10
 theme = ExtResource("2_d6oby")
 
-[node name="Change Language" type="Button" parent="MarginContainer/VBoxContainer/ButtonsVbox"]
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/ButtonsVbox"]
 layout_mode = 2
+auto_translate = false
 theme_override_fonts/font = ExtResource("1_glocy")
 theme_override_font_sizes/font_size = 64
-text = "Change Language"
+item_count = 2
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Chinese/中文"
+popup/item_1/id = 1
 
 [node name="Return" type="Button" parent="MarginContainer/VBoxContainer/ButtonsVbox"]
 layout_mode = 2
@@ -65,4 +70,5 @@ theme_override_fonts/font = ExtResource("1_glocy")
 theme_override_font_sizes/font_size = 64
 text = "Return"
 
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/ButtonsVbox/OptionButton" to="." method="_on_option_button_item_selected"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsVbox/Return" to="." method="_on_return_pressed"]

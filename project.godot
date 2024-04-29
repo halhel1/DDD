@@ -11,6 +11,10 @@ config_version=5
 [application]
 
 config/name="DDD"
+config/name_localized={
+"en_US": "English",
+"zh_CN": "Chinese"
+}
 run/main_scene="res://Scenes/Menu/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -61,7 +65,7 @@ dodge={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://language/language.en.translation", "res://language/language.zh.translation")
+locale/translations=PackedStringArray("res://language/localization.en.translation", "res://language/localization.zh.translation")
 
 [rendering]
 
