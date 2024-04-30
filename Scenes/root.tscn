@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2qyk02xf5hkv"]
+[gd_scene load_steps=4 format=3 uid="uid://b2qyk02xf5hkv"]
 
 [ext_resource type="PackedScene" uid="uid://82a20eu1aqyu" path="res://Scenes/Player/player.tscn" id="1_nqsxe"]
 [ext_resource type="PackedScene" uid="uid://b6t21fne0yyx5" path="res://Scenes/level0.tscn" id="2_olmta"]
+[ext_resource type="PackedScene" uid="uid://cn3jnaf6m67fk" path="res://Scenes/pause_menu.tscn" id="3_spbhg"]
 
 [node name="Root" type="Node2D"]
+process_mode = 3
 position = Vector2(70, 79)
 scale = Vector2(1, 1.002)
 
@@ -11,11 +13,11 @@ scale = Vector2(1, 1.002)
 position = Vector2(-217, -337.325)
 
 [node name="Player" parent="." instance=ExtResource("1_nqsxe")]
+process_mode = 3
 position = Vector2(172, -126.747)
 scale = Vector2(0.433151, 0.495604)
-max_health = null
-max_speed = null
-acceleration = null
-dodge_time = null
-dodge_cooldown = null
-dodge_speed_multiplier = null
+dodge_time = 0.5
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_spbhg")]
