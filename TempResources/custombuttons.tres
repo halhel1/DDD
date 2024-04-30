@@ -1,7 +1,7 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://b4qps1aut45o2"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://bg8wle0jnrveu"]
 
-[ext_resource type="FontFile" uid="uid://bwr4dvi3aclsw" path="res://fonts/NotoSans-Regular.ttf" id="1_4xk7n"]
-[ext_resource type="FontFile" uid="uid://dgdwkoywnpnat" path="res://fonts/NotoSansSC-Regular.ttf" id="2_qxg26"]
+[ext_resource type="FontFile" uid="uid://cg47j0ebpuoyu" path="res://fonts/NotoSans-Regular.ttf" id="1_4xk7n"]
+[ext_resource type="FontFile" uid="uid://3sroivii0c8a" path="res://fonts/NotoSansSC-Regular.ttf" id="2_qxg26"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pr5c2"]
 bg_color = Color(0.360784, 0.694118, 1, 1)
