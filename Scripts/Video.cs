@@ -61,18 +61,13 @@ private void _on_language_item_selected(long index)
 		if (index == 0)
 		{
 			TranslationServer.SetLocale("en");
-			languageSet = true;
 		}
 		else if (index == 1)
 		{
 			TranslationServer.SetLocale("zh");
-			languageSet = true;
 		}
 	}
-private bool LanguageSet()
-	{
-		return languageSet;
-	}
+
 }
 
 
