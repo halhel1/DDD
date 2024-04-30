@@ -27,9 +27,9 @@ func _process(_delta):
 		fire()
 	animate()
 
-func _input(event):
-	if event.is_action_pressed("ui_cancel"):
-		get_tree().change_scene_to_file("res://Scenes/options.tscn")
+#func _input(event):
+	#if event.is_action_pressed("ui_cancel"):
+		#get_tree().change_scene_to_file("res://Scenes/options.tscn")
 
 func take_damage(amount):
 	current_health -= amount
