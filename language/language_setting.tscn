@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://bv8ny1vjw7q08" path="res://fonts/StayPixelRegular-EaOxl.ttf" id="1_glocy"]
 [ext_resource type="Script" path="res://language/language_setting.gd" id="1_hhbph"]
-[ext_resource type="Theme" uid="uid://b4qps1aut45o2" path="res://TempResources/custombuttons.tres" id="2_d6oby"]
+[ext_resource type="Theme" uid="uid://bg8wle0jnrveu" path="res://TempResources/custombuttons.tres" id="2_d6oby"]
 
 [sub_resource type="Theme" id="Theme_qatqf"]
 
