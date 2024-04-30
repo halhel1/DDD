@@ -30,7 +30,7 @@ func _on_resume_pressed():
 
 func _on_restart_pressed():
 	set_paused(false)
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://Scenes/Levels/level_1.tscn")
 
 
 
@@ -43,7 +43,9 @@ func _on_quit_pressed():
 
 
 func _on_main_menu_pressed():
+	set_paused(false)
 	get_tree().change_scene_to_file("res://Scenes/Menu/MainMenu.tscn")
+	
 
 
 func _on_fullscreen_toggled(toggled_on):
