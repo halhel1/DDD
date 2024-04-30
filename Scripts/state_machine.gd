@@ -1,11 +1,10 @@
-# Generic state machine
+#Generic State Machine, feel free to use whenever you need states.
+#Changing this code will mess with player a lot
 class_name StateMachine extends Node
 
-# Emit when transitioning to a new state.
+#Can emit a signal when transitioning to a new state.
 signal transitioned(state_name)
-
-@export var initial_state : NodePath = NodePath("WalkingState")
-
+@export var initial_state : NodePath = NodePath("IdleState")
 @onready var state: State = get_node(initial_state)
 
 func _ready() -> void:

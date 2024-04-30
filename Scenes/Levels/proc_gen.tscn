@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqngml6rf8ay4"]
+[gd_scene load_steps=5 format=3 uid="uid://bfv66g5uflg0h"]
 
-[ext_resource type="Script" path="res://Scenes/proc_gen.cs" id="1_xer3o"]
-[ext_resource type="Texture2D" uid="uid://cv7vxmkeg2ykm" path="res://TempResources/16x16/Tilesets/spritesheet.png" id="2_ynmeq"]
+[ext_resource type="Script" path="res://Scenes/Levels/proc_gen.cs" id="1_xer3o"]
+[ext_resource type="Texture2D" uid="uid://cv7vxmkeg2ykm" path="res://Art/16x16/Tilesets/spritesheet.png" id="2_ynmeq"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ljm0"]
 texture = ExtResource("2_ynmeq")

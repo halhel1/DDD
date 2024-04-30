@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://82a20eu1aqyu"]
+[gd_scene load_steps=38 format=3 uid="uid://82a20eu1aqyu"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_oa1ny"]
 [ext_resource type="Script" path="res://Scripts/state_machine.gd" id="3_ljpdt"]
@@ -10,21 +10,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3wbu"]
 size = Vector2(50.7894, 26.8993)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0d20f"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qexq"]
+atlas = ExtResource("7_qouq5")
+region = Rect2(0, 288, 28, 39)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xapi8"]
-bg_color = Color(1, 0.305882, 0.490196, 1)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0i1dx"]
-radius = 35.7498
-height = 100.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gvtcs"]
-bg_color = Color(1, 1, 1, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rel7"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_0p7ra"]
+atlas = ExtResource("7_qouq5")
+region = Rect2(33, 288, 28, 39)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_032dn"]
 atlas = ExtResource("7_qouq5")
@@ -41,6 +33,14 @@ region = Rect2(66, 336, 28, 39)
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ixry"]
 atlas = ExtResource("7_qouq5")
 region = Rect2(99, 336, 28, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cx2do"]
+atlas = ExtResource("7_qouq5")
+region = Rect2(0, 192, 28, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yve7"]
+atlas = ExtResource("7_qouq5")
+region = Rect2(33, 192, 28, 39)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mfxyj"]
 atlas = ExtResource("7_qouq5")
@@ -82,6 +82,14 @@ region = Rect2(66, 48, 28, 39)
 atlas = ExtResource("7_qouq5")
 region = Rect2(99, 48, 28, 39)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmng8"]
+atlas = ExtResource("7_qouq5")
+region = Rect2(0, 96, 28, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvged"]
+atlas = ExtResource("7_qouq5")
+region = Rect2(33, 96, 28, 39)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_job07"]
 atlas = ExtResource("7_qouq5")
 region = Rect2(0, 144, 28, 39)
@@ -102,6 +110,17 @@ region = Rect2(99, 144, 28, 39)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_3qexq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0p7ra")
+}],
+"loop": true,
+"name": &"b_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_032dn")
 }, {
 "duration": 1.0,
@@ -116,6 +135,17 @@ animations = [{
 "loop": true,
 "name": &"b_walk",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cx2do")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yve7")
+}],
+"loop": true,
+"name": &"br_idle",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -164,6 +194,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_nmng8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvged")
+}],
+"loop": true,
+"name": &"fr_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_job07")
 }, {
 "duration": 1.0,
@@ -180,6 +221,22 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0d20f"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xapi8"]
+bg_color = Color(1, 0.305882, 0.490196, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0i1dx"]
+radius = 35.7498
+height = 100.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gvtcs"]
+bg_color = Color(0, 0.803922, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rel7"]
+bg_color = Color(1, 1, 1, 1)
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 4
 y_sort_enabled = true
@@ -192,6 +249,12 @@ position = Vector2(1.9861, 33)
 scale = Vector2(0.870077, 1.0246)
 shape = SubResource("RectangleShape2D_p3wbu")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.9861, -5)
+scale = Vector2(2.59076, 2.44231)
+sprite_frames = SubResource("SpriteFrames_n0c7s")
+animation = &"br_idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 5)
@@ -250,12 +313,6 @@ one_shot = true
 
 [node name="DeathState" type="Node" parent="StateMachine"]
 script = ExtResource("6_wxmbt")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1.9861, -5)
-scale = Vector2(2.59076, 2.44231)
-sprite_frames = SubResource("SpriteFrames_n0c7s")
-animation = &"f_idle"
 
 [connection signal="area_entered" from="PlayerHitbox" to="." method="_on_player_hitbox_area_entered"]
 [connection signal="area_exited" from="PlayerHitbox" to="." method="_on_player_hitbox_area_exited"]

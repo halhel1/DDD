@@ -13,4 +13,3 @@ scale = Vector2(1.007, 1)
 dodge_time = 0.5
 
 [node name="level0" parent="." instance=ExtResource("2_olmta")]
-position = Vector2(1, -8.98203)
