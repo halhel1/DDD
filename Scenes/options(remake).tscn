@@ -28,6 +28,7 @@ theme_override_fonts/font = ExtResource("2_qw7y8")
 
 [node name="Video" type="TabBar" parent="UI/Settings"]
 layout_mode = 2
+tooltip_text = "Video"
 theme_override_fonts/font = ExtResource("2_qw7y8")
 script = ExtResource("1_f744u")
 
@@ -133,12 +134,12 @@ grow_vertical = 0
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.866667, 0.87451, 1)
 theme_override_fonts/font = ExtResource("2_qw7y8")
-text = "Return
-"
+text = "Return"
 
 [node name="Audio" type="TabBar" parent="UI/Settings"]
 visible = false
 layout_mode = 2
+tooltip_text = "Audio"
 theme_override_fonts/font = ExtResource("2_qw7y8")
 script = ExtResource("2_lvk5p")
 
@@ -165,7 +166,7 @@ theme_override_constants/separation = 17
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.866667, 0.87451, 1)
 theme_override_fonts/font = ExtResource("2_qw7y8")
-text = "Master"
+text = "Master_Music"
 
 [node name="Music" type="Label" parent="UI/Settings/Audio/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -211,6 +212,7 @@ bus_name = "SFX"
 [node name="Controls" type="TabBar" parent="UI/Settings"]
 visible = false
 layout_mode = 2
+tooltip_text = "Controls"
 theme_override_colors/font_selected_color = Color(0, 0.866667, 0.87451, 1)
 theme_override_fonts/font = ExtResource("2_qw7y8")
 script = SubResource("GDScript_60op7")
