@@ -9,7 +9,7 @@ public partial class MainMenu : Control
 private void _on_start_pressed()
 {
 	
-	GetTree().ChangeSceneToFile("res://Scenes/root.tscn");
+	GetTree().ChangeSceneToFile("res://Scenes/Levels/level_1.tscn");
 	
 }
 
