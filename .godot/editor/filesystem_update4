@@ -21,3 +21,6 @@ res://Scenes/obstacleSpawner.cs
 res://Scenes/spawner.cs
 res://Scripts/Video.cs
 res://Scenes/Player/player.gd
+res://Scenes/shader.tscn
+res://Scenes/scene_transition.tscn
+res://Scenes/ocean_shader.tscn

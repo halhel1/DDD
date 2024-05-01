@@ -33,6 +33,7 @@ MasterSlider="*res://Audio/master_slider.gd"
 
 window/size/initial_position=Vector2i(435, 410)
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="res://TempResources/cursor.svg"
 
 [dotnet]
 
