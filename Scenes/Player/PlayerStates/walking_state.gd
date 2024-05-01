@@ -7,6 +7,8 @@ var can_dodge: bool = true
 var dodge_time: float 
 var dodge_cooldown: float 
 var dodge_speed_mult: float
+@onready var sfx_dodge = $"../../sfx_dodge"
+
 
 var alter_max_speed: int
 
@@ -46,6 +48,8 @@ func movement_handler(delta):
 		player.move_and_slide()
 		if Input.is_action_just_pressed("dodge")&&can_dodge:
 			dodge()
+			sfx_dodge.play()
+			
 	
 	else: #accelerate fast & direction locked while dodge
 		player.move_and_slide()
