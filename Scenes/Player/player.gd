@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+#Able to alter any of these values for upgrades
 @export var max_health: float = 100
 var current_health:= max_health 
 
@@ -10,7 +11,6 @@ var current_health:= max_health
 @export var dodge_speed_multiplier: float = 2
 @onready var sfx_shoot = $sfx_shoot
 @onready var sfx_take_damage = $sfx_take_damage
-
 
 var invunerable: bool = false
 var is_dead: bool =false
@@ -28,12 +28,13 @@ func _process(_delta):
 	$AnimatedSprite2D.play()
 	if Input.is_action_just_pressed("attack"):
 		fire()
-	animate()
 
 #func _input(event):
 	#if event.is_action_pressed("ui_cancel"):
 		#get_tree().change_scene_to_file("res://Scenes/options.tscn")
 
+#I am working on making the weapon firing easier to reuse and alter,
+#Coming in a future commit
 func take_damage(amount):
 	sfx_take_damage.play()
 	current_health -= amount
@@ -42,14 +43,13 @@ func take_damage(amount):
 		die();
 
 func fire():
-
 	var projectile = projectile_scene.instantiate()
 	projectile.direction = get_global_mouse_position() - $AnimatedSprite2D.global_position
 	projectile.global_position = $AnimatedSprite2D.global_position
-	projectile.speed = 700
+	projectile.speed = 1000
+	projectile.damage_amount = 40
 	get_tree().get_root().add_child(projectile)
 	sfx_shoot.play()
-	
 
 func die():
 	is_dead=true
@@ -76,37 +76,3 @@ func _on_player_hitbox_area_exited(area):
 func _on_damage_timer_timeout():
 	for enemy in enemies_in_hitbox:
 		take_damage(15)
-
-
-func animate():
-	var direction: Vector2
-	direction.x = Input.get_action_strength("moveRight") - Input.get_action_strength("moveLeft")
-	direction.y = Input.get_action_strength("moveDown") - Input.get_action_strength("moveUp")
-	match(direction):
-		Vector2(0,0):
-			$AnimatedSprite2D.animation = "f_idle"
-			$AnimatedSprite2D.flip_h = false
-		Vector2(0,-1):
-			$AnimatedSprite2D.animation = "b_walk"
-			$AnimatedSprite2D.flip_h = false
-		Vector2(0,1):
-			$AnimatedSprite2D.animation = "f_walk"
-			$AnimatedSprite2D.flip_h = false
-		Vector2(-1,0):
-			$AnimatedSprite2D.animation = "fr_walk"
-			$AnimatedSprite2D.flip_h = true
-		Vector2(-1,-1):
-			$AnimatedSprite2D.animation = "br_walk"
-			$AnimatedSprite2D.flip_h = true
-		Vector2(-1,1):
-			$AnimatedSprite2D.animation = "fr_walk"
-			$AnimatedSprite2D.flip_h = true
-		Vector2(1,0):
-			$AnimatedSprite2D.animation = "fr_walk"
-			$AnimatedSprite2D.flip_h = false
-		Vector2(1,-1):
-			$AnimatedSprite2D.animation = "br_walk"
-			$AnimatedSprite2D.flip_h = false
-		Vector2(1,1):
-			$AnimatedSprite2D.animation = "fr_walk"
-			$AnimatedSprite2D.flip_h = false
