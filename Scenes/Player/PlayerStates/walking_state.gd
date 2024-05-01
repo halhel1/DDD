@@ -7,6 +7,8 @@ var can_dodge: bool = true
 var dodge_time: float 
 var dodge_cooldown: float 
 var dodge_speed_mult: float
+@onready var sfx_dodge = $"../../sfx_dodge"
+
 
 var alter_max_speed: int
 
@@ -15,7 +17,6 @@ var animator: Node = null
 var cooldown_timer: Node = null
 
 
-#this is all pretty clunky but will work on fixing that later
 func _ready():
 	player = get_parent().get_parent()
 	animator = player.get_node("AnimatedSprite2D")
@@ -26,6 +27,7 @@ func _ready():
 	dodge_time=player.dodge_time
 	dodge_cooldown=player.dodge_cooldown
 	dodge_speed_mult = player.dodge_speed_multiplier
+	
 	alter_max_speed = max_speed
 	$DodgeTimer.wait_time = dodge_time
 	cooldown_timer.wait_time = dodge_cooldown
@@ -34,7 +36,7 @@ func physics_update(delta):
 	movement_handler(delta)
 
 func movement_handler(delta):
-	var direction: Vector2 
+	var direction: Vector2
 	if (!dodging):
 		direction = get_input_direction()
 		if direction == Vector2.ZERO:
@@ -45,7 +47,10 @@ func movement_handler(delta):
 		player.move_and_slide()
 		if Input.is_action_just_pressed("dodge")&&can_dodge:
 			dodge()
-	else: #accelerate fast & direction locked while dodging
+			sfx_dodge.play()
+			
+	
+	else: #accelerate fast & direction locked while dodge
 		player.move_and_slide()
 
 
@@ -83,7 +88,7 @@ func get_input_direction():
 	return direction.normalized()
 
 func accelerate(magnitude):
-	#add to velocity until reach max speed
+		#add to velocity until reach max speed
 	#at that point, get unit vector and scalar mult
 	player.velocity += magnitude
 	if player.velocity.length() > max_speed:

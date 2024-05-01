@@ -2,13 +2,15 @@ extends CharacterBody2D
 
 #Able to alter any of these values for upgrades
 @export var max_health: float = 100
-var current_health= max_health
+var current_health:= max_health 
 
 @export var max_speed: int = 350
 @export var acceleration: int = 3500
 @export var dodge_time: float = 0.5
 @export var dodge_cooldown: float = 3
 @export var dodge_speed_multiplier: float = 2
+@onready var sfx_shoot = $sfx_shoot
+@onready var sfx_take_damage = $sfx_take_damage
 
 var invunerable: bool = false
 var is_dead: bool =false
@@ -23,29 +25,31 @@ func ready():
 
 func _process(_delta):
 	$CooldownBar.value = $CooldownTimer.time_left
-	#Play animation, animations are selected in state nodes
 	$AnimatedSprite2D.play()
 	if Input.is_action_just_pressed("attack"):
 		fire()
 
-func _input(event):
-	if event.is_action_pressed("ui_cancel"):
-		get_tree().change_scene_to_file("res://Scenes/options.tscn")
+#func _input(event):
+	#if event.is_action_pressed("ui_cancel"):
+		#get_tree().change_scene_to_file("res://Scenes/options.tscn")
 
+#I am working on making the weapon firing easier to reuse and alter,
+#Coming in a future commit
 func take_damage(amount):
+	sfx_take_damage.play()
 	current_health -= amount
 	$HealthBar.value = current_health
 	if current_health<=0:
 		die();
 
-#I am working on making the weapon firing easier to reuse and alter,
-#Coming in a future commit
 func fire():
 	var projectile = projectile_scene.instantiate()
 	projectile.direction = get_global_mouse_position() - $AnimatedSprite2D.global_position
 	projectile.global_position = $AnimatedSprite2D.global_position
 	projectile.speed = 700
 	get_tree().get_root().add_child(projectile)
+	sfx_shoot.play()
+	
 
 func die():
 	is_dead=true
@@ -68,7 +72,7 @@ func _on_player_hitbox_area_exited(area):
 	if area.is_in_group("enemy"):
 		enemies_in_hitbox.erase(area)
 		$damageTimer.stop()
-
+	
 func _on_damage_timer_timeout():
 	for enemy in enemies_in_hitbox:
 		take_damage(15)

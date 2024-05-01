@@ -17,3 +17,22 @@ Language,Language,语言
 Return,Return,返回
 English,English,English
 Chinese,Chinese,中文
+Video,Video,图像
+Audio,Audio,音频
+Controls,Controls,操作
+Return,Return,返回
+Fullscreen,Fullscreen,全屏
+Borderless,Borderless,无边框
+Disabled,Disabled,关闭
+Enabled,Enabled,开启
+Adaptive,Adaptive,自适应
+Nvidia DLSS,Nvidia DLSS,Nvidia DLSS
+Master_Music,Master,主音量
+Music,Music,音乐
+SFX,SFX,音效
+Game,Game,游戏
+Paused_Settings,settings,设置
+Resume,Resume,恢复游戏
+Restart,Restart,重新开始
+Main Menu,Main Menu,主菜单
+Game Paused,Game Paused,游戏暂停

@@ -1,9 +1,18 @@
 res://TempResources
-res://Scenes/Levels
-res://Scenes/Player
 res://language
+res://Audio
+res://Scenes
 res://
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 res://Scenes/Enemies
 res://TempResources/16x16/Sprites
-res://Scenes/Menu
 res://Scenes
+=======
+res://Scenes
+res://TempResources/16x16/Sprites
+res://Scenes/Levels
+res://Scenes/Player
+res://Scenes/Enemies
+>>>>>>> Stashed changes
+res://Scenes/Menu
