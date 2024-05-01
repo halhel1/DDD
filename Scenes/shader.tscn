@@ -19,6 +19,6 @@ top_level = true
 z_index = 7
 y_sort_enabled = true
 material = SubResource("ShaderMaterial_nuq8i")
-position = Vector2(275, 88)
+position = Vector2(257, 102)
 scale = Vector2(1, 0.816406)
 texture = SubResource("NoiseTexture2D_so3by")

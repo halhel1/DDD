@@ -1,3 +1,4 @@
+ProgressBar
 AudioStreamPlayer2D
 CanvasLayer
 VBoxContainer
@@ -12,4 +13,3 @@ VisibleOnScreenNotifier2D
 Node
 OptionButton
 RemoteTransform2D
-CollisionPolygon2D

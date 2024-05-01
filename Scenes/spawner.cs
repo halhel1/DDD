@@ -20,26 +20,22 @@ private List<Vector2>spawnPositions=new List<Vector2>();
 		player=(Node2D)playerScene.Instantiate();
 	}
 
-	public override void _Process(double delta)
-	{
+	public void setEntity(PackedScene entityScene, float entityRadius){
+		this.entityScene=entityScene;
+		this.entityRadius=entityRadius;
 	}
-    public void setEntity(PackedScene entityScene, float entityRadius){
-        this.entityScene=entityScene;
-        this.entityRadius=entityRadius;
-
-    }
 
 	 protected void spawnEntities(int numEntities,Color[]colors,string sprite)
-    {
+	{
 		spawnPositions.Clear();
-        for (int i = 0; i < numEntities; i++)
-        {
+		for (int i = 0; i < numEntities; i++)
+		{
 			Vector2 randomPos;
 			float randomScale;
 			bool posValid=false;
 			do{
 			float randomX = (float)random.NextDouble() * (maxX - minX) + minX;
-            float randomY = (float)random.NextDouble() * (maxY - minY) + minY;
+			float randomY = (float)random.NextDouble() * (maxY - minY) + minY;
 			randomPos = new Vector2(randomX, randomY);
 			randomScale=(float)random.NextDouble()*(float)(0.9-0.2)+(float)0.8;
 			float effectiveRadius = entityRadius * randomScale;
@@ -47,8 +43,8 @@ private List<Vector2>spawnPositions=new List<Vector2>();
 			}
 			while(!posValid);
 			spawnPositions.Add(randomPos);
-            Node2D entityInstance = (Node2D)entityScene.Instantiate();
-            entityInstance.Position = randomPos;
+			Node2D entityInstance = (Node2D)entityScene.Instantiate();
+			entityInstance.Position = randomPos;
 			entityInstance.Scale=new Vector2(randomScale,randomScale);
 			AnimatedSprite2D entitySprite=entityInstance.GetNode<Godot.AnimatedSprite2D>(sprite);
 			if(entitySprite!=null){
@@ -57,19 +53,19 @@ private List<Vector2>spawnPositions=new List<Vector2>();
 				entitySprite.Modulate *= colors[colorIndex];
 			}
 			AddChild(entityInstance);
-        }
-    }
+		}
+	}
 
 	 protected void spawnEntities(int numEntities)
-    {
-        for (int i = 0; i < numEntities; i++)
-        {
+	{
+		for (int i = 0; i < numEntities; i++)
+		{
 			Vector2 randomPos;
 			float randomScale;
 			bool posValid=false;
 			do{
 			float randomX = (float)random.NextDouble() * (maxX - minX) + minX;
-            float randomY = (float)random.NextDouble() * (maxY - minY) + minY;
+			float randomY = (float)random.NextDouble() * (maxY - minY) + minY;
 			randomPos = new Vector2(randomX, randomY);
 			randomScale=(float)random.NextDouble()*(float)(0.9-0.2)+(float)0.8;
 			float effectiveRadius=entityRadius * randomScale;
@@ -77,48 +73,42 @@ private List<Vector2>spawnPositions=new List<Vector2>();
 			}
 			while(!posValid);
 			spawnPositions.Add(randomPos);
-            Node2D entityInstance = (Node2D)entityScene.Instantiate();
-            entityInstance.Position = randomPos;
+			Node2D entityInstance = (Node2D)entityScene.Instantiate();
+			entityInstance.Position = randomPos;
 			entityInstance.Scale=new Vector2(randomScale,randomScale);
 			AddChild(entityInstance);
-        }
-    }
-
-	protected virtual bool isValidEntity(Vector2 newPos,float effectiveRadius){
-
-		foreach (Node child in GetChildren())
-        {
-			
-            if (child is Node2D entity && newPos.DistanceTo(entity.Position) < effectiveRadius)
-            {
-                return false;
-            }
-			  
-        }
-        return true;
-		
-
+		}
 	}
 
-	
+	protected virtual bool isValidEntity(Vector2 newPos,float effectiveRadius){
+		foreach (Node child in GetChildren())
+		{
+			if (child is Node2D entity && newPos.DistanceTo(entity.Position) < effectiveRadius)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
 
 	private bool isPlayerClose(Vector2 newPos)
 {
 	
-    if (player != null && player.Position != null)
-    {
-            if (ManhattanDistance(player.Position,newPos) < entityRadius * 3)
-            {
-                return true;
-            }
-        
-    }
-    return false;
+	if (player != null && player.Position != null)
+	{
+			if (ManhattanDistance(player.Position,newPos) < entityRadius * 3)
+			{
+				return true;
+			}
+		
+	}
+	return false;
 }
+
 	protected virtual float ManhattanDistance(Vector2 pointA, Vector2 pointB)
-    {
-        float deltaX = Math.Abs(pointA.X - pointB.X);
-        float deltaY = Math.Abs(pointA.Y - pointB.Y);
-        return deltaX + deltaY;
-    }
+	{
+		float deltaX = Math.Abs(pointA.X - pointB.X);
+		float deltaY = Math.Abs(pointA.Y - pointB.Y);
+		return deltaX + deltaY;
+	}
 }

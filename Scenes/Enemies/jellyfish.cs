@@ -18,12 +18,13 @@ public partial class jellyfish : CharacterBody2D
 	private float recoveryTime = 0.5f;
 	private float recoveryTimer = 0.0f;
 	private bool isIdle=false;
-	
 	[Export] private float max_health = 200;
 	private float health;
 	
 	public override void _Ready()
 	{
+		GetNode<Godot.ProgressBar>("HealthBar").MaxValue=max_health;
+		GetNode<Godot.ProgressBar>("HealthBar").Value=max_health;
 		health = max_health;
 		enemySprite=GetNode<Godot.AnimatedSprite2D>("jellyfishSprite");
 		enemySprite.Play("idle");
@@ -67,6 +68,7 @@ public partial class jellyfish : CharacterBody2D
 			break;
         }
 	}
+
 	 private void MoveTowardsPlayer(double delta)
     {
      if (player is Area2D kinematicPlayer)
@@ -85,7 +87,6 @@ public partial class jellyfish : CharacterBody2D
 		player=body;
 		playerChase=true;
 		}
-		
 	}
 
 	private void _on_detection_area_area_exited(Node body){
@@ -96,18 +97,14 @@ public partial class jellyfish : CharacterBody2D
 	}
 	private void _on_enemy_hitbox_area_entered(Node body){
 	 if (body.IsInGroup("player") && currentState != enemyState.Recover)
-    {
-        currentState = enemyState.Attack;
-    }
-	 
-}
-	private void _on_enemy_hitbox_area_exited(Node body){
-		if(body.IsInGroup("attack")){
-			
-		}
+	{
+		currentState = enemyState.Attack;
 	}
+}
+
 	public void damage(float damageAmount){
 		health -= damageAmount;
+		GetNode<Godot.ProgressBar>("HealthBar").Value = health;
 		if(health <= 0){
 			QueueFree();
 		}

@@ -9,13 +9,10 @@ var dodge_cooldown: float
 var dodge_speed_mult: float
 @onready var sfx_dodge = $"../../sfx_dodge"
 
-
 var alter_max_speed: int
-
 var player: Node = null
 var animator: Node = null
 var cooldown_timer: Node = null
-
 
 func _ready():
 	player = get_parent().get_parent()
@@ -32,10 +29,10 @@ func _ready():
 	$DodgeTimer.wait_time = dodge_time
 	cooldown_timer.wait_time = dodge_cooldown
 
-func physics_update(delta):
+func physics_update(delta: float) -> void: 
 	movement_handler(delta)
 
-func movement_handler(delta):
+func movement_handler(delta) -> void:
 	var direction: Vector2
 	if (!dodging):
 		direction = get_input_direction()
@@ -48,14 +45,12 @@ func movement_handler(delta):
 		if Input.is_action_just_pressed("dodge")&&can_dodge:
 			dodge()
 			sfx_dodge.play()
-			
-	
 	else: #accelerate fast & direction locked while dodge
 		player.move_and_slide()
 
 
 
-func get_input_direction():
+func get_input_direction() -> Vector2:
 	var direction: Vector2
 	direction.x = Input.get_action_strength("moveRight") - Input.get_action_strength("moveLeft")
 	direction.y = Input.get_action_strength("moveDown") - Input.get_action_strength("moveUp")
@@ -87,14 +82,14 @@ func get_input_direction():
 			animator.flip_h = false
 	return direction.normalized()
 
-func accelerate(magnitude):
+func accelerate(magnitude) -> void:
 		#add to velocity until reach max speed
 	#at that point, get unit vector and scalar mult
 	player.velocity += magnitude
 	if player.velocity.length() > max_speed:
 		player.velocity = player.velocity.normalized() * max_speed
 
-func dodge():
+func dodge() -> void:
 	dodging = true
 	can_dodge = false
 	max_speed *= dodge_speed_mult
@@ -102,11 +97,11 @@ func dodge():
 	$DodgeTimer.start()
 	cooldown_timer.start()
 
-func _on_cooldown_timer_timeout():
+func _on_cooldown_timer_timeout() -> void:
 	can_dodge = true
 	cooldown_timer.stop()
 
-func _on_dodge_timer_timeout():
+func _on_dodge_timer_timeout() -> void:
 	#reset speed and stop dodge
 	max_speed = alter_max_speed
 	dodging = false

@@ -12,7 +12,7 @@ func physics_update(_delta: float) -> void:
 	if (Input.get_action_strength("moveRight")||Input.get_action_strength("moveLeft")||
 	Input.get_action_strength("moveDown")||Input.get_action_strength("moveUp")): state_machine.transition_to("WalkingState")
 
-func animate():
+func animate() -> void:
 	var cursor_position = animator.get_global_mouse_position()
 	var player_position = animator.global_position
 	var angle_to_cursor = (cursor_position - player_position).angle()
