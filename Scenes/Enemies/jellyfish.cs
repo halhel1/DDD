@@ -68,6 +68,7 @@ public partial class jellyfish : CharacterBody2D
 			break;
 		}
 	}
+
 	 private void MoveTowardsPlayer(double delta)
 	{
 	 if (player is Area2D kinematicPlayer)
@@ -86,7 +87,6 @@ public partial class jellyfish : CharacterBody2D
 		player=body;
 		playerChase=true;
 		}
-		
 	}
 
 	private void _on_detection_area_area_exited(Node body){
@@ -100,15 +100,9 @@ public partial class jellyfish : CharacterBody2D
 	{
 		currentState = enemyState.Attack;
 	}
-	 
 }
-	private void _on_enemy_hitbox_area_exited(Node body){
-		if(body.IsInGroup("attack")){
-			
-		}
-	}
+
 	public void damage(float damageAmount){
-		
 		health -= damageAmount;
 		GetNode<Godot.ProgressBar>("HealthBar").Value = health;
 		if(health <= 0){

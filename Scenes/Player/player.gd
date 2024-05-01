@@ -9,13 +9,14 @@ var current_health:= max_health
 @export var dodge_time: float = 0.5
 @export var dodge_cooldown: float = 3
 @export var dodge_speed_multiplier: float = 2
-@onready var sfx_shoot = $sfx_shoot
-@onready var sfx_take_damage = $sfx_take_damage
+
+@onready var sfx_shoot: Node = $sfx_shoot
+@onready var sfx_take_damage: Node = $sfx_take_damage
 
 var invunerable: bool = false
 var is_dead: bool =false
 var enemies_in_hitbox:Array =[];
-var projectile_scene = preload("res://Scenes/Attacks/AttackSuper.tscn")
+var projectile_scene: PackedScene = preload("res://Scenes/Attacks/AttackSuper.tscn")
 
 func ready():
 	$HealthBar.max_value = max_health
@@ -23,7 +24,7 @@ func ready():
 	$CooldownBar.max_value = dodge_cooldown
 	$damageTimer.timeout.connect(_on_damage_timer_timeout)
 
-func _process(_delta):
+func _process(_delta) -> void:
 	$CooldownBar.value = $CooldownTimer.time_left
 	$AnimatedSprite2D.play()
 	if Input.is_action_just_pressed("attack"):
@@ -35,14 +36,14 @@ func _process(_delta):
 
 #I am working on making the weapon firing easier to reuse and alter,
 #Coming in a future commit
-func take_damage(amount):
+func take_damage(amount) -> void:
 	sfx_take_damage.play()
 	current_health -= amount
 	$HealthBar.value = current_health
 	if current_health<=0:
 		die();
 
-func fire():
+func fire() -> void:
 	var projectile = projectile_scene.instantiate()
 	projectile.direction = get_global_mouse_position() - $AnimatedSprite2D.global_position
 	projectile.global_position = $AnimatedSprite2D.global_position
@@ -51,11 +52,11 @@ func fire():
 	get_tree().get_root().add_child(projectile)
 	sfx_shoot.play()
 
-func die():
+func die() -> void:
 	is_dead=true
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 
-func _on_player_hitbox_area_entered(area):
+func _on_player_hitbox_area_entered(area) -> void:
 	if area.is_in_group("seashell"):
 		print("shell collected")
 	if area.is_in_group("heart"):
@@ -68,12 +69,12 @@ func _on_player_hitbox_area_entered(area):
 		$damageTimer.start();
 		$HealthBar.value = current_health
 
-func _on_player_hitbox_area_exited(area):
+func _on_player_hitbox_area_exited(area) -> void:
 	if area.is_in_group("enemy"):
 		enemies_in_hitbox.erase(area)
 		$damageTimer.stop()
 	
-func _on_damage_timer_timeout():
+func _on_damage_timer_timeout() -> void:
 	for enemy in enemies_in_hitbox:
 		take_damage(15)
 

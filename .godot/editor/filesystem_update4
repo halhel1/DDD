@@ -24,3 +24,16 @@ res://Scenes/Player/player.gd
 res://Scenes/shader.tscn
 res://Scenes/scene_transition.tscn
 res://Scenes/ocean_shader.tscn
+res://Scenes/Player/PlayerStates/idle_state.gd
+res://Scenes/Player/PlayerStates/walking_state.gd
+res://Scenes/Player/PlayerStates/death_state.gd
+res://language/language_setting.gd
+res://Scenes/pause_menu.gd
+res://Scenes/scene_transition.gd
+res://Scenes/cave.tscn
+res://Scenes/options(remake).tscn
+res://Scenes/obstacleSpawner.tscn
+res://Scenes/Menu/scrolling.gdshader
+res://TempResources/custombuttons.tres
+res://Scenes/tile_map.tscn
+res://Scenes/Menu/MainMenu.tscn
