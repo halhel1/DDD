@@ -1,11 +1,14 @@
-[gd_scene load_steps=32 format=3 uid="uid://82a20eu1aqyu"]
+[gd_scene load_steps=35 format=3 uid="uid://82a20eu1aqyu"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_oa1ny"]
 [ext_resource type="Script" path="res://Scripts/state_machine.gd" id="3_ljpdt"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/idle_state.gd" id="4_yryu6"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/walking_state.gd" id="5_4a82o"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/death_state.gd" id="6_wxmbt"]
+[ext_resource type="AudioStream" uid="uid://bki8x1rfrj0s6" path="res://TempResources/Underwater Sloshing-Sound Effect HD.mp3" id="7_3l1e4"]
 [ext_resource type="Texture2D" uid="uid://dyw0h7wkahf0w" path="res://TempResources/deepDiver.svg" id="7_qouq5"]
+[ext_resource type="AudioStream" uid="uid://m6dhlchp88y2" path="res://TempResources/Something being hit - Sound Effect.mp3" id="8_226lu"]
+[ext_resource type="AudioStream" uid="uid://c2w6gtgqoqtoe" path="res://TempResources/bubble-pop-sound-effect_udV2fZVu.mp3" id="9_l7d47"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3wbu"]
 size = Vector2(50.7894, 26.8993)
@@ -256,6 +259,24 @@ position = Vector2(-1.9861, -5)
 scale = Vector2(2.59076, 2.44231)
 sprite_frames = SubResource("SpriteFrames_n0c7s")
 animation = &"f_idle"
+
+[node name="sfx_dodge" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1.9861, -5)
+scale = Vector2(2.59076, 2.44231)
+stream = ExtResource("7_3l1e4")
+bus = &"SFX"
+
+[node name="sfx_take_damage" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1.9861, -5)
+scale = Vector2(2.59076, 2.44231)
+stream = ExtResource("8_226lu")
+bus = &"SFX"
+
+[node name="sfx_shoot" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1.9861, -5)
+scale = Vector2(2.59076, 2.44231)
+stream = ExtResource("9_l7d47")
+bus = &"SFX"
 
 [connection signal="area_entered" from="PlayerHitbox" to="." method="_on_player_hitbox_area_entered"]
 [connection signal="area_exited" from="PlayerHitbox" to="." method="_on_player_hitbox_area_exited"]

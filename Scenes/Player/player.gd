@@ -8,6 +8,9 @@ var current_health:= max_health
 @export var dodge_time: float = 0.5
 @export var dodge_cooldown: float = 3
 @export var dodge_speed_multiplier: float = 2
+@onready var sfx_shoot = $sfx_shoot
+@onready var sfx_take_damage = $sfx_take_damage
+
 
 var invunerable: bool = false
 var is_dead: bool =false
@@ -32,17 +35,21 @@ func _process(_delta):
 		#get_tree().change_scene_to_file("res://Scenes/options.tscn")
 
 func take_damage(amount):
+	sfx_take_damage.play()
 	current_health -= amount
 	$HealthBar.value = current_health
 	if current_health<=0:
 		die();
 
 func fire():
+
 	var projectile = projectile_scene.instantiate()
 	projectile.direction = get_global_mouse_position() - $AnimatedSprite2D.global_position
 	projectile.global_position = $AnimatedSprite2D.global_position
 	projectile.speed = 700
 	get_tree().get_root().add_child(projectile)
+	sfx_shoot.play()
+	
 
 func die():
 	is_dead=true
