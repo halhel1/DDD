@@ -28,11 +28,13 @@ buses/default_bus_layout="res://TempResources/default_bus_layout.tres"
 SceneTransition="*res://Scenes/scene_transition.tscn"
 BgMuisc="*res://Audio/bg_muisc.tscn"
 MasterSlider="*res://Audio/master_slider.gd"
+LevelManager="*res://levelManager.cs"
 
 [display]
 
 window/size/initial_position=Vector2i(435, 410)
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="res://TempResources/cursor.svg"
 
 [dotnet]
 
