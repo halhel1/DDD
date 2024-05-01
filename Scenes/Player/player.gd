@@ -46,10 +46,10 @@ func fire():
 	var projectile = projectile_scene.instantiate()
 	projectile.direction = get_global_mouse_position() - $AnimatedSprite2D.global_position
 	projectile.global_position = $AnimatedSprite2D.global_position
-	projectile.speed = 700
+	projectile.speed = 900
+	projectile.damage_amount = 40
 	get_tree().get_root().add_child(projectile)
 	sfx_shoot.play()
-	
 
 func die():
 	is_dead=true

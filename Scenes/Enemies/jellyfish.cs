@@ -19,8 +19,12 @@ public partial class jellyfish : CharacterBody2D
 	private float recoveryTimer = 0.0f;
 	private bool isIdle=false;
 	
+	[Export] private float max_health = 200;
+	private float health;
+	
 	public override void _Ready()
 	{
+		health = max_health;
 		enemySprite=GetNode<Godot.AnimatedSprite2D>("jellyfishSprite");
 		enemySprite.Play("idle");
 	}
@@ -28,31 +32,31 @@ public partial class jellyfish : CharacterBody2D
 	{
 		switch(currentState){
 		 case enemyState.Idle:
-                if (playerChase && player != null)
-                {
-                    currentState = enemyState.Chase;
-                    enemySprite.Stop();
-                    enemySprite.Play("chase");
-                }
-                break;
-            case enemyState.Chase:
-                if (playerChase && player != null)
-                {
-                    MoveTowardsPlayer(delta);
-                }
-                else
-                {
-                    currentState = enemyState.Idle;
-                    enemySprite.Stop();
-                    enemySprite.Play("idle");
-                }
-                break;
-            case enemyState.Attack:
-                enemySprite.Play("attack");
-                currentState = enemyState.Recover;
-                recoveryTimer = recoveryTime;
-                break;
-            case enemyState.Recover:
+				if (playerChase && player != null)
+				{
+					currentState = enemyState.Chase;
+					enemySprite.Stop();
+					enemySprite.Play("chase");
+				}
+				break;
+			case enemyState.Chase:
+				if (playerChase && player != null)
+				{
+					MoveTowardsPlayer(delta);
+				}
+				else
+				{
+					currentState = enemyState.Idle;
+					enemySprite.Stop();
+					enemySprite.Play("idle");
+				}
+				break;
+			case enemyState.Attack:
+				enemySprite.Play("attack");
+				currentState = enemyState.Recover;
+				recoveryTimer = recoveryTime;
+				break;
+			case enemyState.Recover:
 			recoveryTimer -= (float)delta;
 			if (recoveryTimer <= 0)
 			{
@@ -61,11 +65,11 @@ public partial class jellyfish : CharacterBody2D
 				 enemySprite.Play("chase");
 			}
 			break;
-        }
+		}
 	}
 	 private void MoveTowardsPlayer(double delta)
-    {
-     if (player is Area2D kinematicPlayer)
+	{
+	 if (player is Area2D kinematicPlayer)
 			{
 				Vector2 direction = ((kinematicPlayer.GlobalPosition -GlobalPosition).Normalized())*speed * (float)delta;
 				KinematicCollision2D enemyCollision=MoveAndCollide(direction);
@@ -74,7 +78,7 @@ public partial class jellyfish : CharacterBody2D
 				isIdle=false;
 				}
 			}
-    }
+	}
 
 	private void _on_detection_area_area_entered(Node body){
 		if(body.IsInGroup("player")){
@@ -92,18 +96,21 @@ public partial class jellyfish : CharacterBody2D
 	}
 	private void _on_enemy_hitbox_area_entered(Node body){
 	 if (body.IsInGroup("player") && currentState != enemyState.Recover)
-    {
-        currentState = enemyState.Attack;
-    }
+	{
+		currentState = enemyState.Attack;
+	}
 	 
 }
 	private void _on_enemy_hitbox_area_exited(Node body){
 		if(body.IsInGroup("attack")){
 			
 		}
-
-	
 	}
-
+	public void damage(float damageAmount){
+		health -= damageAmount;
+		if(health <= 0){
+			QueueFree();
+		}
+	}
 	
 }
