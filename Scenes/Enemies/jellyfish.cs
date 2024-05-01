@@ -19,8 +19,12 @@ public partial class jellyfish : CharacterBody2D
 	private float recoveryTimer = 0.0f;
 	private bool isIdle=false;
 	
+	[Export] private float max_health = 200;
+	private float health;
+	
 	public override void _Ready()
 	{
+		health = max_health;
 		enemySprite=GetNode<Godot.AnimatedSprite2D>("jellyfishSprite");
 		enemySprite.Play("idle");
 	}
@@ -101,9 +105,12 @@ public partial class jellyfish : CharacterBody2D
 		if(body.IsInGroup("attack")){
 			
 		}
-
-	
 	}
-
+	public void damage(float damageAmount){
+		health -= damageAmount;
+		if(health <= 0){
+			QueueFree();
+		}
+	}
 	
 }

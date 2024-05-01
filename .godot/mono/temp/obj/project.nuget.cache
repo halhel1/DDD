@@ -1,15 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "f2NY2BQ/5Ie+Tq0gK2XW/gCC68dcFtU0uTvSvvbtw19d6IP+Uc1Zx1JbRRXg6zvDMlqdvJ5BOnfHUv8D9hjLmw==",
+  "dgSpecHash": "reMPI/0/g9gw1/6OPRdVYNwuC5L/xCgl2YPAzMq3eSfOCCKBuZP2rSgj9vfiLrvXBJB5RlR5/yP+90X+XIWU1A==",
   "success": true,
-  "projectFilePath": "F:\\Github Desktop Clone\\Team-5\\New Game Project.csproj",
+   "projectFilePath": "/Users/bricetillman/Team-5/New Game Project.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\PureWhite\\.nuget\\packages\\godot.sourcegenerators\\4.2.1\\godot.sourcegenerators.4.2.1.nupkg.sha512",
-    "C:\\Users\\PureWhite\\.nuget\\packages\\godotsharp\\4.2.1\\godotsharp.4.2.1.nupkg.sha512",
-    "C:\\Users\\PureWhite\\.nuget\\packages\\godotsharpeditor\\4.2.1\\godotsharpeditor.4.2.1.nupkg.sha512",
-    "C:\\Users\\PureWhite\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\PureWhite\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\PureWhite\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"
+    "/Users/bricetillman/.nuget/packages/godot.sourcegenerators/4.2.1/godot.sourcegenerators.4.2.1.nupkg.sha512",
+    "/Users/bricetillman/.nuget/packages/godotsharp/4.2.1/godotsharp.4.2.1.nupkg.sha512",
+    "/Users/bricetillman/.nuget/packages/godotsharpeditor/4.2.1/godotsharpeditor.4.2.1.nupkg.sha512",
+    "/Users/bricetillman/.nuget/packages/microsoft.netcore.app.ref/6.0.27/microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "/Users/bricetillman/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.27/microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /Users/hussainalhelfi/Downloads/aam/Team-5/.godot/mono/temp/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
