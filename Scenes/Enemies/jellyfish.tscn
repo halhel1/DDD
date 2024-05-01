@@ -218,10 +218,10 @@ shape = SubResource("CapsuleShape2D_xy3m3")
 wait_time = 1.5
 
 [node name="HealthBar" type="ProgressBar" parent="."]
-offset_left = -20.0
-offset_top = 54.4959
-offset_right = -12.0
-offset_bottom = 91.4959
+offset_left = -21.6667
+offset_top = 53.1335
+offset_right = -13.6667
+offset_bottom = 142.134
 scale = Vector2(8.82032, 0.0609859)
 theme_override_styles/background = SubResource("StyleBoxFlat_pxmj1")
 theme_override_styles/fill = SubResource("StyleBoxFlat_1m8nh")

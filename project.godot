@@ -28,6 +28,7 @@ buses/default_bus_layout="res://TempResources/default_bus_layout.tres"
 SceneTransition="*res://Scenes/scene_transition.tscn"
 BgMuisc="*res://Audio/bg_muisc.tscn"
 MasterSlider="*res://Audio/master_slider.gd"
+LevelManager="*res://levelManager.cs"
 
 [display]
 
