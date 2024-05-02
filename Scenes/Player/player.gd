@@ -10,13 +10,12 @@ var current_health:= max_health
 @export var dodge_cooldown: float = 3
 @export var dodge_speed_multiplier: float = 2
 
-@onready var sfx_shoot: Node = $sfx_shoot
+
 @onready var sfx_take_damage: Node = $sfx_take_damage
 
 var invunerable: bool = false
 var is_dead: bool =false
 var enemies_in_hitbox:Array =[];
-var projectile_scene: PackedScene = preload("res://Scenes/Attacks/AttackSuper.tscn")
 
 func ready():
 	$HealthBar.max_value = max_health
@@ -27,8 +26,6 @@ func ready():
 func _process(_delta) -> void:
 	$CooldownBar.value = $CooldownTimer.time_left
 	$AnimatedSprite2D.play()
-	if Input.is_action_just_pressed("attack"):
-		fire()
 
 #func _input(event):
 	#if event.is_action_pressed("ui_cancel"):
@@ -42,15 +39,6 @@ func take_damage(amount) -> void:
 	$HealthBar.value = current_health
 	if current_health<=0:
 		die();
-
-func fire() -> void:
-	var projectile = projectile_scene.instantiate()
-	projectile.direction = get_global_mouse_position() - $AnimatedSprite2D.global_position
-	projectile.global_position = $AnimatedSprite2D.global_position
-	projectile.speed = 1000
-	projectile.damage_amount = 40
-	get_tree().get_root().add_child(projectile)
-	sfx_shoot.play()
 
 func die() -> void:
 	is_dead=true
