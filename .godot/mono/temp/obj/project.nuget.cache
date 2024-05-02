@@ -1,21 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "reMPI/0/g9gw1/6OPRdVYNwuC5L/xCgl2YPAzMq3eSfOCCKBuZP2rSgj9vfiLrvXBJB5RlR5/yP+90X+XIWU1A==",
+  "dgSpecHash": "clOhG8nV6BaFwV+MMovEzRXrwyzA9vHPZCt20HehMTfnxConwZI3jUOL58tmk/gmpkvyvEwfCHzTW87kismFVQ==",
   "success": true,
-   "projectFilePath": "/Users/bricetillman/Team-5/New Game Project.csproj",
+  "projectFilePath": "C:\\Users\\No Thanks\\Desktop\\DDD\\New Game Project.csproj",
   "expectedPackageFiles": [
-    "/Users/bricetillman/.nuget/packages/godot.sourcegenerators/4.2.1/godot.sourcegenerators.4.2.1.nupkg.sha512",
-    "/Users/bricetillman/.nuget/packages/godotsharp/4.2.1/godotsharp.4.2.1.nupkg.sha512",
-    "/Users/bricetillman/.nuget/packages/godotsharpeditor/4.2.1/godotsharpeditor.4.2.1.nupkg.sha512",
-    "/Users/bricetillman/.nuget/packages/microsoft.netcore.app.ref/6.0.27/microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
-    "/Users/bricetillman/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.27/microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512"
+    "C:\\Users\\No Thanks\\.nuget\\packages\\godot.sourcegenerators\\4.2.1\\godot.sourcegenerators.4.2.1.nupkg.sha512",
+    "C:\\Users\\No Thanks\\.nuget\\packages\\godotsharp\\4.2.1\\godotsharp.4.2.1.nupkg.sha512",
+    "C:\\Users\\No Thanks\\.nuget\\packages\\godotsharpeditor\\4.2.1\\godotsharpeditor.4.2.1.nupkg.sha512",
+    "C:\\Users\\No Thanks\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\No Thanks\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\No Thanks\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file /Users/hussainalhelfi/Downloads/aam/Team-5/.godot/mono/temp/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
