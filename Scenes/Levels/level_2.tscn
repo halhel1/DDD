@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0jx1ixgdji13"]
+[gd_scene load_steps=7 format=3 uid="uid://b0jx1ixgdji13"]
 
 [ext_resource type="PackedScene" uid="uid://cpdw67kpdatce" path="res://Scenes/Levels/level_2_gen.tscn" id="1_42rxj"]
 [ext_resource type="PackedScene" uid="uid://cqu832mk5cl60" path="res://Scenes/Player/player_manager.tscn" id="1_s5nae"]
 [ext_resource type="PackedScene" uid="uid://b47tt78bshp0b" path="res://Scenes/ocean_shader.tscn" id="2_ksvu3"]
+[ext_resource type="PackedScene" uid="uid://c844kqesrljy5" path="res://Scenes/cave.tscn" id="3_3rqyg"]
 [ext_resource type="PackedScene" uid="uid://bw41lglmsvfru" path="res://Scenes/Enemies/enemySpawner.tscn" id="3_ge5mq"]
 [ext_resource type="PackedScene" uid="uid://brgeaqsabhqad" path="res://Scenes/pause_menu.tscn" id="5_18xf1"]
 
@@ -12,6 +13,9 @@
 position = Vector2(2156, 863)
 
 [node name="level2Gen" parent="." instance=ExtResource("1_42rxj")]
+
+[node name="cave" parent="." instance=ExtResource("3_3rqyg")]
+position = Vector2(2000, 2.08165e-12)
 
 [node name="enemySpawner" parent="." instance=ExtResource("3_ge5mq")]
 position = Vector2(2156, 863)

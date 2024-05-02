@@ -14,8 +14,7 @@ process_mode = 1
 [node name="playerManager" parent="." instance=ExtResource("1_ktdaq")]
 position = Vector2(2156, 863)
 
-[node name="procGen" parent="." instance=ExtResource("1_hl2b8")]
-position = Vector2(2.08165e-12, 2.08165e-12)
+[node name="level1Gen" parent="." instance=ExtResource("1_hl2b8")]
 
 [node name="cave" parent="." instance=ExtResource("3_nd8vb")]
 position = Vector2(2000, 2.08165e-12)
