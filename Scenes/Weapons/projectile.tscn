@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b5e2thahn08x1"]
 
-[ext_resource type="Script" path="res://Scenes/Attacks/attack_superclass.gd" id="1_eerho"]
-[ext_resource type="Texture2D" uid="uid://cgm48ljnixbx5" path="res://TempResources/projectile.svg" id="2_r20ch"]
+[ext_resource type="Script" path="res://Scenes/Weapons/projectile.gd" id="1_lghsd"]
+[ext_resource type="Texture2D" uid="uid://cgm48ljnixbx5" path="res://TempResources/projectile.svg" id="2_r8bvm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wtiau"]
 radius = 9.05539
@@ -12,15 +12,15 @@ light_mask = 512
 visibility_layer = 512
 z_index = 4
 y_sort_enabled = true
-script = ExtResource("1_eerho")
+script = ExtResource("1_lghsd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 light_mask = 512
 visibility_layer = 512
 y_sort_enabled = true
-position = Vector2(0, 0.5)
-scale = Vector2(2, 2)
-texture = ExtResource("2_r20ch")
+position = Vector2(0, 2.98023e-08)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_r8bvm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_wtiau")
@@ -29,3 +29,4 @@ shape = SubResource("CircleShape2D_wtiau")
 scale = Vector2(0.2, 0.2)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
