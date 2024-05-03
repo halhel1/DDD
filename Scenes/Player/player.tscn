@@ -248,12 +248,6 @@ z_index = 4
 y_sort_enabled = true
 scale = Vector2(1.007, 1)
 script = ExtResource("1_oa1ny")
-max_health = null
-max_speed = null
-acceleration = null
-dodge_time = null
-dodge_cooldown = null
-dodge_speed_multiplier = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1.9861, 3)
