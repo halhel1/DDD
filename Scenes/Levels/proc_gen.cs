@@ -57,7 +57,7 @@ public partial class proc_gen : Node2D
     }
     public override void _Ready()
     {
-        PackedScene tileMapScene = ResourceLoader.Load<PackedScene>("res://Scenes/tile_map.tscn");
+        PackedScene tileMapScene = ResourceLoader.Load<PackedScene>("res://Scenes/Map/tile_map.tscn");
         TileMap tileMapInstance = (TileMap)tileMapScene.Instantiate();
         tileMap = tileMapInstance;
         AddChild(tileMap);

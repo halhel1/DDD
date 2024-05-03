@@ -85,4 +85,3 @@ func change_weapon(weapon: String) -> void:
 		$Hand/Sprite2D.get_child(0).queue_free()  
 	var new_weapon_instance = load(weapon_type[weapon]).instantiate() 
 	$Hand/Sprite2D.add_child(new_weapon_instance)  
-
