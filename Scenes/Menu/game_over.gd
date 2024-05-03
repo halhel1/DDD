@@ -15,6 +15,7 @@ func _on_restart_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Levels/level_1.tscn")
 
 
-func _on_main_menu_pressed():
+func _on_return_home_pressed():
 	LevelManager.set_current_level(1)
 	get_tree().change_scene_to_file("res://Scenes/Menu/MainMenu.tscn")
+	
