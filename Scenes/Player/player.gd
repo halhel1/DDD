@@ -9,6 +9,8 @@ var current_health:= max_health
 @export var dodge_time: float = 0.5
 @export var dodge_cooldown: float = 3
 @export var dodge_speed_multiplier: float = 2
+@onready var damage_numbers_origin: Node2D = $DamageNumbersOrigin
+
 
 
 @onready var sfx_take_damage: Node = $sfx_take_damage
@@ -54,6 +56,7 @@ func _on_player_hitbox_area_entered(area) -> void:
 	if area.is_in_group("enemy"):
 		enemies_in_hitbox.append(area)
 		take_damage(15)
+		DamageNumbers.display_number(15, damage_numbers_origin.global_position)
 		$damageTimer.start();
 		$HealthBar.value = current_health
 
