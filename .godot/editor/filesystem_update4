@@ -41,3 +41,5 @@ res://Scenes/Player/PlayerStates/idle_state.gd
 res://Scenes/Player/PlayerStates/death_state.gd
 res://Scenes/Menu/pause_menu.gd
 res://Scenes/Menu/options(remake).tscn
+res://Scenes/Map/cave.gd
+res://Scenes/Menu/game_over.gd
