@@ -24,7 +24,7 @@ public partial class MainMenu : Control
 
 	private void _on_options_pressed()
 	{
-		GetTree().ChangeSceneToFile("res://Scenes/options(remake).tscn");
+		GetTree().ChangeSceneToFile("res://Scenes/Menu/options(remake).tscn");
 	}
 
 	private void _on_quit_pressed()

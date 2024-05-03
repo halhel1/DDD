@@ -20,7 +20,6 @@ public partial class jellyfish : CharacterBody2D
 	private bool isIdle=false;
 	[Export] private float max_health = 200;
 	private float health;
-	
 	public override void _Ready()
 	{
 		GetNode<Godot.ProgressBar>("HealthBar").MaxValue=max_health;
@@ -109,5 +108,6 @@ public partial class jellyfish : CharacterBody2D
 			QueueFree();
 		}
 	}
+	
 	
 }
