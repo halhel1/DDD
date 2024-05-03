@@ -7,7 +7,7 @@ var current_health:= max_health
 @export var max_speed: int = 350
 @export var acceleration: int = 3500
 @export var dodge_time: float = 0.5
-@export var dodge_cooldown: float = 3
+@export var dodge_cooldown: float = 1.5
 @export var dodge_speed_multiplier: float = 2
 
 
@@ -18,9 +18,8 @@ var is_dead: bool =false
 var enemies_in_hitbox:Array =[];
 
 func ready():
-	$HealthBar.max_value = max_health
-	$HealthBar.value = current_health
-	$CooldownBar.max_value = dodge_cooldown
+	set_bars()
+	set_cooldown()
 	$damageTimer.timeout.connect(_on_damage_timer_timeout)
 
 func _process(_delta) -> void:
@@ -65,3 +64,11 @@ func _on_player_hitbox_area_exited(area) -> void:
 func _on_damage_timer_timeout() -> void:
 	for enemy in enemies_in_hitbox:
 		take_damage(15)
+
+func set_bars() -> void:
+	$CooldownBar.max_value = dodge_cooldown
+	$HealthBar.max_value = max_health
+	$HealthBar.value = current_health
+
+func set_cooldown() -> void:
+	$CooldownTimer.time = dodge_cooldown

@@ -27,7 +27,7 @@ func _ready():
 	
 	alter_max_speed = max_speed
 	$DodgeTimer.wait_time = dodge_time
-	cooldown_timer.wait_time = dodge_cooldown
+	player.set_bars()
 
 func physics_update(delta: float) -> void: 
 	movement_handler(delta)
