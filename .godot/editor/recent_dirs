@@ -1,6 +1,9 @@
 res://Scenes/Weapons
-res://
+
 res://Scenes/Weapons/Types
+res://Scenes/Weapons
+res://
+
 res://TempResources
 res://Scenes
 res://language
@@ -13,10 +16,4 @@ res://Audio
 <<<<<<< Updated upstream
 res://Scenes/Enemies
 res://TempResources/16x16/Sprites
-=======
-res://TempResources/16x16/Sprites
-res://Scenes/Levels
-res://Scenes/Player
-res://Scenes/Enemies
->>>>>>> Stashed changes
 res://Scenes/Menu

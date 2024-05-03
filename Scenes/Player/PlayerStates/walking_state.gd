@@ -32,7 +32,7 @@ func _ready():
 func physics_update(delta: float) -> void: 
 	movement_handler(delta)
 
-func movement_handler(delta) -> void:
+func movement_handler(delta: float) -> void:
 	var direction: Vector2
 	if (!dodging):
 		direction = get_input_direction()
@@ -82,7 +82,7 @@ func get_input_direction() -> Vector2:
 			animator.flip_h = false
 	return direction.normalized()
 
-func accelerate(magnitude) -> void:
+func accelerate(magnitude: Vector2) -> void:
 		#add to velocity until reach max speed
 	#at that point, get unit vector and scalar mult
 	player.velocity += magnitude
