@@ -1,6 +1,7 @@
-[gd_scene load_steps=43 format=3 uid="uid://82a20eu1aqyu"]
+[gd_scene load_steps=44 format=3 uid="uid://82a20eu1aqyu"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_oa1ny"]
+[ext_resource type="Script" path="res://Scenes/Player/cam.gd" id="3_0io7u"]
 [ext_resource type="Script" path="res://Scenes/Player/hand.gd" id="3_7jgpg"]
 [ext_resource type="Texture2D" uid="uid://bbkx0kpniap27" path="res://TempResources/16x16/hand.svg" id="3_hmcdn"]
 [ext_resource type="Script" path="res://Scripts/state_machine.gd" id="3_ljpdt"]
@@ -8,7 +9,7 @@
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/walking_state.gd" id="5_4a82o"]
 [ext_resource type="PackedScene" uid="uid://cs7ahhfg34b8a" path="res://Scenes/Weapons/Types/pulse.tscn" id="5_uysud"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/death_state.gd" id="6_wxmbt"]
-[ext_resource type="AudioStream" path="res://TempResources/underwater-sloshing-sound-effect-hd_4Dz6qPxT.mp3" id="7_j4p1d"]
+[ext_resource type="AudioStream" uid="uid://d2nddg30hvv1t" path="res://TempResources/underwater-sloshing-sound-effect-hd_4Dz6qPxT.mp3" id="7_j4p1d"]
 [ext_resource type="Texture2D" uid="uid://dyw0h7wkahf0w" path="res://TempResources/deepDiver.svg" id="7_qouq5"]
 [ext_resource type="AudioStream" uid="uid://m6dhlchp88y2" path="res://TempResources/Something being hit - Sound Effect.mp3" id="8_226lu"]
 
@@ -268,6 +269,7 @@ limit_top = 80
 limit_right = 4550
 limit_bottom = 2350
 editor_draw_limits = true
+script = ExtResource("3_0io7u")
 
 [node name="Hand" type="Node2D" parent="."]
 script = ExtResource("3_7jgpg")
@@ -278,7 +280,12 @@ scale = Vector2(-0.068897, 0.0605722)
 texture = ExtResource("3_hmcdn")
 
 [node name="Pulse" parent="Hand/Sprite2D" instance=ExtResource("5_uysud")]
-
+direction = null
+speed = null
+scale_vector = null
+damage_amount = null
+cooldown = null
+spread_radius = null
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 offset_left = -50.6455
@@ -341,9 +348,9 @@ scale = Vector2(2.59076, 2.44231)
 stream = ExtResource("8_226lu")
 bus = &"SFX"
 
-
 [node name="DamageNumbersOrigin" type="Node2D" parent="."]
 position = Vector2(0, -55)
+
 [connection signal="area_entered" from="PlayerHitbox" to="." method="_on_player_hitbox_area_entered"]
 [connection signal="area_exited" from="PlayerHitbox" to="." method="_on_player_hitbox_area_exited"]
 [connection signal="timeout" from="damageTimer" to="." method="_on_damage_timer_timeout"]

@@ -13,6 +13,7 @@ private float maxX = 2000;
 private float minY = -700;
 private float maxY = 1000;
 private float entityRadius;
+
 private List<Vector2>spawnPositions=new List<Vector2>();
 	public override void _Ready()
 	{

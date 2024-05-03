@@ -1,25 +1,24 @@
 [gd_scene load_steps=7 format=3 uid="uid://du4hj66eu78wk"]
 
-[ext_resource type="PackedScene" uid="uid://cqu832mk5cl60" path="res://Scenes/Player/player_manager.tscn" id="1_k2nb3"]
+[ext_resource type="PackedScene" uid="uid://82a20eu1aqyu" path="res://Scenes/Player/player.tscn" id="1_v5ohp"]
 [ext_resource type="PackedScene" uid="uid://c1ndy7ps54xr7" path="res://Scenes/Levels/level_3_gen.tscn" id="2_chdpw"]
 [ext_resource type="PackedScene" uid="uid://c844kqesrljy5" path="res://Scenes/cave.tscn" id="3_7q2kt"]
 [ext_resource type="PackedScene" uid="uid://bw41lglmsvfru" path="res://Scenes/Enemies/enemySpawner.tscn" id="4_p42sg"]
 [ext_resource type="PackedScene" uid="uid://d07kdjiw2eb0r" path="res://Scenes/shader.tscn" id="5_c4twi"]
 [ext_resource type="PackedScene" uid="uid://brgeaqsabhqad" path="res://Scenes/pause_menu.tscn" id="6_rcmi0"]
 
-[node name="level_3" type="Node2D"]
+[node name="level" type="Node2D"]
 
-[node name="playerManager" parent="." instance=ExtResource("1_k2nb3")]
-position = Vector2(2156, 863)
+[node name="Player" parent="." instance=ExtResource("1_v5ohp")]
+position = Vector2(2156, 833)
 
 [node name="level_3_gen" parent="." instance=ExtResource("2_chdpw")]
 
 [node name="cave" parent="." instance=ExtResource("3_7q2kt")]
-position = Vector2(2000, 2.08165e-12)
+position = Vector2(2000, 500)
 
 [node name="enemySpawner" parent="." instance=ExtResource("4_p42sg")]
 position = Vector2(2156, 863)
-scale = Vector2(12, 12)
 
 [node name="Node2D" parent="." instance=ExtResource("5_c4twi")]
 z_index = 8

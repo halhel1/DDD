@@ -3,23 +3,14 @@ using System;
 public partial class level_3_gen : proc_gen
 
 {
-
-	private Vector2I stoneAtlas = new Vector2I(6, 5);
-	private Vector2I flowerAtlas = new Vector2I(3, 4);
-	
-
-	int width, height;
-
 	public override void _Ready()
 	{
-		base._Ready(); 
-
-		
-		width = 50; 
-		height = 100; 
-
-		
-		GenerateLevel(width, height, stoneAtlas, flowerAtlas, stoneAtlas);
+		Width=100;
+        Height=100;
+		Tile1=new Vector2I(6, 5);
+        Tile2=new Vector2I(3, 4);
+        base._Ready();
+        GenerateLevel(Width,Height, Tile1, Tile2, Tile1);
 	}
 
 	public override void _Process(double delta)
