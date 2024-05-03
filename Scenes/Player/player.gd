@@ -45,7 +45,7 @@ func take_damage(amount: float) -> void:
 
 func die() -> void:
 	is_dead=true
-	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Menu/game_over.tscn")
 
 func _on_player_hitbox_area_entered(area) -> void:
 	if area.is_in_group("seashell"):

@@ -13,6 +13,12 @@ process_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_hcy1s")]
 position = Vector2(2156, 833)
+max_health = 100.0
+max_speed = 350
+acceleration = 3500
+dodge_time = 0.5
+dodge_cooldown = 1.5
+dodge_speed_multiplier = 2.0
 
 [node name="level1Gen" parent="." instance=ExtResource("1_hl2b8")]
 
