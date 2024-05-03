@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://82a20eu1aqyu" path="res://Scenes/Player/player.tscn" id="1_v5ohp"]
 [ext_resource type="PackedScene" uid="uid://c1ndy7ps54xr7" path="res://Scenes/Levels/level_3_gen.tscn" id="2_chdpw"]
-[ext_resource type="PackedScene" uid="uid://c844kqesrljy5" path="res://Scenes/cave.tscn" id="3_7q2kt"]
+[ext_resource type="PackedScene" uid="uid://c844kqesrljy5" path="res://Scenes/Map/cave.tscn" id="3_7q2kt"]
 [ext_resource type="PackedScene" uid="uid://bw41lglmsvfru" path="res://Scenes/Enemies/enemySpawner.tscn" id="4_p42sg"]
-[ext_resource type="PackedScene" uid="uid://d07kdjiw2eb0r" path="res://Scenes/shader.tscn" id="5_c4twi"]
-[ext_resource type="PackedScene" uid="uid://brgeaqsabhqad" path="res://Scenes/pause_menu.tscn" id="6_rcmi0"]
+[ext_resource type="PackedScene" uid="uid://b47tt78bshp0b" path="res://Scenes/Map/ocean_shader.tscn" id="5_cm8c1"]
+[ext_resource type="PackedScene" uid="uid://brgeaqsabhqad" path="res://Scenes/Menu/pause_menu.tscn" id="6_rcmi0"]
 
 [node name="level" type="Node2D"]
 
@@ -20,9 +20,7 @@ position = Vector2(2000, 500)
 [node name="enemySpawner" parent="." instance=ExtResource("4_p42sg")]
 position = Vector2(2156, 863)
 
-[node name="Node2D" parent="." instance=ExtResource("5_c4twi")]
-z_index = 8
-y_sort_enabled = true
+[node name="oceanShader" parent="." instance=ExtResource("5_cm8c1")]
 position = Vector2(-489, -811)
 scale = Vector2(12, 12)
 

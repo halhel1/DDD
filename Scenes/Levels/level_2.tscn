@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://cpdw67kpdatce" path="res://Scenes/Levels/level_2_gen.tscn" id="1_42rxj"]
 [ext_resource type="PackedScene" uid="uid://82a20eu1aqyu" path="res://Scenes/Player/player.tscn" id="2_jc5vh"]
-[ext_resource type="PackedScene" uid="uid://b47tt78bshp0b" path="res://Scenes/ocean_shader.tscn" id="2_ksvu3"]
-[ext_resource type="PackedScene" uid="uid://c844kqesrljy5" path="res://Scenes/cave.tscn" id="3_3rqyg"]
+[ext_resource type="PackedScene" uid="uid://b47tt78bshp0b" path="res://Scenes/Map/ocean_shader.tscn" id="2_ksvu3"]
+[ext_resource type="PackedScene" uid="uid://c844kqesrljy5" path="res://Scenes/Map/cave.tscn" id="3_3rqyg"]
 [ext_resource type="PackedScene" uid="uid://bw41lglmsvfru" path="res://Scenes/Enemies/enemySpawner.tscn" id="3_ge5mq"]
-[ext_resource type="PackedScene" uid="uid://brgeaqsabhqad" path="res://Scenes/pause_menu.tscn" id="5_18xf1"]
+[ext_resource type="PackedScene" uid="uid://brgeaqsabhqad" path="res://Scenes/Menu/pause_menu.tscn" id="5_18xf1"]
 
 [node name="level" type="Node2D"]
 

@@ -30,6 +30,7 @@ BgMuisc="*res://Audio/bg_muisc.tscn"
 MasterSlider="*res://Audio/master_slider.gd"
 DamageNumbers="*res://Scenes/Player/damage_numbers.gd"
 LevelManager="*res://Scenes/Levels/level_manager.gd"
+PlayerManager="*res://Scenes/Player/player_manager.gd"
 
 [display]
 
