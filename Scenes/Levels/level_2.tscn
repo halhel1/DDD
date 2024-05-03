@@ -11,12 +11,6 @@
 
 [node name="Player" parent="." instance=ExtResource("2_jc5vh")]
 position = Vector2(2156, 833)
-max_health = 100.0
-max_speed = 350
-acceleration = 3500
-dodge_time = 0.5
-dodge_cooldown = 1.5
-dodge_speed_multiplier = 2.0
 
 [node name="level2Gen" parent="." instance=ExtResource("1_42rxj")]
 

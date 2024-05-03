@@ -10,6 +10,7 @@ var current_health:= max_health
 @export var dodge_cooldown: float = 1.5
 @export var dodge_speed_multiplier: float = 2
 @onready var damage_numbers_origin: Node2D = $DamageNumbersOrigin
+var player_vars
 
 @onready var sfx_take_damage: Node = $sfx_take_damage
 
@@ -27,6 +28,8 @@ var weapon_type: Dictionary = {
 }
 
 func _ready():
+	player_vars = get_node("/root/PlayerManager")
+	current_health = player_vars.get_player_health()
 	set_bars()
 	set_cooldown()
 	$damageTimer.timeout.connect(_on_damage_timer_timeout)
@@ -37,14 +40,18 @@ func _process(_delta) -> void:
 	$AnimatedSprite2D.play()
 
 func take_damage(amount: float) -> void:
+	player_vars.update_player_health(player_vars.get_player_health()-amount)
+	current_health = player_vars.get_player_health()
 	sfx_take_damage.play()
-	current_health -= amount
 	$HealthBar.value = current_health
 	if current_health<=0:
 		die();
 
 func die() -> void:
 	is_dead=true
+	player_vars.update_player_health(max_health)
+	current_health = max_health
+	$HealthBar.value = current_health
 	get_tree().change_scene_to_file("res://Scenes/Menu/game_over.tscn")
 
 func _on_player_hitbox_area_entered(area) -> void:
@@ -53,6 +60,7 @@ func _on_player_hitbox_area_entered(area) -> void:
 	if area.is_in_group("heart"):
 		if current_health!=max_health:
 			current_health += 20 
+			player_vars.player_health+=20
 			$HealthBar.value = current_health
 	if area.is_in_group("enemy"):
 		enemies_in_hitbox.append(area)
