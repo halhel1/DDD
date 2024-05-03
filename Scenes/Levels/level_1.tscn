@@ -1,23 +1,23 @@
 [gd_scene load_steps=8 format=3 uid="uid://b6t21fne0yyx5"]
 
+[ext_resource type="PackedScene" uid="uid://82a20eu1aqyu" path="res://Scenes/Player/player.tscn" id="1_hcy1s"]
 [ext_resource type="PackedScene" uid="uid://dya0e2aqexbui" path="res://Scenes/Levels/level_1_gen.tscn" id="1_hl2b8"]
-[ext_resource type="PackedScene" uid="uid://cqu832mk5cl60" path="res://Scenes/Player/player_manager.tscn" id="1_ktdaq"]
 [ext_resource type="PackedScene" uid="uid://c844kqesrljy5" path="res://Scenes/cave.tscn" id="3_nd8vb"]
 [ext_resource type="PackedScene" uid="uid://d07kdjiw2eb0r" path="res://Scenes/shader.tscn" id="4_2qdaq"]
 [ext_resource type="PackedScene" uid="uid://ntva6vdjjb7g" path="res://Scenes/Collectibles/collectibleSpawner.tscn" id="4_mg5es"]
 [ext_resource type="PackedScene" uid="uid://bw41lglmsvfru" path="res://Scenes/Enemies/enemySpawner.tscn" id="6_f5n0i"]
 [ext_resource type="PackedScene" uid="uid://brgeaqsabhqad" path="res://Scenes/pause_menu.tscn" id="7_u4kev"]
 
-[node name="level1" type="Node2D"]
+[node name="level" type="Node2D"]
 process_mode = 1
 
-[node name="playerManager" parent="." instance=ExtResource("1_ktdaq")]
-position = Vector2(2156, 863)
+[node name="Player" parent="." instance=ExtResource("1_hcy1s")]
+position = Vector2(2156, 833)
 
 [node name="level1Gen" parent="." instance=ExtResource("1_hl2b8")]
 
 [node name="cave" parent="." instance=ExtResource("3_nd8vb")]
-position = Vector2(2000, 2.08165e-12)
+position = Vector2(2000, 500)
 
 [node name="enemySpawner" parent="." instance=ExtResource("6_f5n0i")]
 position = Vector2(2156, 863)

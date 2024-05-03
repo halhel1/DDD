@@ -8,13 +8,11 @@ public partial class proc_gen : Node2D
     protected NoiseTexture2D noiseHeightText;
     protected FastNoiseLite noise;
     private float[] noiseValArr;
-    private int width;
-    private int height;
-    protected TileMap tileMap;
+    private TileMap tileMap;
     private int sourceId=0;
-    protected Vector2I tile1;
-    protected Vector2I tile2;
-    protected Vector2I tile3;
+    private Vector2I tile1;
+    private Vector2I tile2;
+    private Vector2I tile3;
     protected Vector2I borderAtlas=new Vector2I(8,5);
     Random rand = new Random();
     int ground=0;
@@ -23,6 +21,40 @@ public partial class proc_gen : Node2D
     int ground3=3;
     int ground4=4;
     PackedScene Border;
+    private int width;
+    private int height;
+
+    public TileMap TileMapInstance
+    {
+        get { return tileMap; }
+    }
+
+    public int Width
+    {
+        get { return width; }
+        set { width = value; }
+    }
+
+    public int Height
+    {
+        get { return height; }
+        set { height = value; }
+    }
+    public Vector2I Tile1
+    {
+        get { return tile1; }
+        set { tile1 = value; }
+    }
+    public Vector2I Tile2
+    {
+        get { return tile2; }
+        set { tile2 = value; }
+    }
+    public Vector2I Tile3
+    {
+        get { return tile3; }
+        set { tile3 = value; }
+    }
     public override void _Ready()
     {
         PackedScene tileMapScene = ResourceLoader.Load<PackedScene>("res://Scenes/tile_map.tscn");
@@ -75,6 +107,7 @@ public partial class proc_gen : Node2D
             
             }
         }
+        
     }
    
 }

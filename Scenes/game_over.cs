@@ -3,6 +3,14 @@ using System;
 
 public partial class game_over : Control
 {
+	
+
+public override void _Ready()
+{
+	
+	
+	
+}
 private void _on_restart_pressed()
 {
 	GetTree().ChangeSceneToFile("res://Scenes/Levels/level_1.tscn");
