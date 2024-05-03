@@ -29,6 +29,7 @@ SceneTransition="*res://Scenes/scene_transition.tscn"
 BgMuisc="*res://Audio/bg_muisc.tscn"
 MasterSlider="*res://Audio/master_slider.gd"
 LevelManager="*res://levelManager.cs"
+DamageNumbers="*res://Scenes/Player/damage_numbers.gd"
 
 [display]
 

@@ -32,7 +32,6 @@ func fire() -> void:
 	projectile.damage_amount = damage_amount
 	get_tree().get_root().add_child(projectile)
 
-
 func _on_weapon_cooldown_timeout():
 	$WeaponCooldown.stop()
 	can_fire = true

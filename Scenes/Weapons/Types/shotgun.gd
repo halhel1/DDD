@@ -1,6 +1,5 @@
 class_name Shotgun extends "res://Scenes/Weapons/weapons_base.gd"
 
-
 func _ready():
 	speed = 600
 	scale_vector = Vector2(0.5,0.5)

@@ -5,3 +5,4 @@ func _ready():
 	scale_vector = Vector2(1,1)
 	damage_amount = 100
 	$WeaponCooldown.wait_time = 1.3
+

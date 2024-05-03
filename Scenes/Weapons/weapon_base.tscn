@@ -5,6 +5,12 @@
 
 [node name="WeaponBase" type="Node2D"]
 script = ExtResource("1_6xqbp")
+direction = null
+speed = null
+scale_vector = null
+damage_amount = null
+cooldown = null
+spread_radius = null
 
 [node name="sfx_shoot" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-3, 0)

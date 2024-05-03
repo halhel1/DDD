@@ -3,6 +3,7 @@ using System;
 public partial class level_3_gen : proc_gen
 
 {
+
 	private Vector2I stoneAtlas = new Vector2I(6, 5);
 	private Vector2I flowerAtlas = new Vector2I(3, 4);
 	

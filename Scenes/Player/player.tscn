@@ -279,6 +279,7 @@ texture = ExtResource("3_hmcdn")
 
 [node name="Pulse" parent="Hand/Sprite2D" instance=ExtResource("5_uysud")]
 
+
 [node name="HealthBar" type="ProgressBar" parent="."]
 offset_left = -50.6455
 offset_top = 51.0
@@ -340,6 +341,9 @@ scale = Vector2(2.59076, 2.44231)
 stream = ExtResource("8_226lu")
 bus = &"SFX"
 
+
+[node name="DamageNumbersOrigin" type="Node2D" parent="."]
+position = Vector2(0, -55)
 [connection signal="area_entered" from="PlayerHitbox" to="." method="_on_player_hitbox_area_entered"]
 [connection signal="area_exited" from="PlayerHitbox" to="." method="_on_player_hitbox_area_exited"]
 [connection signal="timeout" from="damageTimer" to="." method="_on_damage_timer_timeout"]

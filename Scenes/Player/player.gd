@@ -9,6 +9,7 @@ var current_health:= max_health
 @export var dodge_time: float = 0.5
 @export var dodge_cooldown: float = 1.5
 @export var dodge_speed_multiplier: float = 2
+@onready var damage_numbers_origin: Node2D = $DamageNumbersOrigin
 
 @onready var sfx_take_damage: Node = $sfx_take_damage
 
@@ -56,6 +57,7 @@ func _on_player_hitbox_area_entered(area) -> void:
 	if area.is_in_group("enemy"):
 		enemies_in_hitbox.append(area)
 		take_damage(15)
+		DamageNumbers.display_number(15, damage_numbers_origin.global_position)
 		$damageTimer.start();
 		$HealthBar.value = current_health
 
@@ -67,6 +69,7 @@ func _on_player_hitbox_area_exited(area) -> void:
 func _on_damage_timer_timeout() -> void:
 	for enemy in enemies_in_hitbox:
 		take_damage(15)
+
 
 func set_bars() -> void:
 	$CooldownBar.max_value = dodge_cooldown
@@ -82,3 +85,4 @@ func change_weapon(weapon: String) -> void:
 		$Hand/Sprite2D.get_child(0).queue_free()  
 	var new_weapon_instance = load(weapon_type[weapon]).instantiate() 
 	$Hand/Sprite2D.add_child(new_weapon_instance)  
+
