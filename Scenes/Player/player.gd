@@ -33,7 +33,7 @@ func _ready():
 	set_bars()
 	set_cooldown()
 	$damageTimer.timeout.connect(_on_damage_timer_timeout)
-	#change_weapon("pulse")
+	change_weapon("machine_gun")
 
 func _process(_delta) -> void:
 	$CooldownBar.value = $CooldownTimer.time_left

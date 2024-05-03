@@ -43,3 +43,5 @@ res://Scenes/Menu/pause_menu.gd
 res://Scenes/Menu/options(remake).tscn
 res://Scenes/Map/cave.gd
 res://Scenes/Menu/game_over.gd
+res://Scenes/Weapons/weapons_base.gd
+res://Scenes/Weapons/Types/machine_gun.gd

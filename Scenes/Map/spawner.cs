@@ -112,4 +112,6 @@ private List<Vector2>spawnPositions=new List<Vector2>();
 		float deltaY = Math.Abs(pointA.Y - pointB.Y);
 		return deltaX + deltaY;
 	}
+
+	
 }

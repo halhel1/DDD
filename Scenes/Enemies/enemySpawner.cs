@@ -13,7 +13,7 @@ public partial class enemySpawner : spawner
 		base._Ready();
 		setEntity((PackedScene)ResourceLoader.Load("res://Scenes/Enemies/jellyfish.tscn"),220);
         int totalEnemies = 20 + (5); 
-		spawnEntities(20,colors,"jellyfishSprite"); 
+		spawnEntities(totalEnemies,colors,"jellyfishSprite"); 
 	}
 	 protected override bool isValidEntity(Vector2 newPos, float effectiveRadius){
 		return base.isValidEntity(newPos,effectiveRadius);

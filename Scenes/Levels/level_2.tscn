@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0jx1ixgdji13"]
+[gd_scene load_steps=8 format=3 uid="uid://b0jx1ixgdji13"]
 
+[ext_resource type="Script" path="res://Scenes/Levels/level_manager.gd" id="1_11ju2"]
 [ext_resource type="PackedScene" uid="uid://cpdw67kpdatce" path="res://Scenes/Levels/level_2_gen.tscn" id="1_42rxj"]
 [ext_resource type="PackedScene" uid="uid://82a20eu1aqyu" path="res://Scenes/Player/player.tscn" id="2_jc5vh"]
 [ext_resource type="PackedScene" uid="uid://b47tt78bshp0b" path="res://Scenes/Map/ocean_shader.tscn" id="2_ksvu3"]
@@ -8,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://brgeaqsabhqad" path="res://Scenes/Menu/pause_menu.tscn" id="5_18xf1"]
 
 [node name="level" type="Node2D"]
+script = ExtResource("1_11ju2")
 
 [node name="Player" parent="." instance=ExtResource("2_jc5vh")]
 position = Vector2(2156, 833)
