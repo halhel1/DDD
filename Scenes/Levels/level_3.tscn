@@ -27,7 +27,7 @@ position = Vector2(2156, 863)
 
 [node name="oceanShader" parent="." instance=ExtResource("5_cm8c1")]
 position = Vector2(-489, -811)
-scale = Vector2(12, 12)
+scale = Vector2(20, 12)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
