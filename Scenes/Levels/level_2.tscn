@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0jx1ixgdji13"]
+[gd_scene load_steps=9 format=3 uid="uid://b0jx1ixgdji13"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_manager.gd" id="1_11ju2"]
 [ext_resource type="PackedScene" uid="uid://cpdw67kpdatce" path="res://Scenes/Levels/level_2_gen.tscn" id="1_42rxj"]
 [ext_resource type="PackedScene" uid="uid://82a20eu1aqyu" path="res://Scenes/Player/player.tscn" id="2_jc5vh"]
 [ext_resource type="PackedScene" uid="uid://b47tt78bshp0b" path="res://Scenes/Map/ocean_shader.tscn" id="2_ksvu3"]
 [ext_resource type="PackedScene" uid="uid://c844kqesrljy5" path="res://Scenes/Map/cave.tscn" id="3_3rqyg"]
-[ext_resource type="PackedScene" uid="uid://bw41lglmsvfru" path="res://Scenes/Enemies/enemySpawner.tscn" id="3_ge5mq"]
+[ext_resource type="PackedScene" uid="uid://bfjx7xoabxd71" path="res://Scenes/Enemies/enemySpawner.tscn" id="3_ge5mq"]
 [ext_resource type="PackedScene" uid="uid://brgeaqsabhqad" path="res://Scenes/Menu/pause_menu.tscn" id="5_18xf1"]
+[ext_resource type="PackedScene" uid="uid://b2nsnqbndwddg" path="res://Scenes/Collectibles/collectibleSpawner.tscn" id="7_h5eek"]
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_11ju2")
@@ -20,6 +21,8 @@ position = Vector2(2156, 833)
 position = Vector2(2000, 500)
 
 [node name="enemySpawner" parent="." instance=ExtResource("3_ge5mq")]
+
+[node name="collectibleSpawner" parent="." instance=ExtResource("7_h5eek")]
 position = Vector2(2156, 863)
 
 [node name="oceanShader" parent="." instance=ExtResource("2_ksvu3")]
