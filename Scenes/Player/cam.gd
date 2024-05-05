@@ -20,7 +20,7 @@ func setCam():
 		limit_bottom = map_height_pixels
 		
 		pass
-	elif LevelManager.get_current_level()%2==0:
+	elif LevelManager.get_current_level()%3==2:
 		map_width_pixels = 55 * 80 
 		map_height_pixels = 55 * 81 
 		limit_right = map_width_pixels
