@@ -1,9 +1,9 @@
 class_name spawner
 extends Node2D
-var minX: int=-2000
-var maxX:int= 2000
-var minY: int=-700
-var maxY: int=1000
+var minX: int
+var maxX:int
+var minY: int
+var maxY: int
 var entityScene: PackedScene
 var playerScene: PackedScene
 var player:CharacterBody2D
@@ -12,6 +12,7 @@ var entityRadius: int
 var spawnPositions: Array = []
 
 func _ready():
+	setBounds()
 	playerScene = load("res://Scenes/Player/player.tscn")
 	player = playerScene.instantiate()
 
@@ -60,3 +61,24 @@ func manhattan_distance(pointA: Vector2, pointB: Vector2):
 	var deltaY = abs(pointA.y - pointB.y)
 	return deltaX + deltaY
 
+
+func setBounds():
+	if LevelManager.get_current_level()%3==0:
+		minX=-2000
+		maxX= 6400
+		minY=-700
+		maxY=1000
+		
+		pass
+	elif LevelManager.get_current_level()%3==2:
+		minX=-2000
+		maxX= 2000
+		minY=-700
+		maxY=3500
+		pass
+	else:
+		minX=-2000
+		maxX= 2000
+		minY=-700
+		maxY=1000
+		pass

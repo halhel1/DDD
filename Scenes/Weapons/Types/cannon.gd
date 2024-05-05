@@ -3,7 +3,7 @@ class_name Cannon extends "res://Scenes/Weapons/weapons_base.gd"
 
 func _ready():
 	speed = 400
-	scale = Vector2(3,3)
+	scale = Vector2(20,20)
 	damage_amount = 200
 	spread_radius = 0
 	$WeaponCooldown.wait_time = 2.5
