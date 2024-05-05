@@ -1,3 +1,6 @@
+res://Scenes/Collectibles/collectible_spawner.gd
+res://Scenes/Map/spawner.gd
+res://Scenes/Player/cam.gd
 res://Scenes/Menu/MainMenu.tscn
 res://TempResources/custombuttons.tres
 res://Scripts/shader.gdshader
@@ -30,7 +33,5 @@ res://Scenes/Levels/proc_gen.cs
 res://Scenes/Menu/MainMenu.cs
 res://Scripts/Video.cs
 res://Scenes/Map/cave.gd
-res://Scenes/Player/cam.gd
-res://Scenes/Map/spawner.gd
-res://Scenes/Enemies/enemy_spawner.gd
-res://Scenes/Levels/level_manager.gd
+res://Scenes/Player/hand.gd
+res://Scenes/Weapons/projectile.gd
