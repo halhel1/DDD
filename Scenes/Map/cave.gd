@@ -14,6 +14,7 @@ func _on_area_entered(area: Area2D):
 			call_deferred("increase_level_and_change_scene", next_lvl_path)
 		else:
 			call_deferred("increase_level_and_change_scene", "res://Scenes/Levels/level_1.tscn")
+			LevelManager.increase_loop()
 
 func increase_level_and_change_scene(next_lvl_path: String):
 	LevelManager.increase_level()

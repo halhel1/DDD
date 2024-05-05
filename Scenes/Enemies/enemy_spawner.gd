@@ -1,6 +1,6 @@
 extends spawner
 const GameManager = preload("res://Scenes/Levels/level_manager.gd")
-var entitySpawns: int =20;
+var entitySpawns: int =15;
 
 var colors = [
 	Color(0, 1, 0),
