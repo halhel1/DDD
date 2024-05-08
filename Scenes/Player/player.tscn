@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://82a20eu1aqyu"]
+[gd_scene load_steps=45 format=3 uid="uid://82a20eu1aqyu"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_oa1ny"]
 [ext_resource type="Script" path="res://Scenes/Player/cam.gd" id="3_0io7u"]
@@ -7,11 +7,12 @@
 [ext_resource type="Script" path="res://Scripts/state_machine.gd" id="3_ljpdt"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/idle_state.gd" id="4_yryu6"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/walking_state.gd" id="5_4a82o"]
-[ext_resource type="PackedScene" uid="uid://cs7ahhfg34b8a" path="res://Scenes/Weapons/Types/pulse.tscn" id="5_uysud"]
+[ext_resource type="PackedScene" uid="uid://bk5b17rwnpv5s" path="res://Scenes/Weapons/weapon_base.tscn" id="6_w7rmq"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/death_state.gd" id="6_wxmbt"]
 [ext_resource type="AudioStream" uid="uid://d2nddg30hvv1t" path="res://TempResources/underwater-sloshing-sound-effect-hd_4Dz6qPxT.mp3" id="7_j4p1d"]
 [ext_resource type="Texture2D" uid="uid://dyw0h7wkahf0w" path="res://TempResources/deepDiver.svg" id="7_qouq5"]
 [ext_resource type="AudioStream" uid="uid://m6dhlchp88y2" path="res://TempResources/Something being hit - Sound Effect.mp3" id="8_226lu"]
+[ext_resource type="Script" path="res://Scenes/Player/player_upgrader.gd" id="13_j0du7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fn4sd"]
 atlas = ExtResource("7_qouq5")
@@ -274,13 +275,7 @@ position = Vector2(42.7011, 3)
 scale = Vector2(-0.068897, 0.0605722)
 texture = ExtResource("3_hmcdn")
 
-[node name="Pulse" parent="Hand/Sprite2D" instance=ExtResource("5_uysud")]
-direction = null
-speed = null
-scale_vector = null
-damage_amount = null
-cooldown = null
-spread_radius = null
+[node name="WeaponBase" parent="Hand/Sprite2D" instance=ExtResource("6_w7rmq")]
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 offset_left = -50.6455
@@ -345,6 +340,9 @@ bus = &"SFX"
 
 [node name="DamageNumbersOrigin" type="Node2D" parent="."]
 position = Vector2(0, -55)
+
+[node name="PlayerUpgrader" type="Node" parent="."]
+script = ExtResource("13_j0du7")
 
 [connection signal="area_entered" from="PlayerHitbox" to="." method="_on_player_hitbox_area_entered"]
 [connection signal="area_exited" from="PlayerHitbox" to="." method="_on_player_hitbox_area_exited"]

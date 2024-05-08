@@ -12,10 +12,10 @@ var rng = RandomNumberGenerator.new()
 @onready var sfx_shoot: Node = $sfx_shoot
 var projectile_scene: PackedScene = preload("res://Scenes/Weapons/projectile.tscn")
 
-func ready():
+func ready() -> void:
 	$WeaponCooldown.wait_time = cooldown
 
-func _process(_delta):
+func _process(_delta) -> void:
 	if(Input.is_action_pressed("attack")&&can_fire):
 		fire()
 		sfx_shoot.play()
@@ -32,6 +32,21 @@ func fire() -> void:
 	projectile.damage_amount = damage_amount
 	get_tree().get_root().add_child(projectile)
 
-func _on_weapon_cooldown_timeout():
+func _on_weapon_cooldown_timeout() -> void:
 	$WeaponCooldown.stop()
 	can_fire = true
+
+func upgrade_weapon_spread(amount: float) -> void:
+	pass
+
+func upgrade_weapon_damage(amount: float) -> void:
+	pass
+
+func upgrade_projectile_speed(amount: float) -> void:
+	pass
+
+func upgrade_weapon_firerate(amount: float) -> void:
+	pass
+
+func upgrade_projectile_size(amount: float) -> void:
+	pass
