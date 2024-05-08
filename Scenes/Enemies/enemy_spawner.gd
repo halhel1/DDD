@@ -9,10 +9,10 @@ var colors = [
 ]
 
 func _ready():
-    super._ready()
-    entitySpawns+=LevelManager.get_current_level()*5
-    set_entity(load("res://Scenes/Enemies/jellyfish.tscn"), 220)
-    spawn_entities(entitySpawns, colors, "jellyfishSprite")
+	super._ready()
+	entitySpawns+=LevelManager.get_current_level()*5
+	set_entity(load("res://Scenes/Enemies/jellyfish.tscn"), 220)
+	spawn_entities(entitySpawns, colors, "jellyfishSprite")
 
 func is_valid_entity(new_pos, effective_radius):
-    return super.is_valid_entity(new_pos, effective_radius)
+	return super.is_valid_entity(new_pos, effective_radius)

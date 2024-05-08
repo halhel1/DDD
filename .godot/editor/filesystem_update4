@@ -35,3 +35,26 @@ res://Scripts/player_upgrader.gd
 res://Scenes/Player/player_upgrader.gd
 res://Scenes/Player/player.gd
 res://Scenes/Weapons/weapons_base.gd
+res://Boss/ShootBoss.gd
+res://Scenes/Collectibles/collectibleSpawner.cs
+res://Scenes/Enemies/enemySpawner.cs
+res://Scenes/Map/Levels/level1Gen.cs
+res://Scenes/Map/Levels/level_2_gen.cs
+res://Scenes/Map/Levels/level_3_gen.cs
+res://Scenes/Map/Levels/proc_gen.cs
+res://Scenes/Map/obstacleSpawner.cs
+res://Scenes/Map/spawner.cs
+res://Scenes/Menu/game_over.cs
+res://Scenes/Enemies/enemy_spawner.gd
+res://BossFinal 2.tscn
+res://Scenes/Map/cave.gd
+res://test_scene 2.tscn
+res://Boss/FiniteStateMachine.gd
+res://BossFinal.tscn
+res://test_scene.tscn
+res://bullet_boss.tscn
+res://Boss/bulletBoss.gd
+res://Boss/DashBoss.gd
+res://Boss/BossFinal.gd
+res://Boss/IdleBoss.gd
+res://Boss/FollowBoss.gd
