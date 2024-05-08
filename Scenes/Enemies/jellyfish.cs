@@ -20,6 +20,9 @@ public partial class jellyfish : CharacterBody2D
 	private bool isIdle=false;
 	[Export] private float max_health = 200;
 	private float health;
+	private Vector2 lastDefeatedEnemyPosition = Vector2.Zero;
+
+	private enemyManager enemyManager;
 	public override void _Ready()
 	{
 		GetNode<Godot.ProgressBar>("HealthBar").MaxValue=max_health;
@@ -27,6 +30,10 @@ public partial class jellyfish : CharacterBody2D
 		health = max_health;
 		enemySprite=GetNode<Godot.AnimatedSprite2D>("jellyfishSprite");
 		enemySprite.Play("idle");
+		enemyManager=GetNode<enemyManager>("/root/EnemyManager");
+		enemyManager.enemySpawned();
+		
+		
 	}
 	public override void _Process(double delta)
 	{
@@ -105,9 +112,16 @@ public partial class jellyfish : CharacterBody2D
 		health -= damageAmount;
 		GetNode<Godot.ProgressBar>("HealthBar").Value = health;
 		if(health <= 0){
+			enemyManager.enemyKilled();
+			lastDefeatedEnemyPosition = GlobalPosition;
 			QueueFree();
+			GD.Print(enemyManager.getNumEnemies());
+			if(enemyManager.getNumEnemies()==0){
+				
+
+			}
+			
 		}
 	}
-	
 	
 }
