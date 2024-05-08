@@ -2,7 +2,7 @@ extends Area2D
 
 
 var direction = Vector2.RIGHT
-var speed = 0
+var speed = 650
 
 func _physics_process(delta):
 	position += direction * speed * delta

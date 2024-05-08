@@ -21,14 +21,14 @@ config/icon="res://icon.svg"
 
 [audio]
 
-buses/default_bus_layout="res://TempResources/default_bus_layout.tres"
+buses/default_bus_layout="res://Assets/default_bus_layout.tres"
 
 [autoload]
 
 SceneTransition="*res://Scenes/scene_transition.tscn"
 BgMuisc="*res://Audio/bg_muisc.tscn"
 MasterSlider="*res://Audio/master_slider.gd"
-DamageNumbers="*res://Scenes/Player/damage_numbers.gd"
+DamageNumbers="*res://Scenes/Player/PlayerSubscenes/damage_numbers.gd"
 LevelManager="*res://Scenes/Levels/level_manager.gd"
 PlayerManager="*res://Scenes/Player/player_manager.gd"
 
@@ -36,7 +36,7 @@ PlayerManager="*res://Scenes/Player/player_manager.gd"
 
 window/size/initial_position=Vector2i(435, 410)
 window/stretch/mode="canvas_items"
-mouse_cursor/custom_image="res://TempResources/cursor.svg"
+mouse_cursor/custom_image="res://Assets/cursor.svg"
 
 [dotnet]
 

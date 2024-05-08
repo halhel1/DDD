@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwwvypk3aolxp"]
-
-[ext_resource type="Texture2D" uid="uid://br7x1nmmy5x3u" path="res://TempResources/icon.svg" id="1_y8ukq"]
+[gd_scene load_steps=3 format=3 uid="uid://ukmyog7uawi1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hqjv"]
 size = Vector2(124, 124)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5qmmb"]
+load_path = "res://.godot/imported/icon.svg-8193eb3d66a1b5143b8bb4c28c1dc139.ctex"
 
 [node name="generic_terrain" type="Node2D"]
 
@@ -14,4 +15,4 @@ position = Vector2(-1, -1)
 shape = SubResource("RectangleShape2D_5hqjv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_y8ukq")
+texture = SubResource("CompressedTexture2D_5qmmb")

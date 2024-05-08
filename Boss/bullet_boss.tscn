@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://esruk3c3ltv"]
+
+[ext_resource type="Script" path="res://Boss/bulletBoss.gd" id="1_rdd31"]
+[ext_resource type="Texture2D" uid="uid://d37p8gdlwa76n" path="res://Assets/craftpix-net-760946-free-underwater-enemies-pixel-art-character-pack/4/Projectile.png" id="2_42klp"]
+
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_webt3"]
+radius = 4.0
+
+[node name="bulletBoss" type="Area2D"]
+position = Vector2(20, 16)
+script = ExtResource("1_rdd31")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_42klp")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+scale = Vector2(0.3, 0.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_webt3")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]
