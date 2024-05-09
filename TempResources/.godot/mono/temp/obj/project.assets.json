@@ -93,11 +93,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hussainalhelfi/Downloads/dddd/Team-5/TempResources/Menu.csproj",
+      "projectUniqueName": "/Users/hussainalhelfi/Downloads/boss/Team-5/TempResources/Menu.csproj",
       "projectName": "Menu",
-      "projectPath": "/Users/hussainalhelfi/Downloads/dddd/Team-5/TempResources/Menu.csproj",
+      "projectPath": "/Users/hussainalhelfi/Downloads/boss/Team-5/TempResources/Menu.csproj",
       "packagesPath": "/Users/hussainalhelfi/.nuget/packages/",
-      "outputPath": "/Users/hussainalhelfi/Downloads/dddd/Team-5/TempResources/.godot/mono/temp/obj/",
+      "outputPath": "/Users/hussainalhelfi/Downloads/boss/Team-5/TempResources/.godot/mono/temp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/hussainalhelfi/.nuget/NuGet/NuGet.Config"
