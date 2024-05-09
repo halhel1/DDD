@@ -35,3 +35,9 @@ res://Scenes/Levels/proc_gen.cs
 res://Scenes/Menu/MainMenu.cs
 res://Scripts/Video.cs
 res://Scenes/Enemies/enemy_spawner.gd
+res://Scenes/Map/spawner.gd
+res://Scenes/Weapons/projectile.gd
+res://Scenes/Weapons/weapons_base.gd
+res://Scenes/Map/cave.gd
+res://Scenes/Menu/game_over.gd
+res://Scenes/Collectibles/experience_orb.gd

@@ -124,19 +124,21 @@ public partial class jellyfish : CharacterBody2D
 		lastDefeatedEnemyPosition = GlobalPosition;
 		if(health <= 0){
 			experienceOrbInstance.Position = lastDefeatedEnemyPosition;
+			caveInstance.Position = lastDefeatedEnemyPosition;
 			enemyManager.enemyKilled();
-			lastDefeatedEnemyPosition = GlobalPosition;
 			QueueFree();
-			GetTree().Root.AddChild(experienceOrbInstance);
+			lastDefeatedEnemyPosition = GlobalPosition;
+			GetParent().AddChild(experienceOrbInstance);
+			
 			GD.Print(enemyManager.getNumEnemies());
 			if(enemyManager.getNumEnemies()==0){
 				caveInstance.Position = lastDefeatedEnemyPosition;
-				GetTree().Root.AddChild(caveInstance);
+				GetParent().AddChild(caveInstance);
 				
-
 			}
 			
 		}
 	}
+	
 	
 }

@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bfjx7xoabxd71" path="res://Scenes/Enemies/enemySpawner.tscn" id="6_f5n0i"]
 [ext_resource type="PackedScene" uid="uid://brgeaqsabhqad" path="res://Scenes/Menu/pause_menu.tscn" id="7_u4kev"]
 
-[node name="level" type="Node2D"]
+[node name="level2" type="Node2D"]
 process_mode = 1
 script = ExtResource("1_4ww4k")
 

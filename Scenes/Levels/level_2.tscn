@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://brgeaqsabhqad" path="res://Scenes/Menu/pause_menu.tscn" id="5_18xf1"]
 [ext_resource type="PackedScene" uid="uid://b2nsnqbndwddg" path="res://Scenes/Collectibles/collectibleSpawner.tscn" id="7_h5eek"]
 
-[node name="level" type="Node2D"]
+[node name="level2" type="Node2D"]
 script = ExtResource("1_11ju2")
 
 [node name="Player" parent="." instance=ExtResource("2_jc5vh")]
