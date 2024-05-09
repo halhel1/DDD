@@ -19,3 +19,4 @@ res://Scenes/Map/spawner.gd
 res://Scenes/Collectibles/seashell.tscn
 res://Scenes/Collectibles/collectibleSpawner.tscn
 res://Scenes/Levels/level_1.tscn
+res://Scenes/Weapons/Types/pulse.gd

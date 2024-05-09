@@ -6,9 +6,9 @@ var pulse_count: int = 0
 func _ready():
 	speed = 900
 	scale_vector = Vector2(1,1)
-	damage_amount = 200
+	damage_amount = 30
 	spread_radius = 2
-	$WeaponCooldown.wait_time = 0.1
+	$WeaponCooldown.wait_time = 1
 	$PulseTimer.wait_time = 0.05
 
 
