@@ -1,6 +1,6 @@
 extends spawner
 const GameManager = preload("res://Scenes/Levels/level_manager.gd")
-var entitySpawns: int = 2;
+var entitySpawns: int = 3;
 
 var colors: Array = [
 	Color(0, 1, 0),
@@ -11,9 +11,9 @@ var colors: Array = [
 func _ready():
 	entitySpawns+=LevelManager.get_current_level()
 	super._ready()
-	set_entity(load("res://Scenes/Collectibles/heart.tscn"), 200)
+	set_entity(load("res://Scenes/Collectibles/heart.tscn"), 300)
 	spawn_entities(entitySpawns)
-	set_entity(load("res://Scenes/Collectibles/seashell.tscn"), 200)
+	set_entity(load("res://Scenes/Collectibles/experience_orb.tscn"), 200)
 	spawn_entities(entitySpawns)
 
 func is_valid_entity(new_pos: Vector2, effective_radius: float):

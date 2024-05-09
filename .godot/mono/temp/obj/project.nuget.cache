@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "a0dcvUx32MNmbXcxpM9QTuTfBNLdx7Ilx6uAQC2jLqs5q5V9r7H3LmkmoXJjpxbq+jgCJShkxI2dSqnKdkAahg==",
+  "dgSpecHash": "gCZNTDgs44HHLRY62ZLveRnEZQmpJLnuv/UA71wh3Swzmua9fmHvdRczQb8kj0b1CRJJtcWcvNF9ynG0jVDoDA==",
   "success": true,
-  "projectFilePath": "/Users/hussainalhelfi/Downloads/boss/Team-5/New Game Project.csproj",
+  "projectFilePath": "/Users/hussainalhelfi/Downloads/dwdw/Team-5/New Game Project.csproj",
   "expectedPackageFiles": [
-    "/Users/hussainalhelfi/.nuget/packages/godot.sourcegenerators/4.2.1/godot.sourcegenerators.4.2.1.nupkg.sha512",
-    "/Users/hussainalhelfi/.nuget/packages/godotsharp/4.2.1/godotsharp.4.2.1.nupkg.sha512",
-    "/Users/hussainalhelfi/.nuget/packages/godotsharpeditor/4.2.1/godotsharpeditor.4.2.1.nupkg.sha512",
-    "/Users/hussainalhelfi/.nuget/packages/microsoft.netcore.app.ref/6.0.27/microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
-    "/Users/hussainalhelfi/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.27/microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512"
+    "C:\\Users\\No Thanks\\.nuget\\packages\\godot.sourcegenerators\\4.2.1\\godot.sourcegenerators.4.2.1.nupkg.sha512",
+    "C:\\Users\\No Thanks\\.nuget\\packages\\godotsharp\\4.2.1\\godotsharp.4.2.1.nupkg.sha512",
+    "C:\\Users\\No Thanks\\.nuget\\packages\\godotsharpeditor\\4.2.1\\godotsharpeditor.4.2.1.nupkg.sha512",
+    "C:\\Users\\No Thanks\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\No Thanks\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\No Thanks\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512"
   ],
   "logs": []
 }

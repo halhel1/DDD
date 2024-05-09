@@ -2,6 +2,10 @@ using System;
 using System.Runtime.CompilerServices;
 using Godot;
 
+using System;
+using System.Runtime.CompilerServices;
+using Godot;
+
 public partial class jellyfish : CharacterBody2D
 {
 	private enum enemyState{
@@ -25,9 +29,9 @@ public partial class jellyfish : CharacterBody2D
 	private enemyManager enemyManager;
 	public override void _Ready()
 	{
-		GetNode<Godot.ProgressBar>("HealthBar").MaxValue=max_health;
-		GetNode<Godot.ProgressBar>("HealthBar").Value=max_health;
-		health = max_health;
+		GetNode<Godot.ProgressBar>("HealthBar").MaxValue=maxHealth;
+		GetNode<Godot.ProgressBar>("HealthBar").Value=maxHealth;
+		health = maxHealth;
 		enemySprite=GetNode<Godot.AnimatedSprite2D>("jellyfishSprite");
 		enemySprite.Play("idle");
 		enemyManager=GetNode<enemyManager>("/root/EnemyManager");
