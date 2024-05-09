@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbkx0kpniap27"
-path="res://.godot/imported/hand.svg-2fb2d486724a38c2a7a44aae070ac574.ctex"
+path="res://.godot/imported/hand.svg-b9015d50ec548bf5b3fccc96cd8f8a75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TempResources/16x16/Sprites/hand.svg"
-dest_files=["res://.godot/imported/hand.svg-2fb2d486724a38c2a7a44aae070ac574.ctex"]
+source_file="res://Assets/16x16/Sprites/hand.svg"
+dest_files=["res://.godot/imported/hand.svg-b9015d50ec548bf5b3fccc96cd8f8a75.ctex"]
 
 [params]
 

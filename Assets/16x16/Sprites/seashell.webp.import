@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c65osrmx14r6w"
-path="res://.godot/imported/seashell.webp-6c6aaaf57a43d3b3cf165937f805c653.ctex"
+path="res://.godot/imported/seashell.webp-e0918de48b4ce361fc11a245f16b4eb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TempResources/16x16/Sprites/seashell.webp"
-dest_files=["res://.godot/imported/seashell.webp-6c6aaaf57a43d3b3cf165937f805c653.ctex"]
+source_file="res://Assets/16x16/Sprites/seashell.webp"
+dest_files=["res://.godot/imported/seashell.webp-e0918de48b4ce361fc11a245f16b4eb3.ctex"]
 
 [params]
 

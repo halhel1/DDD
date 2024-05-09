@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://82a20eu1aqyu"]
+[gd_scene load_steps=48 format=3 uid="uid://82a20eu1aqyu"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_oa1ny"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerSubscenes/cam.gd" id="3_0io7u"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://d2nddg30hvv1t" path="res://Assets/SFX/underwater-sloshing-sound-effect-hd_4Dz6qPxT.mp3" id="7_j4p1d"]
 [ext_resource type="Texture2D" uid="uid://dyw0h7wkahf0w" path="res://Assets/PlayerAssets/deepDiver.svg" id="7_qouq5"]
 [ext_resource type="AudioStream" uid="uid://m6dhlchp88y2" path="res://Assets/SFX/Something being hit - Sound Effect.mp3" id="8_226lu"]
+[ext_resource type="AudioStream" uid="uid://c2w6gtgqoqtoe" path="res://Assets/SFX/bubble-pop-sound-effect_udV2fZVu.mp3" id="12_ljabv"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerSubscenes/player_upgrader.gd" id="13_j0du7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fn4sd"]
@@ -320,6 +321,11 @@ stream = ExtResource("7_j4p1d")
 position = Vector2(-1.9861, -5)
 scale = Vector2(2.59076, 2.44231)
 stream = ExtResource("8_226lu")
+
+[node name="sfx_shoot" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1.98, -5)
+scale = Vector2(2.591, 2.591)
+stream = ExtResource("12_ljabv")
 
 [node name="DamageNumbersOrigin" type="Node2D" parent="."]
 position = Vector2(0, -55)
