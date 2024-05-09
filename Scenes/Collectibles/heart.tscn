@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Scenes/Collectibles/heart.cs" id="1_4mwfp"]
 [ext_resource type="Texture2D" uid="uid://dgkt3t4m7l7gn" path="res://Assets/PixelArt/J-Ur-u.png" id="2_v2xyk"]
 
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_ybg2w"]
 radius = 23.0217
 

@@ -17,7 +17,7 @@ func upgrade_dodge_cooldown(amount: float) -> void:
 
 func upgrade_dodge(amount: float) -> void:
 	parent.dodge_speed_multiplier += amount
-	parent.dodge_time += 0.1
+	parent.dodge_time += sqrt(amount)
 
 func upgrade_weapon_spread(amount: float) -> void:
 	weapon.upgrade_weapon_spread(amount)
@@ -33,3 +33,6 @@ func upgrade_weapon_firerate(amount: float) -> void:
 
 func upgrade_projectile_size(amount: float) -> void:
 	weapon.upgrade_projectile_size(amount)
+
+func upgrage_num_bullets(amount: float) -> void:
+	weapon.upgrade_num_bullets(amount)

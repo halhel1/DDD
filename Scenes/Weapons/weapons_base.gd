@@ -6,6 +6,7 @@ class_name WeaponBase extends Node2D
 @export var damage_amount: float = 10
 @export var cooldown: float = 1
 @export var spread_radius: float = 0
+@export var num_bullets = 1
 var can_fire: bool = true
 var rng = RandomNumberGenerator.new()
 
@@ -23,30 +24,36 @@ func _process(_delta) -> void:
 		$WeaponCooldown.start()
 
 func fire() -> void:
-	var projectile = projectile_scene.instantiate()
-	projectile.direction = $AimDirection.global_position - global_position
-	projectile.direction += Vector2(rng.randf_range(-spread_radius,spread_radius),rng.randf_range(-spread_radius,spread_radius))
-	projectile.global_position = global_position
-	projectile.scale = scale_vector
-	projectile.speed = speed
-	projectile.damage_amount = damage_amount
-	get_tree().get_root().add_child(projectile)
+	for x in num_bullets:
+		var projectile = projectile_scene.instantiate()
+		projectile.direction = $AimDirection.global_position - global_position
+		projectile.direction += Vector2(2*x+rng.randf_range(-spread_radius,spread_radius),2*x+rng.randf_range(-spread_radius,spread_radius))
+		projectile.global_position = global_position
+		projectile.scale = scale_vector
+		projectile.speed = speed
+		projectile.damage_amount = damage_amount
+		get_tree().get_root().add_child(projectile)
 
 func _on_weapon_cooldown_timeout() -> void:
 	$WeaponCooldown.stop()
 	can_fire = true
 
 func upgrade_weapon_spread(amount: float) -> void:
-	pass
+	scale_vector.x += amount
+	scale_vector.y += amount
 
 func upgrade_weapon_damage(amount: float) -> void:
-	pass
+	damage_amount += amount
 
 func upgrade_projectile_speed(amount: float) -> void:
-	pass
+	speed += amount
 
 func upgrade_weapon_firerate(amount: float) -> void:
-	pass
+	$WeaponCooldown.wait_time -= amount
 
 func upgrade_projectile_size(amount: float) -> void:
-	pass
+	scale_vector.x += amount
+	scale_vector.y += amount
+
+func upgrade_num_bullets(amount: float) -> void:
+	num_bullets += amount

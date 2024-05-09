@@ -2,6 +2,10 @@ using System;
 using System.Runtime.CompilerServices;
 using Godot;
 
+using System;
+using System.Runtime.CompilerServices;
+using Godot;
+
 public partial class jellyfish : CharacterBody2D
 {
 	private enum enemyState{
@@ -13,18 +17,12 @@ public partial class jellyfish : CharacterBody2D
 	private int speed = 150;
 	private Node player = null;
 	private bool playerChase = false;
-	private enemyState currentState = enemyState.Idle;
-	private AnimatedSprite2D enemySprite;
-	private float recoveryTime = 0.5f;
-	private float recoveryTimer = 0.0f;
-	private bool isIdle=false;
-	[Export] private float max_health = 200;
-	private float health;
+	pri	
 	public override void _Ready()
 	{
-		GetNode<Godot.ProgressBar>("HealthBar").MaxValue=max_health;
-		GetNode<Godot.ProgressBar>("HealthBar").Value=max_health;
-		health = max_health;
+		GetNode<Godot.ProgressBar>("HealthBar").MaxValue=maxHealth;
+		GetNode<Godot.ProgressBar>("HealthBar").Value=maxHealth;
+		health = maxHealth;
 		enemySprite=GetNode<Godot.AnimatedSprite2D>("jellyfishSprite");
 		enemySprite.Play("idle");
 	}
@@ -108,6 +106,4 @@ public partial class jellyfish : CharacterBody2D
 			QueueFree();
 		}
 	}
-	
-	
 }

@@ -6,10 +6,10 @@ var pulse_count: int = 0
 func _ready():
 	speed = 900
 	scale_vector = Vector2(1,1)
-	damage_amount = 30
-	spread_radius = 0
-	$WeaponCooldown.wait_time = 1
-	$PulseTimer.wait_time = 0.01
+	damage_amount = 200
+	spread_radius = 2
+	$WeaponCooldown.wait_time = 0.1
+	$PulseTimer.wait_time = 0.05
 
 
 func _process(_delta):
@@ -24,7 +24,6 @@ func fire_pulses():
 		pulse_count += 1
 		sfx_shoot.play()
 		$PulseTimer.start()
-
 
 func _on_pulse_timer_timeout():
 	$PulseTimer.stop()
