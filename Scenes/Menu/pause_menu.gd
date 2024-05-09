@@ -1,6 +1,6 @@
 extends Control
 
-@onready var player = get_node("/root/PlayerManager")
+@onready var player : Node= get_node("/root/PlayerManager")
 
 var _is_paused:bool = false:
 	set = set_paused
