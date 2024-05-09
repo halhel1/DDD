@@ -11,6 +11,7 @@ var acceleration: int = 3500
 var dodge_time: float = 0.5
 var dodge_cooldown: float = 1.5
 var dodge_speed_multiplier: float = 2
+var player_experience: float = 0
 
 
 func _get_instance():
@@ -25,6 +26,9 @@ func update_player_health(health: float) -> void:
 
 func update_player_position(position: Vector2) -> void:
     _get_instance().player_position = position
+
+func update_player_experience(experience: float) -> void:
+    _get_instance().player_experience = experience
 
 
 func get_player_health() -> float:
@@ -52,3 +56,6 @@ func get_dodge_cooldown() -> float:
 
 func get_dodge_speed_multiplier() -> float:
     return _get_instance().dodge_speed_multiplier
+
+func get_player_experience() -> float:
+    return _get_instance().player_experience
