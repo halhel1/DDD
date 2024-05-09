@@ -37,3 +37,5 @@ res://Scenes/Enemies/enemy_spawner.gd
 res://Scenes/Map/spawner.gd
 res://Scenes/Collectibles/experience_orb.tscn
 res://Scenes/Collectibles/collectible_spawner.gd
+res://Scenes/Menu/pause_menu.gd
+res://Scenes/Player/player_manager.gd

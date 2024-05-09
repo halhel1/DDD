@@ -18,4 +18,8 @@ public partial class enemyManager: Node
         return numEntities;
     }
 
+     public void resetEnemyCount(){
+        numEntities = 0;
+    }
+
 }
