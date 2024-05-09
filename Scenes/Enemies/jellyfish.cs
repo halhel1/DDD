@@ -22,7 +22,7 @@ public partial class jellyfish : CharacterBody2D
 	private float recoveryTime = 0.5f;
 	private float recoveryTimer = 0.0f;
 	private bool isIdle=false;
-	[Export] private float max_health = 200;
+	[Export] private float maxHealth = 200;
 	private float health;
 	private Vector2 lastDefeatedEnemyPosition = Vector2.Zero;
 
