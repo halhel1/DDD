@@ -22,9 +22,10 @@ public partial class jellyfish : CharacterBody2D
 	[Export] private float maxHealth = 200;
 	private float health;
 	private Vector2 lastDefeatedEnemyPosition = Vector2.Zero;
-
 	private PackedScene experienceScene;
     private Node2D experienceOrbInstance;
+	private PackedScene caveScene;
+    private Node2D caveInstance;
 
 	private enemyManager enemyManager;
 	public override void _Ready()
@@ -36,6 +37,8 @@ public partial class jellyfish : CharacterBody2D
 		enemySprite.Play("idle");
 		experienceScene=(PackedScene)ResourceLoader.Load("res://Scenes/Collectibles/experience_orb.tscn");
 		experienceOrbInstance =(Node2D) experienceScene.Instantiate();
+		caveScene=(PackedScene)ResourceLoader.Load("res://Scenes/Map/cave.tscn");
+		caveInstance=(Node2D) caveScene.Instantiate();
 		enemyManager=GetNode<enemyManager>("/root/EnemyManager");
 		enemyManager.enemySpawned();
 		
@@ -127,6 +130,8 @@ public partial class jellyfish : CharacterBody2D
 			GetTree().Root.AddChild(experienceOrbInstance);
 			GD.Print(enemyManager.getNumEnemies());
 			if(enemyManager.getNumEnemies()==0){
+				caveInstance.Position = lastDefeatedEnemyPosition;
+				GetTree().Root.AddChild(caveInstance);
 				
 
 			}
