@@ -13,8 +13,6 @@ func _ready():
 	super._ready()
 	set_entity(load("res://Scenes/Collectibles/heart.tscn"), 300)
 	spawn_entities(entitySpawns)
-	set_entity(load("res://Scenes/Collectibles/experience_orb.tscn"), 200)
-	spawn_entities(entitySpawns)
 
 func is_valid_entity(new_pos: Vector2, effective_radius: float):
 	return super.is_valid_entity(new_pos, effective_radius)

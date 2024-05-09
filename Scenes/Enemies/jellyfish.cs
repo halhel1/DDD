@@ -2,9 +2,6 @@ using System;
 using System.Runtime.CompilerServices;
 using Godot;
 
-using System;
-using System.Runtime.CompilerServices;
-using Godot;
 
 public partial class jellyfish : CharacterBody2D
 {
@@ -26,6 +23,9 @@ public partial class jellyfish : CharacterBody2D
 	private float health;
 	private Vector2 lastDefeatedEnemyPosition = Vector2.Zero;
 
+	private PackedScene experienceScene;
+    private Node2D experienceOrbInstance;
+
 	private enemyManager enemyManager;
 	public override void _Ready()
 	{
@@ -34,8 +34,11 @@ public partial class jellyfish : CharacterBody2D
 		health = maxHealth;
 		enemySprite=GetNode<Godot.AnimatedSprite2D>("jellyfishSprite");
 		enemySprite.Play("idle");
+		experienceScene=(PackedScene)ResourceLoader.Load("res://Scenes/Collectibles/experience_orb.tscn");
+		experienceOrbInstance =(Node2D) experienceScene.Instantiate();
 		enemyManager=GetNode<enemyManager>("/root/EnemyManager");
 		enemyManager.enemySpawned();
+		
 		
 		
 	}
@@ -115,10 +118,13 @@ public partial class jellyfish : CharacterBody2D
 	public void damage(float damageAmount){
 		health -= damageAmount;
 		GetNode<Godot.ProgressBar>("HealthBar").Value = health;
+		lastDefeatedEnemyPosition = GlobalPosition;
 		if(health <= 0){
+			experienceOrbInstance.Position = lastDefeatedEnemyPosition;
 			enemyManager.enemyKilled();
 			lastDefeatedEnemyPosition = GlobalPosition;
 			QueueFree();
+			GetTree().Root.AddChild(experienceOrbInstance);
 			GD.Print(enemyManager.getNumEnemies());
 			if(enemyManager.getNumEnemies()==0){
 				
