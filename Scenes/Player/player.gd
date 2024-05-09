@@ -35,6 +35,7 @@ var weapon_type: Dictionary = {
 func _ready():
 	player_vars = get_node("/root/PlayerManager")
 	current_health = player_vars.get_player_health()
+	experience= player_vars.get_player_experience()
 	set_bars()
 	set_cooldown()
 	$damageTimer.timeout.connect(_on_damage_timer_timeout)
@@ -53,7 +54,8 @@ func take_damage(amount: float) -> void:
 		die()
 
 func collect_exp(amount: float) -> void:
-	experience += amount
+	player_vars.update_player_experience(player_vars.get_player_experience()+amount)
+	experience=player_vars.get_player_experience()
 	if (experience >= exp_per_level):
 		player_level += 1
 		experience = 0
@@ -69,6 +71,8 @@ func die() -> void:
 	player_vars.update_player_health(max_health)
 	current_health = max_health
 	$PlayerBars/HealthBar.value = current_health
+	player_vars.update_player_experience(0)
+	experience=0
 	get_tree().change_scene_to_file("res://Scenes/Menu/game_over.tscn")
 
 func _on_player_hitbox_area_entered(area) -> void:
@@ -101,6 +105,7 @@ func set_bars() -> void:
 	$PlayerBars/CooldownBar.max_value = dodge_cooldown
 	$PlayerBars/HealthBar.max_value = max_health
 	$PlayerBars/HealthBar.value = current_health
+	$PlayerBars/ExperienceBar.value = experience
 	$PlayerBars/ExperienceBar.max_value = exp_per_level
 
 func set_cooldown() -> void:

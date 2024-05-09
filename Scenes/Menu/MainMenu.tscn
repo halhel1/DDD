@@ -6,7 +6,6 @@
 [ext_resource type="Theme" uid="uid://bg8wle0jnrveu" path="res://Assets/custombuttons.tres" id="3_spsce"]
 [ext_resource type="Texture2D" uid="uid://hurqkiaoy2a1" path="res://Assets/b978c3af01002c418a6b38ffe5caf323.png" id="3_xykr3"]
 
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_w017s"]
 shader = ExtResource("2_1bwg8")
 shader_parameter/speed = 0.01

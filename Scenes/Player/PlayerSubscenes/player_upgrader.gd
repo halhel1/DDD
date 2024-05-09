@@ -1,6 +1,6 @@
 class_name PlayerUpgrader extends Node
 
-@onready var parent: Player = get_parent()
+@onready var parent: Node = get_parent()
 @onready var weapon: WeaponBase = parent.get_node("Hand/Sprite2D").get_child(0)
 
 func upgrade_health(amount: float) -> void:

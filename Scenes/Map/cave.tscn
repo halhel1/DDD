@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Scenes/Map/cave.gd" id="1_c0bpk"]
 [ext_resource type="Texture2D" uid="uid://c6v6fc7f1qt6r" path="res://Assets/LevelAssets/image-removebg-preview-4.png" id="3_76mqf"]
 
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ycob"]
 atlas = ExtResource("3_76mqf")
 region = Rect2(0, 0, 183, 151)

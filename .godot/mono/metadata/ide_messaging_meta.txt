@@ -1,2 +1,2 @@
-﻿55670
-C:/Users/No Thanks/Godot/Godot_v4.2.1-stable_mono_win64.exe
+﻿50512
+/Applications/Godot_mono.app/Contents/MacOS/Godot
