@@ -9,7 +9,6 @@ func _ready() -> void:
 	pass 
 
 func setCam():
-	var limit_top
 	var map_width_pixels: int  = 0
 	var map_height_pixels: int = 0 
 	if LevelManager.get_current_level()%3==0:

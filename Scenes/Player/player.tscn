@@ -9,9 +9,9 @@
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/walking_state.gd" id="5_4a82o"]
 [ext_resource type="PackedScene" uid="uid://cs7ahhfg34b8a" path="res://Scenes/Weapons/Types/pulse.tscn" id="5_uysud"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/death_state.gd" id="6_wxmbt"]
-[ext_resource type="AudioStream" uid="uid://d2nddg30hvv1t" path="res://TempResources/underwater-sloshing-sound-effect-hd_4Dz6qPxT.mp3" id="7_j4p1d"]
-[ext_resource type="Texture2D" uid="uid://dyw0h7wkahf0w" path="res://TempResources/deepDiver.svg" id="7_qouq5"]
-[ext_resource type="AudioStream" uid="uid://m6dhlchp88y2" path="res://TempResources/Something being hit - Sound Effect.mp3" id="8_226lu"]
+[ext_resource type="AudioStream" uid="uid://d2nddg30hvv1t" path="res://TempResources/sfx/underwater-sloshing-sound-effect-hd_4Dz6qPxT.mp3" id="7_j4p1d"]
+[ext_resource type="Texture2D" uid="uid://dyw0h7wkahf0w" path="res://TempResources/16x16/Sprites/deepDiver.svg" id="7_qouq5"]
+[ext_resource type="AudioStream" uid="uid://m6dhlchp88y2" path="res://TempResources/sfx/Something being hit - Sound Effect.mp3" id="8_226lu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fn4sd"]
 atlas = ExtResource("7_qouq5")
