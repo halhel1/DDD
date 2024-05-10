@@ -4,6 +4,11 @@
 
 
 ## How to run
+
+-Download Godot 
+(Make sure to select the version with C# support)
+[LINK](https://godotengine.org/download/windows/)
+
 -Clone the repo or download the zip file
 
 -Import project to godot and select the .godot executable to run
