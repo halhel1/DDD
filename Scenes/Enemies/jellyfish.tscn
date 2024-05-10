@@ -194,7 +194,7 @@ scale = Vector2(-0.704242, 1.39847)
 
 [node name="enemyVision" type="CollisionShape2D" parent="jellyfishSprite/detectionArea"]
 position = Vector2(12.6941, 36.9015)
-scale = Vector2(1.2, 1.2)
+scale = Vector2(1.8, 1.8)
 shape = SubResource("CircleShape2D_5yj07")
 debug_color = Color(0.713726, 0.466667, 0.360784, 0.419608)
 

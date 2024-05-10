@@ -11,7 +11,7 @@ public partial class jellyfish : CharacterBody2D
 		Attack,
 		Recover
 	}
-	private int speed = 150;
+	private int speed = 200;
 	private Node player = null;
 	private bool playerChase = false;
 	private enemyState currentState = enemyState.Idle;
