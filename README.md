@@ -6,13 +6,6 @@
 
 -Defeat all enemies in a level to open the path to the next.
 
--Features not yet fully integrated:
-    -Sammy's boss (and with it, better enemy AI)
-    -Upgrading(It is there, the upgrade screen is not made yet however)
-    -Weapon switching (There are multiple weapon types, if you are really, really curious, you can change the weapon type.
-    by navigating to "res://Scenes/Player/player.gd". Then in the line "change_weapon("pulse")", 
-    change "pulse" to "sniper", "cannon", "machine_gun" or "shotgun")
-
 ## How to run
 -You will have to download the Godot Engine. For Windows do it through this link: https://godotengine.org/download/windows/
 
