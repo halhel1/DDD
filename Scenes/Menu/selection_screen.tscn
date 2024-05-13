@@ -1,0 +1,84 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkoxnvbkvwkfx"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/selection_screen.gd" id="1_1vomd"]
+[ext_resource type="Theme" uid="uid://l4e0cnupcyl2" path="res://Assets/custombuttons.tres" id="1_vqwyo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jcmgc"]
+font_size = 50
+
+[node name="selection_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1vomd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -14.0
+offset_right = 1188.0
+offset_bottom = 688.0
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.222
+anchor_top = 0.08
+anchor_right = 0.776
+anchor_bottom = 0.84
+offset_left = 0.25598
+offset_top = 0.159996
+offset_right = 0.0479736
+offset_bottom = -0.320022
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "       Select your weapon
+"
+label_settings = SubResource("LabelSettings_jcmgc")
+
+[node name="Weapons" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 2
+theme = ExtResource("1_vqwyo")
+
+[node name="Sniper" type="Button" parent="MarginContainer/VBoxContainer/Weapons"]
+layout_mode = 2
+text = "Sniper"
+
+[node name="Machine gun" type="Button" parent="MarginContainer/VBoxContainer/Weapons"]
+layout_mode = 2
+text = "Machine gun"
+
+[node name="Cannon" type="Button" parent="MarginContainer/VBoxContainer/Weapons"]
+layout_mode = 2
+text = "Cannon
+"
+
+[node name="Shotgun" type="Button" parent="MarginContainer/VBoxContainer/Weapons"]
+layout_mode = 2
+text = "Shotgun
+"
+
+[node name="Pulse" type="Button" parent="MarginContainer/VBoxContainer/Weapons"]
+layout_mode = 2
+text = "Pulse
+"
+
+[node name="Base" type="Button" parent="MarginContainer/VBoxContainer/Weapons"]
+layout_mode = 2
+text = "Base"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Weapons/Sniper" to="." method="_on_sniper_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Weapons/Machine gun" to="." method="_on_machine_gun_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Weapons/Cannon" to="." method="_on_cannon_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Weapons/Shotgun" to="." method="_on_shotgun_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Weapons/Pulse" to="." method="_on_pulse_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Weapons/Base" to="." method="_on_base_pressed"]

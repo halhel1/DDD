@@ -13,6 +13,7 @@ var current_health:= max_health
 @export var exp_per_level = 100
 var experience: float = 0
 var player_level: int = 1
+var weapon: String
 
 @onready var damage_numbers_origin: Node2D = $DamageNumbersOrigin
 var player_vars: Node
@@ -36,10 +37,11 @@ func _ready():
 	player_vars = get_node("/root/PlayerManager")
 	current_health = player_vars.get_player_health()
 	experience= player_vars.get_player_experience()
+	weapon=player_vars.get_player_weapon()
 	set_bars()
 	set_cooldown()
 	$damageTimer.timeout.connect(_on_damage_timer_timeout)
-	change_weapon("pulse")
+	change_weapon(weapon)
 
 func _process(_delta) -> void:
 	$PlayerBars/CooldownBar.value = $CooldownTimer.time_left

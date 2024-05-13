@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_oa1ny"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerSubscenes/cam.gd" id="3_0io7u"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerSubscenes/hand.gd" id="3_7jgpg"]
-[ext_resource type="Texture2D" uid="uid://bbkx0kpniap27" path="res://Assets/16x16/Sprites/hand.svg" id="3_hmcdn"]
+[ext_resource type="Texture2D" uid="uid://bbkx0kpniap27" path="res://Assets/16x16/hand.svg" id="3_hmcdn"]
 [ext_resource type="Script" path="res://Scripts/state_machine.gd" id="3_ljpdt"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/idle_state.gd" id="4_yryu6"]
 [ext_resource type="Script" path="res://Scenes/Player/PlayerStates/walking_state.gd" id="5_4a82o"]
